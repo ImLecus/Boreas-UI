@@ -8,6 +8,18 @@
 :root{
     --font: system-ui, 'Roboto', sans-serif;
     --astra-highlight-bg: #FDEBD0;
+    --red: #d00000;
+    --orange: #f77f00;
+    --yellow: #ffbc0a;
+    --green: #9ef01a;
+    --turquoise: #02c39a;
+    --blue: #0466c8;
+    --violet: #9d4edd;
+    --pink: #ff5d8f;
+    --grey: #6c757d;
+    --lightGrey: #d8d8d8;
+    --white: #f8fcfd;
+    --black: #1a1a21;
 }
 body{
     font-family: var(--font);
@@ -15,7 +27,7 @@ body{
 }
 /* TYPOGRAPHY */
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
-    margin: 0 0 0.25rem 0;
+    margin: 0.2rem 0 0.8rem 0;
     font-weight: normal;
     font-style: normal;
     line-height: 1.25;
@@ -62,6 +74,7 @@ h6,.h6{
 }
 p,a {
     font-size: 16px;
+    margin-bottom: 0.8rem;
 }
 .lead{
     font-size: 20px;
@@ -79,4 +92,60 @@ b,strong{
 }
 i,em{
     font-style: italic;
+}
+hr {
+    background-color: var(--lightGrey);
+    width: 100%;
+    margin: 0.25rem 0 0.5rem 0;
+}
+blockquote p{
+    font-size: 1.5rem;
+    margin: 0 0 0 0.25rem;
+}
+blockquote footer, .bq-footer{
+    font-size: 1.25rem;
+    color: var(--grey);
+}
+/* ROOTS */
+.root {
+    max-width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.root-xs {
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.root-s {
+    max-width: 768px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.root-m {
+    max-width: 992px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.root-l {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.root-xl {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.root-full {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
 }
