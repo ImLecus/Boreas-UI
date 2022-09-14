@@ -13,11 +13,13 @@
     --yellow: #ffbc0a;
     --green: #9ef01a;
     --turquoise: #02c39a;
+    --lightBlue: #1EC4F5;
     --blue: #0466c8;
     --violet: #9d4edd;
     --pink: #ff5d8f;
     --grey: #6c757d;
-    --lightGrey: #d8d8d8;
+    --lightGrey:#b0b0b0; 
+    --lightGrey2: #cecbcb;
     --white: #f8fcfd;
     --black: #1a1a21;
 }
@@ -72,7 +74,7 @@ h5,.h5{
 h6,.h6{
     font-size: 11pt;
 }
-p,a {
+p,a{
     font-size: 16px;
     margin-bottom: 0.8rem;
 }
@@ -94,9 +96,13 @@ i,em{
     font-style: italic;
 }
 hr {
-    background-color: var(--lightGrey);
+    background-color: var(--lightGrey2);
     width: 100%;
     margin: 0.25rem 0 0.5rem 0;
+}
+blockquote{
+    display: block;
+    margin-bottom: 1rem;
 }
 blockquote p{
     font-size: 1.5rem;
@@ -105,6 +111,54 @@ blockquote p{
 blockquote footer, .bq-footer{
     font-size: 1.25rem;
     color: var(--grey);
+}
+/* INPUTS */
+.input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.input-sub{
+    margin-left: 0.5rem;
+    font-size: 15px;
+    color: var(--grey);
+}
+input,select{
+    margin-left: 5px;
+    padding-left: 10px;
+    border: 1px solid var(--lightGrey);
+    border-radius: 5px;
+    height: 30px;
+    width: 33%;
+    transition: 0.25s linear;
+}
+input:focus,select:focus {
+    border: 1px solid var(--lightBlue);
+    outline: 4px solid #1EC4F58E;
+}
+input[type="range"]{
+    -webkit-appearance: none;
+
+}
+input[type="range"],input[type="range"]:focus{
+    border: none;
+    outline: none;
+}
+input[type="text"]{
+    color:var(--black);
+    font-size: 15px;
+}
+input[type="password"]{
+    font-size: 20px;
+}
+label{
+    margin: 0 0 0.25rem 0.5rem;
+    padding-left: 0.2rem;
+    color: var(--black);
+}
+select{
+    padding: 0 1.5rem 0 5px;
+    font-size: 15px;
 }
 /* ROOTS */
 .root {
