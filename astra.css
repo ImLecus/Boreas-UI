@@ -673,7 +673,7 @@ code{
 }
 
 .primary-btn {
-    color: var(--bgColor);
+    color: var(--white);
     background-color: var(--blue);
 }
 
@@ -689,11 +689,14 @@ code{
 }
 
 .secondary-btn-dark {
-    color: var(--bgColor);
+    color: var(--white);
     border: solid 1px var(--bgColor);
     background-color: transparent;
 }
 /*  NAVBARS */
+.header{
+    filter: drop-shadow(0 5px 10px var(--grey));
+}
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -704,8 +707,9 @@ code{
 .navbar-link {
     text-decoration: none;
     transition: 0.5s ease-in;
-    color: var(--bgColor);
+    color: var(--grey);
     padding: 0.5rem 1rem;
+    margin-bottom: 0;
 }
 
 .sticky-top {
@@ -728,10 +732,19 @@ code{
 .navbar-pills .navbar-link {
     color: var(--blue);
     font-size: 15px;
+    margin-bottom: 0;
 }
 
 .navbar-pills .active {
     background-color: var(--blue);
     color: var(--white);
     border-radius: 5px;
+    margin-bottom: 0;
+}
+.name{
+    margin: 0 0 0 0.5rem;
+}
+/* IMAGES */
+.brand{
+    margin-left: 0.5rem;
 }
