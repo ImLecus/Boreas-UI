@@ -208,3 +208,47 @@ code{
     margin: 0 auto;
     overflow: hidden;
 }
+/* ALIGNMENT */
+.center-y {
+    align-items: center;
+}
+
+.center-x {
+    justify-content: center;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.align-left {
+    justify-content: left;
+    margin-right: auto;
+}
+
+.align-right {
+    justify-content: right;
+    margin-left: auto;
+}
+
+.align-top {
+    align-items: flex-start;
+}
+
+.align-bottom {
+    align-items: flex-end;
+}
+
+.stretch{
+    align-items: stretch;
+}
+.around{
+    justify-content: space-around;
+}
+.between{
+    justify-content: space-between;
+}
+.evenly{
+    justify-content: space-evenly;
+}
