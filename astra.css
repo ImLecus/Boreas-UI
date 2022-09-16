@@ -80,7 +80,7 @@ p,a{
     margin-bottom: 0.8rem;
 }
 .lead{
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 300;
 }
 mark{
@@ -160,6 +160,14 @@ label{
 select{
     padding: 0 1.5rem 0 5px;
     font-size: 15px;
+}
+input[type="file"]{
+    display: block;
+    background-color: var(--grey);
+    border-radius: 5px;
+}
+input[type="checkbox"]{
+    width: 20px;
 }
 /* CODE */
 code{
@@ -251,4 +259,32 @@ code{
 }
 .evenly{
     justify-content: space-evenly;
+}
+/* FLEX */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
 }
