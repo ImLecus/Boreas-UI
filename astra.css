@@ -8,6 +8,7 @@
 :root{
     --font: system-ui, 'Roboto', sans-serif;
     --astra-highlight-bg: #FDEBD0;
+    --astra-code-color: #ed3a6a;
     --red: #d00000;
     --orange: #f77f00;
     --yellow: #ffbc0a;
@@ -159,6 +160,10 @@ label{
 select{
     padding: 0 1.5rem 0 5px;
     font-size: 15px;
+}
+/* CODE */
+code{
+    color:var(--astra-code-color);
 }
 /* ROOTS */
 .root {
