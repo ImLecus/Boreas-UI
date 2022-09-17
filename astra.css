@@ -349,21 +349,21 @@ pre{
 }
 
 .align-left {
-    justify-content: left;
-    margin-right: auto;
+    justify-self: left;
+    margin-right: auto !important;
 }
 
 .align-right {
-    justify-content: right;
-    margin-left: auto;
+    justify-self: right;
+    margin-left: auto !important;
 }
 
 .align-top {
-    align-items: flex-start;
+    align-self: flex-start !important;
 }
 
 .align-bottom {
-    align-items: flex-end;
+    align-self: flex-end !important;
 }
 
 .stretch{
@@ -1063,10 +1063,18 @@ pre{
     border-radius: 5px;
     margin-bottom: 0;
 }
-.name{
+.name, .brand{
     margin: 0 0 0 0.5rem;
 }
-/* IMAGES */
-.brand{
-    margin-left: 0.5rem;
+/* SIDEBARS */
+.sidebar{
+    height: 2000px;
+    width: 100px;
+    background-color: #003025;
+
+    position: sticky;
+}
+main{
+    display: flex;
+    flex-direction: column;
 }
