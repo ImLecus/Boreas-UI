@@ -7,7 +7,8 @@ button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=
     box-sizing: border-box;
 }
 :root{
-    --font: system-ui, 'Roboto', sans-serif;
+    --astra-body-font: system-ui, 'Roboto', sans-serif;
+    --astra-code-font: monospace;
     --astra-highlight-bg: #FDEBD0;
     --astra-code-color: #ed3a6a;
     --red-100: #d0aaaa;
@@ -102,7 +103,7 @@ button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=
     --grey-900: #1a1a1b;
 }
 body{
-    font-family: var(--font);
+    font-family: var(--astra-body-font);
     font-weight: 400;
 }
 /* TYPOGRAPHY */
@@ -188,7 +189,7 @@ blockquote p{
 }
 blockquote footer, .bq-footer{
     font-size: 1.25rem;
-    color: var(--grey);
+    color: var(--grey-500);
 }
 /* INPUTS */
 .input{
@@ -265,11 +266,14 @@ input[type=search]::placeholder {
 /* CODE */
 code{
     color:var(--astra-code-color);
+    font-family: var(--astra-code-font);
 }
 pre{
+    font-family: var(--astra-code-font);
     background-color: var(--grey-100);
     border-radius: 10px;
     padding: 20px;
+    font-size: 15px;
 }
 .line{
     color: var(--grey-700);
@@ -284,7 +288,7 @@ pre{
     line-height: 1.4rem;
 }
 .v{
-    color: var(--blue-700);
+    color: var(--turquoise-600);
     line-height: 1.4rem;
 }
 /* ROOTS */
@@ -704,35 +708,35 @@ pre{
 }
 /* BG COLORS */
 .bg-red {
-    background-color: var(--red);
+    background-color: var(--red-500);
 }
 
 .bg-orange {
-    background-color: var(--orange);
+    background-color: var(--orange-500);
 }
 
 .bg-yellow {
-    background-color: var(--yellow);
+    background-color: var(--yellow-500);
 }
 
 .bg-green {
-    background-color: var(--green);
+    background-color: var(--green-500);
 }
 
 .bg-turquoise {
-    background-color: var(--turquoise);
+    background-color: var(--turquoise-500);
 }
 
 .bg-blue {
-    background-color: var(--blue);
+    background-color: var(--blue-500);
 }
 
 .bg-violet {
-    background-color: var(--violet);
+    background-color: var(--violet-500);
 }
 
 .bg-pink {
-    background-color: var(--pink);
+    background-color: var(--pink-500);
 }
 
 .bg-grey, .bg.grey-500 {
@@ -770,18 +774,18 @@ pre{
 
 .primary-btn {
     color: var(--grey-100);
-    background-color: var(--blue);
+    background-color: var(--blue-500);
 }
 
 .secondary-btn {
     color: var(--blue);
     background-color: transparent;
-    border: solid 1px var(--blue);
+    border: solid 1px var(--blue-500);
 }
 
 .primary-btn-dark {
     color: var(--grey-900);
-    background-color: var(--yellow);
+    background-color: var(--yellow-500);
 }
 
 .secondary-btn-dark {
@@ -826,13 +830,13 @@ pre{
 }
 
 .navbar-pills .navbar-link {
-    color: var(--blue);
+    color: var(--blue-500);
     font-size: 15px;
     margin-bottom: 0;
 }
 
 .navbar-pills .active {
-    background-color: var(--blue);
+    background-color: var(--blue-500);
     color: var(--grey-100);
     border-radius: 5px;
     margin-bottom: 0;
