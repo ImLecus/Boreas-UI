@@ -194,6 +194,40 @@ blockquote footer, .bq-footer{
     font-size: 1.25rem;
     color: var(--astra-grey-500);
 }
+/* BUTTONS */
+.primary-btn,
+.secondary-btn,
+.primary-btn-dark,
+.secondary-btn-dark {
+    font-size: 15px;
+    display: block;
+    border-radius: 5px;
+    border: none;
+    padding: 7px 15px;
+    margin: 5px;
+}
+
+.primary-btn {
+    color: var(--astra-grey-100);
+    background-color: var(--astra-blue-500);
+}
+
+.secondary-btn {
+    color: var(--astra-blue-500);
+    background-color: transparent;
+    border: solid 1px var(--astra-blue-500);
+}
+
+.primary-btn-dark {
+    color: var(--astra-grey-900);
+    background-color: var(--astra-yellow-500);
+}
+
+.secondary-btn-dark {
+    color: var(--astra-grey-100);
+    border: solid 1px var(--astra-grey-100);
+    background-color: transparent;
+}
 /* INPUTS */
 .input{
     display: flex;
@@ -975,40 +1009,6 @@ pre{
 }
 .grey{
     color: var(--astra-grey-800) !important;
-}
-/* BUTTONS */
-.primary-btn,
-.secondary-btn,
-.primary-btn-dark,
-.secondary-btn-dark {
-    font-size: 15px;
-    display: block;
-    border-radius: 5px;
-    border: none;
-    padding: 7px 15px;
-    margin: 5px;
-}
-
-.primary-btn {
-    color: var(--astra-grey-100);
-    background-color: var(--astra-blue-500);
-}
-
-.secondary-btn {
-    color: var(--astra-blue-500);
-    background-color: transparent;
-    border: solid 1px var(--astra-blue-500);
-}
-
-.primary-btn-dark {
-    color: var(--astra-grey-900);
-    background-color: var(--astra-yellow-500);
-}
-
-.secondary-btn-dark {
-    color: var(--astra-grey-100);
-    border: solid 1px var(--astra-grey-100);
-    background-color: transparent;
 }
 /*  NAVBARS */
 .header{
