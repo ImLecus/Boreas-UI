@@ -113,27 +113,29 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
     font-style: normal;
     line-height: 1.25;
     font-weight: 500;
+    color:var(--astra-grey-800);
 }
 .display-1,.display-2,.display-3,.display-4,.display-5,.display-6{
     font-weight: 300;
+    margin-bottom: 1rem;
 }
 .display-1{
-    font-size: 55pt;
-}
-.display-2{
     font-size: 50pt;
 }
-.display-3{
+.display-2{
     font-size: 45pt;
 }
-.display-4{
+.display-3{
     font-size: 40pt;
 }
-.display-5{
+.display-4{
     font-size: 35pt;
 }
-.display-6{
+.display-5{
     font-size: 30pt;
+}
+.display-6{
+    font-size: 25pt;
 }
 h1,.h1 {
     font-size: 33pt;
@@ -158,11 +160,11 @@ p,a{
     margin-bottom: 0.8rem;
 }
 .lead{
-    font-size: 23px;
+    font-size: 24px;
     font-weight: 300;
 }
 mark{
-    padding: 0.1rem;
+    padding: 0.25rem;
     background-color:var(--astra-highlight-bg);
 }
 del{
@@ -194,6 +196,9 @@ blockquote footer, .bq-footer{
     font-size: 1.25rem;
     color: var(--astra-grey-500);
 }
+ul{
+    list-style-type: circle;
+}
 /* BUTTONS */
 .primary-btn,
 .secondary-btn,
@@ -205,13 +210,16 @@ blockquote footer, .bq-footer{
     border: none;
     padding: 7px 15px;
     margin: 5px;
+    cursor: pointer;
+    transition: 0.2s linear;
 }
-
 .primary-btn {
     color: var(--astra-grey-100);
     background-color: var(--astra-blue-500);
 }
-
+.primary-btn:hover{
+    background-color: var(--astra-lightBlue-600);
+}
 .secondary-btn {
     color: var(--astra-blue-500);
     background-color: transparent;
@@ -316,7 +324,7 @@ pre{
     color: var(--astra-grey-700);
     line-height: 1.4rem;
 }
-.tag{
+pre.html .tag, pre.css .selector{
     color: var(--astra-orange-600);
     line-height: 1.4rem;
 }
@@ -324,8 +332,12 @@ pre{
     color: var(--astra-blue-600);
     line-height: 1.4rem;
 }
-.v{
+pre.html .value, pre.css .value{
     color: var(--astra-turquoise-600);
+    line-height: 1.4rem;
+}
+pre.css .var{
+    color: var(--astra-red-400);
     line-height: 1.4rem;
 }
 /* ROOTS */
@@ -1056,3 +1068,29 @@ pre{
     margin: 0 0 0 0.5rem;
 }
 /* SIDEBARS */
+/* SPACES */
+.space-10{
+    display: hidden;
+    height: 10px;
+    width: 100%;
+}
+.space-25 {
+    display: hidden;
+    height: 25px;
+    width: 100%;
+}
+.space-50 {
+    display: hidden;
+    height: 50px;
+    width: 100%;
+}
+.space-100 {
+    display: hidden;
+    height: 100px;
+    width: 100%;
+}
+.space-250 {
+    display: hidden;
+    height: 250px;
+    width: 100%;
+}

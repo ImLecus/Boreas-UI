@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astra, the CSS framework that makes it easier.</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra/astra.min.css" integrity="sha384-CwuBVASKFHrRN9a2Je8uZXvZVMNEd3kyTGFwSUb0Zsc1DtsL/dosqDuO0HnBG2On" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra/astra.min.css" integrity="sha384-CwuBVASKFHrRN9a2Je8uZXvZVMNEd3kyTGFwSUb0Zsc1DtsL/dosqDuO0HnBG2On" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="../astra.css">
     <link rel="icon" href="../astra.png">
 </head>
 <body>
@@ -30,6 +31,39 @@
                     <button class="primary-btn p-y-3 p-x-5 m-x-2 m-top-5 semi-b" onclick="window.location.href = `./docs/getting-started/introduction.html`">Get started</button>
                     <button class="secondary-btn p-y-3 p-x-5 m-x-2 m-top-5">Examples</button>
                 </div> 
+            </div>
+            <div class="space-250"></div>
+            <div class="flex-row wrap">
+                <div class="m-bottom-5">
+                    <div class="display-6 semi-b grey">Quick and easy to use</div>
+                    <p class="lead m-y-3 m-right-5">Astra was created for both experienced creators <br>and people without much knowledge of CSS. Therefore, <br>its structure is intuitive and quick to use and learn.</p>
+                </div>
+                <div class="m-x-5">
+                    <pre class="html">
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"display-6 semi-b grey"</span>&gt</span>
+    Quick and easy to use
+<span class="line">&lt/<span class="tag">div</span>&gt</span>
+<span class="line">&lt<span class="tag">p</span> <span class="atr">class</span>=<span class="value">"lead m-y-3"</span>&gt</span>
+    Astra was created for both experienced creators and people without
+    much knowledge of CSS.                   
+<span class="line">&lt/<span class="tag">p</span>&gt</span>
+                    </pre>
+                </div>
+            </div>
+            <div class="space-250"></div>
+            <div class="flex-row wrap">
+                <div class="m-bottom-5 m-right-5">
+                    <div class="display-6 semi-b grey">Fully customizable</div>
+                    <p class="lead m-top-5">Over 90 color variety is waiting for you, and all of them are customizable! <br>Unleash your most creative side and made beautifull websites with Astra.</p>
+                </div> 
+                    <pre class="css m-x-5">
+<span class="line"><span class="selector">body</span>{</span>
+    <span class="line"><span class="atr">background-color</span>: <span class="value">var</span>(<span class="var">--astra-grey-100</span>);</span>
+    <span class="line"><span class="atr">color</span>: <span class="value">var</span>(<span class="var">--astra-grey-800</span>);</span>
+    <span class="line"><span class="atr">font-family</span>: <span class="value">var</span>(<span class="var">--astra-body-font</span>);</span>
+<span class="line">}</span>
+                    </pre>
+
             </div>
         </div>   
     </main>
