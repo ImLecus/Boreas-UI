@@ -33,22 +33,68 @@
             <p><i>This is an italic paragraph</i></p>
             <p><u>This is an underlined paragraph</u></p>
             <p><del>This is a deleted paragraph</del></p>
+            <p><small>This is a small text</small></p>
         </div>
         <div class="m-y-4">
             <p>This is a <code>code</code> text</p>
             <p>This is a <mark>highlighted</mark> text</p>
+            <p>This is <sub>subscripted</sub> and this is <sup>superscripted</sup></p>
         </div>
         <div class="m-y-4">
            <blockquote>
                 <p>Make it easier</p>
                 <footer>- Someone who I don't know</footer>
             </blockquote>
+            <hr>
             <br>
             <ul>
-                <li>A</li>
-                <li>B</li>
-                <li>C</li>
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
             </ul>
+            <ol>
+                <li>List item 4</li>
+                <li>List item 5</li>
+                <li>List item 6</li>
+                <li class="unmarked">Unmarked list item</li>
+            </ol>
+        </div>
+        <div class="m-y-4 m-x-1 flex-row around">
+            <div class="m-left-5">
+                <div class="m-bottom-3">
+                   <label for="example_1">Name</label>
+                    <input type="text" id="example_1"> 
+                </div>
+                <div class="m-bottom-3">
+                    <label for="example_3">Select</label>
+                    <select id="example_3">
+                        <option selected>Select an option</option>
+                        <option>Option A</option>
+                        <option>Option B</option>
+                    </select>  
+                </div>
+                <div class="m-bottom-3">
+                    <fieldset>
+                       <input type="radio" id="example_5_1">
+                        <label for="example_5_1">Radio 1</label>
+
+                        <input type="radio" id="example_5_2">
+                        <label for="example_5_2">Radio 2</label> 
+                    </fieldset> 
+                </div>
+            </div>
+            <div class="m-right-5">
+                <div class="m-bottom-3">
+                    <label for="example_2">Password</label>
+                    <input type="password" id="example_2">
+                    <div class="input-footer">We'll not share this information with anyone else.</div>
+                </div>
+                <div class="m-bottom-3">
+                   <input type="checkbox" id="example_4">
+                    <label for="example_4">Checkbox</label> 
+                </div>
+                
+            </div>
         </div>
     </div>
     

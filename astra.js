@@ -1,6 +1,6 @@
-const copyToClipboard = (text) => {
+function copyToClipboard(text){
     navigator.clipboard.writeText(text);
 }
-const redirect = (href) => {
+function redirect(href){
     window.location.href = href;
 }
