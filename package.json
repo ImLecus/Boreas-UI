@@ -1,0 +1,19 @@
+{
+    "name":"astra",
+    "description": "The CSS framework that makes easier and faster to add styles.",
+    "version": "0.1-alpha",
+    "author": {
+        "name": "Marcos González",
+        "email": "marcosgf2005@gmail.com"
+    },
+    "keywords": [
+        "css",
+        "framework",
+        "responsive",
+        "front-end",
+        "pc-first",
+        "web"
+    ],
+    "main": "./dist/astra.js",
+    "style":"./dist/astra.css"
+}

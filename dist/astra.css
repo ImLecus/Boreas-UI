@@ -218,7 +218,7 @@ ol{
     display: block;
     border-radius: 5px;
     border: none;
-    padding: 7px 15px;
+    padding: 18px 30px;
     margin: 5px;
     cursor: pointer;
     transition: 0.2s linear;
@@ -235,16 +235,23 @@ ol{
     background-color: transparent;
     border: solid 1px var(--astra-blue-500);
 }
-
 .primary-btn-dark {
     color: var(--astra-grey-900);
     background-color: var(--astra-yellow-500);
 }
-
 .secondary-btn-dark {
     color: var(--astra-grey-100);
     border: solid 1px var(--astra-grey-100);
     background-color: transparent;
+}
+button.xs,button.s{
+    height: 40px;
+}
+button.m{
+    height: 48px;
+}
+button.l,button.xl{
+    height: 56px;
 }
 /* INPUTS */
 label{
