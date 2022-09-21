@@ -1,4 +1,4 @@
-button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}[type="file"] {height: auto !important;}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
 *,
 *::before,
 *::after {
@@ -210,10 +210,7 @@ ol{
     list-style-type: none;
 }
 /* BUTTONS */
-.primary-btn,
-.secondary-btn,
-.primary-btn-dark,
-.secondary-btn-dark {
+button, [type=button]{
     font-size: 15px;
     display: block;
     border-radius: 5px;
@@ -263,40 +260,105 @@ label{
     font-size: 14px;
     color: var(--astra-grey-700);
 }
-[type="text"],[type="password"],[type=search],select{
+/* Applying border and transition */
+.input,.select,.textarea{
     border-radius: 5px;
     padding-left: 10px;
     background-color: transparent;
     border: solid 1px var(--astra-grey-300);
-    min-width: 180px;
     width: 100%;
     height: 30px;
     transition: 0.1s linear;
     font-size: 15px;
 }
-[type="text"]:focus,[type="password"]:focus,[type=search]:focus,
-select:focus,[type="checkbox"]:focus,[type="radio"]:focus{
+.input:focus,
+.select:focus,
+.textarea:focus{
     border: solid 1px var(--astra-lightBlue-500);
     outline: solid 4px var(--astra-lightBlue-300);
 }
-[type="radio"]{
-    border-radius: 50%;
-}
-[type="checkbox"]{
+.input[type="radio"],
+.input[type="checkbox"]{
     height: 20px;
     width: 20px;
+    border: solid 1px var(--astra-grey-300);
+    border-radius: 50%;
 }
-[type="checkbox"] + label{
+.input[type="checkbox"] + label,
+.input[type="radio"]+label, 
+label .input[type="checkbox"], 
+label .input[type="radio"]{
     vertical-align: top;
-    padding-left: 0.5rem;
+    padding: 0 0.5rem 0 0.25rem;
 }
-[type="search"]{
+.input[type="search"]{
     height: 35px;
     padding-left: 15px;
     margin: 0 10px;
+    width: 200px !important;
 }
-input[type=search]::placeholder {
+.input[type="search"]::placeholder {
     font-size: 15px;
+}
+.input[type="color"]{
+    height: 35px;
+    width: 50px;
+    padding: 1px;
+}
+.input[type="time"]{
+    width: 100px;
+}
+.input[type="date"]{
+    width: 150px;
+}
+.input[type="datetime-local"]{
+    width: 180px;
+}
+.input[type="range"]:focus, 
+.input[type="range"]:hover{
+    outline: none;
+    border: none;
+    opacity: 1;
+}
+.input[type="range"]{
+    appearance: none;
+    border: none;
+    border-radius: 10px;
+    height: 0.5rem;
+    background-color: var(--astra-grey-300);
+    opacity: 0.7;
+}
+.input[type="range"]::-webkit-slider-thumb{
+    appearance: none;
+    opacity: 1;
+    background-color: var(--astra-blue-500);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.input[type="file"]::file-selector-button{
+    background-color: var(--astra-grey-400);
+    border: none;
+    border-right: 1px solid var(--astra-grey-600);
+    color: var(--astra-grey-100);
+    padding: 10px 20px;
+    border-radius: 5px 0 0 5px;
+    transform: translateX(-15px);
+    transition: 0.1s linear;
+    z-index: 1;
+}
+.input::file-selector-button:hover{
+    background-color: var(--astra-grey-500);
+}
+.input[type="file"]:focus, 
+.input[type="radio"]:focus{
+    outline: none;
+}
+textarea.input{
+    padding: 10px 15px;
+    resize: vertical;
+    overflow-y: hidden;
 }
 fieldset{
     outline: none;

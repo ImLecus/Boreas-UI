@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astra</title>
-    <link rel="stylesheet" href="../../astra.css">
+    <link rel="stylesheet" href="../../dist/astra.css">
     <link rel="icon" href="../astra.png">
 </head>
 <body>
@@ -45,7 +45,7 @@
                 <p>Make it easier</p>
                 <footer>- Someone who I don't know</footer>
             </blockquote>
-            <hr>
+            
             <br>
             <ul>
                 <li>List item 1</li>
@@ -58,43 +58,63 @@
                 <li>List item 6</li>
                 <li class="unmarked">Unmarked list item</li>
             </ol>
+            <hr>
         </div>
-        <div class="m-y-4 m-x-1 flex-row around">
-            <div class="m-left-5">
-                <div class="m-bottom-3">
-                   <label for="example_1">Name</label>
-                    <input type="text" id="example_1"> 
-                </div>
-                <div class="m-bottom-3">
-                    <label for="example_3">Select</label>
-                    <select id="example_3">
-                        <option selected>Select an option</option>
-                        <option>Option A</option>
-                        <option>Option B</option>
-                    </select>  
-                </div>
-                <div class="m-bottom-3">
-                    <fieldset>
-                       <input type="radio" id="example_5_1">
-                        <label for="example_5_1">Radio 1</label>
-
-                        <input type="radio" id="example_5_2">
-                        <label for="example_5_2">Radio 2</label> 
-                    </fieldset> 
-                </div>
+        <div class="m-y-4 m-x-1">
+            <h1>Inputs</h1>
+            <br>
+            <div class="m-y-2">
+                <label for="text">Name</label>
+                <input type="text" id="text" class="input"> 
             </div>
-            <div class="m-right-5">
-                <div class="m-bottom-3">
-                    <label for="example_2">Password</label>
-                    <input type="password" id="example_2">
-                    <div class="input-footer">We'll not share this information with anyone else.</div>
-                </div>
-                <div class="m-bottom-3">
-                   <input type="checkbox" id="example_4">
-                    <label for="example_4">Checkbox</label> 
-                </div>
-                
+            <div class="m-y-2">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="input"> 
+                <div class="input-footer">We will not share this information with anyone else.</div>
             </div>
+            <div class="m-y-2"></div>
+                <label for="mail">Email</label>
+                <input type="mail" id="mail" class="input"> 
+            <div class="m-y-2">
+                <input type="search" placeholder="Search..." class="input">
+            </div>
+            <div class="m-y-2">
+                <input type="number" placeholder="Pick a number..." class="input">
+            </div>
+            <div class="m-y-2">
+                <input type="color" class="input">
+            </div>
+            <div class="m-y-2">
+                <textarea class="input"></textarea>
+            </div>
+            <div class="m-y-2">
+                <input type="time" class="input">
+                <input type="date" class="input">
+                <input type="datetime-local" class="input">
+            </div>
+            <div class="m-y-2">
+                <input type="range" class="input">
+            </div>
+            <div class="m-y-2">
+               <input type="file" class="input">
+            </div>
+            <div class="m-y-2" class="input">
+                <label>
+                    <input type="checkbox" class="input"> Checkbox 1
+                </label><br>
+                <label>
+                    <input type="checkbox" class="input"> Checkbox 2
+                </label>
+            </div>
+            <div class="m-y-2">
+                <label>
+                    <input type="radio" name="radio" class="input"> Radio 1
+                </label><br>
+                <label>
+                    <input type="radio" name="radio" class="input"> Radio 2
+                </label>
+            </div>
+            <div class="m-y-2"></div>
         </div>
     </div>
     
