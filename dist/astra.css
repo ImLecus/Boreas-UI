@@ -220,35 +220,17 @@ button, [type=button]{
     cursor: pointer;
     transition: 0.2s linear;
 }
-.primary-btn {
+.primary-btn, .input[type="submit"]{
     color: var(--astra-grey-100);
     background-color: var(--astra-blue-500);
 }
-.primary-btn:hover{
+.primary-btn:hover, .input[type="submit"]:hover{
     background-color: var(--astra-lightBlue-600);
 }
 .secondary-btn {
     color: var(--astra-blue-500);
     background-color: transparent;
     border: solid 1px var(--astra-blue-500);
-}
-.primary-btn-dark {
-    color: var(--astra-grey-900);
-    background-color: var(--astra-yellow-500);
-}
-.secondary-btn-dark {
-    color: var(--astra-grey-100);
-    border: solid 1px var(--astra-grey-100);
-    background-color: transparent;
-}
-button.xs,button.s{
-    height: 40px;
-}
-button.m{
-    height: 48px;
-}
-button.l,button.xl{
-    height: 56px;
 }
 /* INPUTS */
 label{
@@ -338,7 +320,7 @@ label .input[type="radio"]{
     cursor: pointer;
 }
 .input[type="file"]::file-selector-button{
-    background-color: var(--astra-grey-400);
+    background-color: var(--astra-blue-500);
     border: none;
     border-right: 1px solid var(--astra-grey-600);
     color: var(--astra-grey-100);
@@ -349,7 +331,7 @@ label .input[type="radio"]{
     z-index: 1;
 }
 .input::file-selector-button:hover{
-    background-color: var(--astra-grey-500);
+    background-color: var(--astra-blue-600);
 }
 .input[type="file"]:focus, 
 .input[type="radio"]:focus{
@@ -363,6 +345,18 @@ textarea.input{
 fieldset{
     outline: none;
     border: none;
+}
+.input:disabled{
+    background-color: #e3e3e3;
+}
+.input[type="range"]:disabled:focus, .input[type="range"]:disabled:hover{
+    opacity: 0.7;
+}
+.input[type="file"]:disabled::file-selector-button {
+    background-color: var(--astra-grey-500);
+}
+.input[type="file"]:disabled::file-selector-button:hover{
+    background-color: var(--astra-grey-500);
 }
 /* CODE */
 code{
@@ -774,6 +768,39 @@ pre.css .var{
     padding-top: auto;
     padding-bottom: auto;
 }
+/* SIZING */
+button.xs,button.s {
+    height: 40px;
+}
+button.m {
+    height: 48px;
+}
+button.l,button.xl {
+    height: 56px;
+}
+.input.xs,.input.s{
+    height: 25px;
+}
+.input.m{
+    height: 30px;
+}
+.input.l,.input.xl{
+    height: 40px;
+}
+.input[type="range"].xs, .input[type="range"].s{
+    height: 5px;
+}
+.input[type="range"].xs::-webkit-slider-thumb, .input[type="range"].s::-webkit-slider-thumb{
+    height: 12px;
+    width: 12px;
+}
+.input[type="range"].xl, .input[type="range"].l{
+    height: 12px;
+}
+.input[type="range"].xl::-webkit-slider-thumb, .input[type="range"].l::-webkit-slider-thumb{
+    height: 20px;
+    width: 20px;
+}
 /* BG COLORS */
 .bg-red-100{
     background-color: var(--astra-red-100);
@@ -1125,27 +1152,27 @@ pre.css .var{
 }
 /* SIDEBARS */
 /* SPACES */
-.space-10{
+.space-10, .space-xs{
     display: hidden;
     height: 10px;
     width: 100%;
 }
-.space-25 {
+.space-25, .space-s {
     display: hidden;
     height: 25px;
     width: 100%;
 }
-.space-50 {
+.space-50, .space-m {
     display: hidden;
     height: 50px;
     width: 100%;
 }
-.space-100 {
+.space-100, .space-l {
     display: hidden;
     height: 100px;
     width: 100%;
 }
-.space-250 {
+.space-250, .space-xl {
     display: hidden;
     height: 250px;
     width: 100%;
