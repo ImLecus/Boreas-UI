@@ -209,6 +209,14 @@ ol{
 .unmarked{
     list-style-type: none;
 }
+.badge {
+    padding: 3px 0.5em;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: var(--astra-blue-500);
+    color: var(--astra-grey-100);
+}
 /* BUTTONS */
 button, [type=button]{
     font-size: 15px;
@@ -1156,7 +1164,6 @@ button.l,button.xl {
 .name, .brand{
     margin: 0 0 0 0.5rem;
 }
-/* SIDEBARS */
 /* SPACES */
 .space-10, .space-xs{
     display: hidden;

@@ -18,7 +18,7 @@ To start creating we need a `html` file. Additionally, Astra needs Astra needs `
 ```
 
 ##### 2. Adding Astra
-To use Astra in your project, you need to use the `link` tag as the example of below:
+To use Astra in your project, you need to use the `link` tag for the CSS and the `script` tag for the JavaScript as the example of below:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -26,10 +26,11 @@ To use Astra in your project, you need to use the `link` tag as the example of b
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Astra Initial File</title>
-        <link rel="stylesheet" href="...">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.2-alpha/dist/astra.min.css">
     </head>
     <body>
         <h1>Hello world!</h1>
+        <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.2-alpha/dist/astra.min.js"></script>
     </body>
 </html>
 ```
