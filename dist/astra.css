@@ -93,7 +93,7 @@ button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=
     --astra-pink-800: #72082a;
     --astra-pink-900: #370414;
     --astra-grey-100: #f5f5f5;
-    --astra-grey-200: #cecbcb;
+    --astra-grey-200: #e0e0e0;
     --astra-grey-300: #b8b8b8;
     --astra-grey-400: #b0b0b0;
     --astra-grey-500: #7c7c7c;
@@ -319,7 +319,9 @@ label .input[type="radio"]{
     border-radius: 50%;
     cursor: pointer;
 }
-.input[type="file"]::file-selector-button{
+.input[type="file"]::file-selector-button, 
+.input[type="file"]::-webkit-file-upload-button
+{
     background-color: var(--astra-blue-500);
     border: none;
     border-right: 1px solid var(--astra-grey-600);
@@ -330,7 +332,8 @@ label .input[type="radio"]{
     transition: 0.1s linear;
     z-index: 1;
 }
-.input::file-selector-button:hover{
+.input::file-selector-button:hover,
+.input[type="file"]::-webkit-file-upload-button:hover{
     background-color: var(--astra-blue-600);
 }
 .input[type="file"]:focus, 
@@ -347,7 +350,7 @@ fieldset{
     border: none;
 }
 .input:disabled{
-    background-color: #e3e3e3;
+    background-color: var(--astra-grey-200);
 }
 .input[type="range"]:disabled:focus, .input[type="range"]:disabled:hover{
     opacity: 0.7;
@@ -1176,4 +1179,23 @@ button.l,button.xl {
     display: hidden;
     height: 250px;
     width: 100%;
+}
+/* TABLES */
+.table, .table-striped{
+    width: 100%;
+    border-spacing: 0;
+}
+.table *, .table-striped *{
+    padding: 10px 2px;
+    outline: none;
+    border: none;
+}
+.table>*>tr>th, .table-striped>*>tr>th{
+    border-bottom: 1px solid var(--astra-grey-300);
+}
+.table-striped{
+    background-color: var(--astra-grey-200);
+}
+.table-striped>tbody>tr:nth-of-type(odd)>*{
+    background-color: var(--astra-grey-100);
 }
