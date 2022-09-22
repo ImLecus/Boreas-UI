@@ -332,7 +332,7 @@ label .input[type="radio"]{
     transition: 0.1s linear;
     z-index: 1;
 }
-.input::file-selector-button:hover,
+.input[type="file"]::file-selector-button:hover,
 .input[type="file"]::-webkit-file-upload-button:hover{
     background-color: var(--astra-blue-600);
 }
@@ -355,10 +355,13 @@ fieldset{
 .input[type="range"]:disabled:focus, .input[type="range"]:disabled:hover{
     opacity: 0.7;
 }
-.input[type="file"]:disabled::file-selector-button {
+.input[type="file"]:disabled::file-selector-button,
+.input[type="file"]:disabled::-webkit-file-upload-button
+ {
     background-color: var(--astra-grey-500);
 }
-.input[type="file"]:disabled::file-selector-button:hover{
+.input[type="file"]:disabled::file-selector-button:hover,
+.input[type="file"]:disabled::-webkit-file-upload-button:hover{
     background-color: var(--astra-grey-500);
 }
 /* CODE */
@@ -1181,21 +1184,57 @@ button.l,button.xl {
     width: 100%;
 }
 /* TABLES */
-.table, .table-striped{
+.table{
     width: 100%;
     border-spacing: 0;
 }
-.table *, .table-striped *{
+.table *{
     padding: 10px 2px;
     outline: none;
     border: none;
 }
-.table>*>tr>th, .table-striped>*>tr>th{
+.table.striped>*>tr>th{
     border-bottom: 1px solid var(--astra-grey-300);
-}
-.table-striped{
     background-color: var(--astra-grey-200);
 }
-.table-striped>tbody>tr:nth-of-type(odd)>*{
+.table.striped>tbody>tr:nth-of-type(odd)>*{
     background-color: var(--astra-grey-100);
+}
+.table>tbody>tr>th{
+    font-weight: 400;    
+}
+.table>tbody>tr>:nth-child(1){
+    font-weight: bold;
+    width: 40px;
+}
+.table.dark{
+    background-color: var(--astra-grey-900);
+    color: var(--astra-grey-100);
+}
+.table.striped.dark{
+    background-color: var(--astra-grey-900);
+    color: var(--astra-grey-100);
+}
+.table.striped.dark>*>tr>th {
+    border-bottom: 1px solid var(--astra-grey-700);
+    background-color: var(--astra-grey-900);
+}
+.table.striped.dark>tbody>tr:nth-of-type(odd)>* {
+    background-color: var(--astra-grey-800);
+}
+.table.border{
+    border-top: 1px solid var(--astra-grey-300);
+    border-left: 1px solid var(--astra-grey-300);
+}
+.table.border>*>tr>th{
+    border-right: 1px solid var(--astra-grey-300);
+    border-bottom: 1px solid var(--astra-grey-300);
+}
+.table.dark.border{
+    border-top: 1px solid var(--astra-grey-600);
+    border-left: 1px solid var(--astra-grey-600);
+}
+.table.dark.border>*>tr>th {
+    border-right: 1px solid var(--astra-grey-600);
+    border-bottom: 1px solid var(--astra-grey-600);
 }
