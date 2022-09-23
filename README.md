@@ -9,8 +9,8 @@ To add Astra to your project you will need to add this CDN links:
 
 |CSS|
 |--|
-|https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.1-alpha/astra.min.css|
+|https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.2-alpha/dist/astra.min.css|
 
 |JavaScript|
 |--|
-|https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.1-alpha/astra.min.js|
+|https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.2-alpha/dist/astra.min.js|
