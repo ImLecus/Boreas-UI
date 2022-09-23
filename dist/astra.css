@@ -1245,3 +1245,64 @@ button.l,button.xl {
     border-right: 1px solid var(--astra-grey-600);
     border-bottom: 1px solid var(--astra-grey-600);
 }
+/* ALERTS */
+.alert{
+    width: 100%;
+    background-color: var(--astra-grey-200);
+    border: 1px solid var(--astra-grey-400);
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--astra-grey-700);
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.alert button.close{
+    width: 15px;
+    height: 15px;
+    margin: 0 0 0 auto;
+    background-color: transparent;
+    vertical-align: baseline;
+    padding: 0 10px 0 0;
+    opacity: 1;
+}
+.alert.red{
+    background-color: var(--astra-red-200);
+    color: var(--astra-red-700) !important;
+    border-color: var(--astra-red-300) !important;
+}
+.alert.orange{
+    background-color: var(--astra-orange-200);
+    color: var(--astra-orange-700) !important;
+    border-color: var(--astra-orange-500) !important;
+}
+.alert.yellow{
+    background-color: var(--astra-yellow-200);
+    color: var(--astra-yellow-800) !important;
+    border-color: var(--astra-yellow-500) !important;
+}
+.alert.green{
+    background-color: var(--astra-green-200);
+    color: var(--astra-green-800) !important;
+    border-color: var(--astra-green-500) !important;
+}
+.alert.turquoise{
+    background-color: var(--astra-turquoise-200);
+    color: var(--astra-turquoise-800) !important;
+    border-color: var(--astra-turquoise-500) !important;
+}
+.alert.blue{
+    background-color: var(--astra-blue-200);
+    color: var(--astra-blue-800) !important;
+    border-color: var(--astra-blue-500) !important;
+}
+.alert.violet {
+    background-color: var(--astra-violet-200);
+    color: var(--astra-violet-800) !important;
+    border-color: var(--astra-violet-500) !important;
+}
+.alert.pink {
+    background-color: var(--astra-pink-200);
+    color: var(--astra-pink-800) !important;
+    border-color: var(--astra-pink-500) !important;
+}
