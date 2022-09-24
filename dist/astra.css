@@ -1266,6 +1266,9 @@ button.l,button.xl {
     padding: 0 10px 0 0;
     opacity: 1;
 }
+button.close{
+    background-image: url("../site/assets/icons/close.svg");
+}
 .alert.red{
     background-color: var(--astra-red-200);
     color: var(--astra-red-700) !important;
