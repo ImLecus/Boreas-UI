@@ -310,7 +310,7 @@ label .input[type="radio"]{
 .input[type="datetime-local"], .input[type="week"]{
     width: 180px;
 }
-.input[type="range"]:focus, 
+.input[type="range"]:focus,
 .input[type="range"]:hover{
     outline: none;
     border: none;

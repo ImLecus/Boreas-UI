@@ -17,7 +17,7 @@ To use Astra in your project you will need to copy this 2 **CDN links** in your 
   <!-- Put this script tag inside the body tags -->
   <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.2-alpha/dist/astra.min.js" integrity="sha384-NFw+OaI+L8PuYik5+dCYWiQqf49X5rZsLx4/4YpXQGQD9DOm/+7XccKQKHJHxiDD" crossorigin="anonymous"></script>
 ```
-If you are new using Astra, read the [documentation] to learn how to use this framework.
+If you are new using Astra, read the [documentation](https://github.com/ImLecus/Astra/docs) to learn how to use this framework.
 
 ## Documentation
 
