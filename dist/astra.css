@@ -278,7 +278,6 @@ label{
     height: 20px;
     width: 20px;
     border: solid 1px var(--astra-grey-300);
-    border-radius: 50%;
 }
 .input[type="checkbox"] + label,
 .input[type="radio"]+label, 
@@ -308,7 +307,7 @@ label .input[type="radio"]{
     width: 150px;
 }
 .input[type="datetime-local"], .input[type="week"]{
-    width: 180px;
+    width: 200px;
 }
 .input[type="range"]:focus,
 .input[type="range"]:hover{
@@ -1313,4 +1312,30 @@ button.close{
     background-color: var(--astra-pink-200);
     color: var(--astra-pink-800) !important;
     border-color: var(--astra-pink-500) !important;
+}
+/* INPUT VALIDATION */
+.input.valid{
+    border-color: var(--astra-turquoise-600) !important;
+    background-image: url("../site/assets/icons/valid.svg");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+}
+.input.valid:focus{
+    outline-color: var(--astra-turquoise-200) !important;
+}
+.input.invalid{
+    border-color: var(--astra-red-600) !important;
+}
+.input.invalid:focus{
+    outline-color: var(--astra-red-200) !important;
+}
+.input.validation{
+    background-position: right calc(.375em + .1875rem) center;
+}
+.input[type="date"].validation, 
+.input[type="datetime-local"].validation,
+.input[type="time"].validation,
+.input[type="week"].validation
+{
+    background-position: right calc(1em + .1875rem) center;
 }
