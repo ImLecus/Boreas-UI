@@ -223,6 +223,19 @@ ol{
     background-color: var(--astra-blue-500);
     color: var(--astra-grey-100);
 }
+/* DISPLAYS */
+.inline{
+    display: inline;
+}
+.block{
+    display: block;
+}
+.inlineBlock{
+    display: inline-block;
+}
+.inlineFlex{
+    display: inline-flex;
+}
 /* BUTTONS */
 button, [type=button]{
     font-size: 15px;
@@ -1338,4 +1351,20 @@ button.close{
 .input[type="week"].validation
 {
     background-position: right calc(1em + .1875rem) center;
+}
+/* INPUT GROUPS */
+.inputGroup{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+.inputGroup>:first-child.inputGroupText{
+    background-color: var(--astra-grey-500);
+    border-radius: 5px 0 0 5px;
+    color: var(--astra-grey-100);
+    align-self: center;
+    padding: auto 0;
+}
+.inputGroup>:last-child {
+    border-radius: 0 5px 5px 0;
 }
