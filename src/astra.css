@@ -237,12 +237,12 @@ ol{
     display: inline-flex;
 }
 /* BUTTONS */
-button, [type=button]{
+button, [type="button"],.input[type="submit"]{
     font-size: 15px;
     display: block;
     border-radius: 5px;
     border: none;
-    padding: 18px 30px;
+    padding: 12px 20px;
     margin: 5px;
     cursor: pointer;
     transition: 0.2s linear;
@@ -253,6 +253,9 @@ button, [type=button]{
 }
 .input[type="submit"]:hover, .primaryBtn:hover{
     background-color: var(--astra-lightBlue-600);
+}
+.input[type="submit"]{
+    padding: 5px 10px;
 }
 .secondaryBtn {
     color: var(--astra-blue-500);
