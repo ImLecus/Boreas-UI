@@ -1358,15 +1358,14 @@ button.close{
 /* INPUT GROUPS */
 .inputGroup{
     display: flex;
-    align-items: stretch;
     width: 100%;
 }
 .inputGroup>:first-child.inputGroupText{
-    background-color: var(--astra-grey-500);
+    background-color: var(--astra-grey-600);
     border-radius: 5px 0 0 5px;
     color: var(--astra-grey-100);
-    align-self: center;
-    padding: auto 0;
+    padding: 5px 10px;
+    border-color: var(--astra-grey-800);
 }
 .inputGroup>:last-child {
     border-radius: 0 5px 5px 0;

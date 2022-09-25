@@ -1,0 +1,14 @@
+@mixin flex($direction: row){
+    display: flex;
+    flex-direction: $direction;
+}
+@mixin centerX{
+    justify-self: center;
+}
+@mixin centerY{
+    align-self: center;
+}
+@mixin center{
+    @include centerX();
+    @include centerY();
+}
