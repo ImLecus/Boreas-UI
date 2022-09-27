@@ -1290,7 +1290,7 @@ button.l,button.xl {
     opacity: 1;
 }
 button.close{
-    background-image: url("https: //cdn.jsdelivr.net/gh/ImLecus/Astra/icons/close.svg");
+    background-image: url("https://cdn.jsdelivr.net/gh/ImLecus/Astra/icons/close.svg");
 }
 .alert.red{
     background-color: var(--astra-red-200);
