@@ -1185,7 +1185,7 @@ button.l,button.xl {
     margin: 0 0 0 0.5rem;
 }
 .navbarToggler{
-    background-image: url("https://github.com/ImLecus/Astra/blob/main/site/assets/icons/toggler.svg");
+    background-image: url("https: //cdn.jsdelivr.net/gh/ImLecus/Astra/icons/toggler.svg");
 }
 /* SPACES */
 .space-10, .spaceXS{
@@ -1290,7 +1290,7 @@ button.l,button.xl {
     opacity: 1;
 }
 button.close{
-    background-image: url("https://github.com/ImLecus/Astra/blob/main/site/assets/icons/close.svg");
+    background-image: url("https: //cdn.jsdelivr.net/gh/ImLecus/Astra/icons/close.svg");
 }
 .alert.red{
     background-color: var(--astra-red-200);
@@ -1335,7 +1335,7 @@ button.close{
 /* INPUT VALIDATION */
 .input.valid{
     border-color: var(--astra-turquoise-600) !important;
-    background-image: url("https://github.com/ImLecus/Astra/blob/main/site/assets/icons/valid.svg");
+    background-image: url("https://cdn.jsdelivr.net/gh/ImLecus/Astra/icons/valid.svg");
     background-repeat: no-repeat;
     background-position: right calc(.375em + .1875rem) center;
 }

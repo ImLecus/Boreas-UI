@@ -1,10 +1,18 @@
-function copyToClipboard(text){
+const copyToClipboard = text => {
     navigator.clipboard.writeText(text);
 }
-function redirect(href){
+const redirect = href => {
     window.location.href = href;
 }
-
+const getPosition = element => {
+    return new Vector2(element.getBoundingClientRect().x,element.getBoundingClientRect().y);
+}
+class Vector2{
+    constructor(x,y){
+        this.x = x;
+        this.y = y;
+    }
+}
 Array.from(document.getElementsByClassName("close")).forEach(button =>  {
     button.addEventListener("click", () => {
         setInterval(function(){
