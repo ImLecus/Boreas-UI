@@ -13,6 +13,7 @@ class Vector2{
         this.y = y;
     }
 }
+//Close button
 Array.from(document.getElementsByClassName("close")).forEach(button =>  {
     button.addEventListener("click", () => {
         setInterval(function(){
@@ -23,6 +24,8 @@ Array.from(document.getElementsByClassName("close")).forEach(button =>  {
         },50);
     });
 });
+
+//Input validation
 Array.from(document.getElementsByClassName("validation")).forEach(e =>  {
     e.addEventListener("input", () => {
         let isValid = false;
@@ -57,12 +60,16 @@ Array.from(document.getElementsByClassName("validation")).forEach(e =>  {
         }
     }); 
 });
+
+//Gradient function
 const Gradient = (mode,color1,color2,rotation = "") => {
     if(mode == "radial"){ rotation = "" }
     if(color1.toString().includes("--astra")){ color1 = `var(${color1})` }
     if(color2.toString().includes("--astra")){ color2 = `var(${color2})` }
     return(`${(mode == "linear")? "linear-gradient(" : "radial-gradient("}${(rotation == "")? "": rotation+","}${color1},${color2})`)
 };
+
+//Applying CSS to the colour classes
 Array.from(document.querySelectorAll("*")).forEach(e => {
     if(e.getAttribute("class") != null){
         if(e.getAttribute("class").toString().includes("gradient(")){
@@ -73,20 +80,22 @@ Array.from(document.querySelectorAll("*")).forEach(e => {
                     let attributes = c.split(",")
                     e.style.background = Gradient(attributes[0],attributes[1],attributes[2],attributes[3]);
                 }
-            })
+            });
         }
-        else if(e.getAttribute("class").toString().includes("bg-")){
+        else if(e.getAttribute("class").toString().includes("bg(")){
             e.getAttribute("class").toString().split(" ").forEach(c => {
-                if(c.includes("bg-")){
-                    c = c.replace("bg-","")
-                    if(c.includes("#")){
-                        e.style.backgroundColor = c
+                if(c.includes("bg(")){
+                    c = c.replace("bg(","")
+                    c = c.replace(")","")
+                    console.log(c)
+                    if(c.startsWith("--")){
+                        e.style.backgroundColor = "var(" + c + ")"
                     }
                     else{
-                        e.style.backgroundColor = "var(--astra-" + c
+                       e.style.backgroundColor = c
                     }
                 }
-            })
+            });
         }
     }
 });

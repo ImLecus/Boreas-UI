@@ -176,10 +176,10 @@ mark{
 del{
     text-decoration: line-through;
 }
-b,strong,.b{
+b,strong,.b, .bold{
     font-weight: bold !important;
 }
-.semi-b{
+.semiBold{
     font-weight: 600 !important;
 }
 i,em,.i{
@@ -914,7 +914,7 @@ button.l,button.xl {
     margin: 0 0 0 0.5rem;
 }
 .navbarToggler{
-    background-image: url("https: //cdn.jsdelivr.net/gh/ImLecus/Astra/icons/toggler.svg");
+    background-image: url("https: //cdn.jsdelivr.net/gh/ImLecus/Astra/icons/dark/toggler.svg");
 }
 /* SPACES */
 .space-10, .spaceXS{
@@ -1019,7 +1019,7 @@ button.l,button.xl {
     opacity: 1;
 }
 button.close{
-    background-image: url("https://cdn.jsdelivr.net/gh/ImLecus/Astra/icons/close.svg");
+    background-image: url("https://cdn.jsdelivr.net/gh/ImLecus/Astra/icons/dark/close.svg");
 }
 .alert.red{
     background-color: var(--astra-red-200);

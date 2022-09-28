@@ -5,58 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astra, the CSS framework that makes it easier.</title>
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra/astra.min.css" integrity="sha384-CwuBVASKFHrRN9a2Je8uZXvZVMNEd3kyTGFwSUb0Zsc1DtsL/dosqDuO0HnBG2On" crossorigin="anonymous">-->
-    <link rel="stylesheet" href="../dist/astra.css">
-    <link rel="icon" href="../astra.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra/src/astra.min.css">
+    <link rel="icon" href="./assets/images/logo.png">
 </head>
 <body>
-    <div class="header root-full bg-blue-400 sticky-top">
-        <div class="root flex-row center-y p-y-2 wrap">
-            <div class="flex-row nowrap align-left center-y">
-                <img class="brand" width="50" height="50" src="/astra-css-white.png"/>
-                <div class="navbar m-left-5">
-                    <a href="#" class="navbar-link white b">Home</a>
-                    <a href="./docs/getting-started/introduction.html" class="navbar-link white">Docs</a>
-                    <a href="#" class="navbar-link white">Examples</a>
+    <div class="header rootFull stickyTop gradient(linear,#499eef,#4b32a5,90deg)">
+        <div class="root flex centerY paddingY-2 wrap">
+            <div class="flex noWrap alignLeft centerY">
+                <img class="brand" width="50" height="50" src="./assets/images/logoWhite.png"/>
+                <div class="navbar marginLeft-5">
+                    <a href="#" class="navbarLink white b">Home</a>
+                    <a href="./docs/getting-started/introduction.html" class="navbarLink white">Docs</a>
+                    <a href="#" class="navbarLink white">Examples</a>
                 </div>
             </div>     
         </div>
     </div>
     <main>
-        <div class="root m-top-5">
-            <div class="text-center center-x flex-column">
-                <img src="../astra.png" width="300" class="m-y-5 m-x-auto">
-                <div class="display-5 semi-b grey m-x-5">Astra, the CSS framework that makes<br>easier and faster to write CSS.</div>
-                <div class="flex-row center">
-                    <button class="primary-btn m-x-2 m-top-5 semi-b" onclick="window.location.href = `./docs/getting-started/introduction.html`">Get started</button>
-                    <button class="secondary-btn m-x-2 m-top-5">Examples</button>
+        <div class="root mTop-5">
+            <div class="textCenter centerX flexColumn">
+                <img src="./assets/images/logo.png" width="300" class="marginY-5 marginX-auto">
+                <div class="display-5 semi-b grey marginX-5">Astra, the CSS framework that makes<br>easier and faster to write CSS.</div>
+                <div class="flex center">
+                    <button class="primaryBtn marginX-2 marginTop-5 semi-b" onclick="window.location.href = `./docs/getting-started/introduction.html`">Get started</button>
+                    <button class="secondaryBtn marginX-2 marginTop-5">Examples</button>
                 </div> 
             </div>
-            <div class="space-250"></div>
-            <div class="flex-row wrap">
-                <div class="m-bottom-5">
-                    <div class="display-6 semi-b grey">Quick and easy to use</div>
-                    <p class="lead m-y-3 m-right-5">Astra was created for both experienced creators <br>and people without much knowledge of CSS. Therefore, <br>its structure is intuitive and quick to use and learn.</p>
+            <div class="spaceXL"></div>
+            <div class="flex wrap">
+                <div class="marginBottom-5">
+                    <div class="display-6 semiBold grey">Quick and easy to use</div>
+                    <p class="lead marginY-3 marginRight-5">Astra was created for both experienced creators <br>and people without much knowledge of CSS. Therefore, <br>its structure is intuitive and quick to use and learn.</p>
                 </div>
-                <div class="m-x-5">
+                <div class="marginX-5">
                     <pre class="html">
-<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"display-6 semi-b grey"</span>&gt</span>
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"display-6 semiBold grey"</span>&gt</span>
     Quick and easy to use
 <span class="line">&lt/<span class="tag">div</span>&gt</span>
-<span class="line">&lt<span class="tag">p</span> <span class="atr">class</span>=<span class="value">"lead m-y-3"</span>&gt</span>
+<span class="line">&lt<span class="tag">p</span> <span class="atr">class</span>=<span class="value">"lead marginY-3"</span>&gt</span>
     Astra was created for both experienced creators and people without
     much knowledge of CSS.                   
 <span class="line">&lt/<span class="tag">p</span>&gt</span>
                     </pre>
                 </div>
             </div>
-            <div class="space-250"></div>
-            <div class="flex-row wrap">
-                <div class="m-bottom-5 m-right-5">
+            <div class="spaceXL"></div>
+            <div class="flex wrap">
+                <div class="marginBottom-5 marginRight-5">
                     <div class="display-6 semi-b grey">Fully customizable</div>
-                    <p class="lead m-top-5">Over 90 color variety is waiting for you, and all of them are customizable! <br>Unleash your most creative side and made beautifull websites with Astra.</p>
+                    <p class="lead marginTop-5">Over 90 color variety is waiting for you, and all of them are customizable! <br>Unleash your most creative side and made beautifull websites with Astra.</p>
                 </div> 
-                    <pre class="css m-x-5">
+                    <pre class="css marginX-5">
 <span class="line"><span class="selector">body</span>{</span>
     <span class="line"><span class="atr">background-color</span>: <span class="value">var</span>(<span class="var">--astra-grey-100</span>);</span>
     <span class="line"><span class="atr">color</span>: <span class="value">var</span>(<span class="var">--astra-grey-800</span>);</span>
@@ -67,6 +66,6 @@
             </div>
         </div>   
     </main>
-    <script src="../astra.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra/src/astra.min.js"></script>
 </body>
 </html>
