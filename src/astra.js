@@ -57,6 +57,23 @@ Array.from(document.getElementsByClassName("validation")).forEach(e =>  {
         }
     }); 
 });
-
-
+const Gradient = (mode,color1,color2,rotation = "") => {
+    if(mode == "radial"){ rotation = "" }
+    if(color1.toString().includes("--astra")){ color1 = `var(${color1})` }
+    if(color2.toString().includes("--astra")){ color2 = `var(${color2})` }
+    console.log(`${(mode == "linear")? "linear-gradient(" : "radial-gradient("}${(rotation == "")? "": rotation+","}${color1},${color2})`)
+    return(`${(mode == "linear")? "linear-gradient(" : "radial-gradient("}${(rotation == "")? "": rotation+","}${color1},${color2})`)
+};
+Array.from(document.querySelectorAll("*")).forEach(e => {
+    if(e.getAttribute("class") != null && e.getAttribute("class").toString().includes("gradient(")){
+        e.getAttribute("class").toString().split(" ").forEach(c => {
+            if(c.includes("gradient(")){
+                c = c.replace("gradient(","")
+                c = c.replace(")","")
+                let attributes = c.split(",")
+                e.style.background = Gradient(attributes[0],attributes[1],attributes[2],attributes[3]);
+            }
+        })
+    }
+});
 
