@@ -64,39 +64,34 @@ Array.from(document.getElementsByClassName("validation")).forEach(e =>  {
 //Gradient function
 const Gradient = (mode,color1,color2,rotation = "") => {
     if(mode == "radial"){ rotation = "" }
-    if(color1.toString().includes("--astra")){ color1 = `var(${color1})` }
-    if(color2.toString().includes("--astra")){ color2 = `var(${color2})` }
+    if(color1.toString().startsWith("--")){ color1 = `var(${color1})` }
+    if(color2.toString().startsWith("--")){ color2 = `var(${color2})` }
     return(`${(mode == "linear")? "linear-gradient(" : "radial-gradient("}${(rotation == "")? "": rotation+","}${color1},${color2})`)
 };
-
+const BackgroundColor = (color) => {
+    return(`${(color.startsWith("--"))? "var(" + color + ")": color}`)
+}
+const parseFunctionClass = (element,name) => {
+    element = element.replace(name,"");
+    element = element.replace("(","");
+    element = element.replace(")","");
+    return element;
+}
 //Applying CSS to the colour classes
 Array.from(document.querySelectorAll("*")).forEach(e => {
-    if(e.getAttribute("class") != null){
-        if(e.getAttribute("class").toString().includes("gradient(")){
-            e.getAttribute("class").toString().split(" ").forEach(c => {
-                if(c.includes("gradient(")){
-                    c = c.replace("gradient(","")
-                    c = c.replace(")","")
-                    let attributes = c.split(",")
-                    e.style.background = Gradient(attributes[0],attributes[1],attributes[2],attributes[3]);
-                }
-            });
-        }
-        else if(e.getAttribute("class").toString().includes("bg(")){
-            e.getAttribute("class").toString().split(" ").forEach(c => {
-                if(c.includes("bg(")){
-                    c = c.replace("bg(","")
-                    c = c.replace(")","")
-                    console.log(c)
-                    if(c.startsWith("--")){
-                        e.style.backgroundColor = "var(" + c + ")"
-                    }
-                    else{
-                       e.style.backgroundColor = c
-                    }
-                }
-            });
-        }
+    let c = e.getAttribute("class");
+    if(c != null){
+        c = c.toString();
+        c.split(" ").forEach(groupElement => {
+            if(groupElement.startsWith("gradient")){
+                groupElement = parseFunctionClass(groupElement,"gradient");
+                let attributes = groupElement.split(",");
+                e.style.background = Gradient(attributes[0],attributes[1],attributes[2],attributes[3]);
+            }
+            else if(groupElement.startsWith("bg")){
+                groupElement = parseFunctionClass(groupElement,"bg");
+                e.style.backgroundColor = BackgroundColor(groupElement);
+            }
+        });
     }
 });
-
