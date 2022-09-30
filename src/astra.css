@@ -165,6 +165,14 @@ p,a{
     font-size: 16px;
     margin-bottom: 0.8rem;
 }
+a{
+    cursor: pointer;
+    color: var(--astra-blue-500);
+    transition: 0.5s linear;
+}
+a:hover{
+    color: var(--astra-lightBlue-600);
+}
 .lead{
     font-size: 24px;
     font-weight: 300;
@@ -525,6 +533,47 @@ pre.css .var{
 .noWrap{
     flex-wrap: nowrap;
 }
+/* GRID */
+.grid, .grid-2, .grid-3, .grid-4, .grid-5,.grid-6,.grid-7,.grid-8,.grid-9,.grid-10{
+    display: grid;
+    gap: 5px;
+}
+.grid-2{
+    grid-template-columns: 50%;
+}
+.grid-3 {
+    grid-template-columns: 33%;
+}
+.grid-4 {
+    grid-template-columns: 25%;
+}
+.grid-5 {
+    grid-template-columns: 20%;
+}
+.grid-6 {
+    grid-template-columns: 6;
+}
+.grid-7 {
+    grid-template-columns: 7;
+}
+.grid-8 {
+    grid-template-columns: 8;
+}
+.grid-9 {
+    grid-template-columns: 9;
+}
+.grid-10 {
+    grid-template-columns: 10%;
+}
+.overflow{
+    overflow: auto;
+}
+.overflowX{
+    overflow-x: auto;
+}
+.overflowY{
+    overflow-y: auto;
+}
 /* MARGIN & PADDING */
 .margin-1 {
     margin: var(--astra-distance-1);
@@ -871,7 +920,7 @@ button.l,button.xl {
 }
 /*  NAVBARS */
 .header{
-    filter: drop-shadow(0 3px 10px var(--astra-grey-400));
+    z-index: 500;
 }
 .navbar {
     display: flex;
@@ -1086,4 +1135,27 @@ button.close{
 .input[type="week"].validation
 {
     background-position: right calc(1em + .1875rem) center;
+}
+/* WIDTH AND HEIGHT */
+.w-auto{
+    width: auto;
+}
+.h-auto{
+    height: auto;
+}
+.w-half{
+    width: 50%;
+}
+.h-half{
+    height: 50%;
+}
+/* SHADOWS */
+.shadowS, .shadowXS {
+    filter: drop-shadow(0px var(--astra-distance-1) var(--astra-distance-1) #7c7c7caa);
+}
+.shadowM, .shadow{
+    filter: drop-shadow(0px var(--astra-distance-2) var(--astra-distance-2)#7c7c7caa);
+}
+.shadowL, .shadowXL {
+    filter: drop-shadow(0px var(--astra-distance-3) var(--astra-distance-3) #7c7c7caa);
 }
