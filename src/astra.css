@@ -244,6 +244,9 @@ ol{
 .inlineFlex{
     display: inline-flex;
 }
+.hidden{
+    display: hidden;
+}
 /* BUTTONS */
 button, [type="button"],.input[type="submit"]{
     font-size: 15px;
@@ -854,12 +857,18 @@ pre.css .var{
 /* SIZING */
 button.xs,button.s {
     height: 40px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
-button.m {
+button.m, button {
     height: 48px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 button.l,button.xl {
     height: 56px;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .input.xs,.input.s{
     height: 25px;
@@ -917,6 +926,9 @@ button.l,button.xl {
 }
 .grey{
     color: var(--astra-grey-800) !important;
+}
+.transparent{
+    background-color: transparent;
 }
 /*  NAVBARS */
 .header{
@@ -1151,11 +1163,11 @@ button.close{
 }
 /* SHADOWS */
 .shadowS, .shadowXS {
-    filter: drop-shadow(0px var(--astra-distance-1) var(--astra-distance-1) #7c7c7caa);
+    filter: drop-shadow(0px var(--astra-distance-1) calc(var(--astra-distance-1)*3) #777777aa);
 }
 .shadowM, .shadow{
-    filter: drop-shadow(0px var(--astra-distance-2) var(--astra-distance-2)#7c7c7caa);
+    filter: drop-shadow(0px var(--astra-distance-2) calc(var(--astra-distance-1)*3) #777777aa);
 }
 .shadowL, .shadowXL {
-    filter: drop-shadow(0px var(--astra-distance-3) var(--astra-distance-3) #7c7c7caa);
+    filter: drop-shadow(0px var(--astra-distance-3) calc(var(--astra-distance-1)*3) #777777aa);
 }
