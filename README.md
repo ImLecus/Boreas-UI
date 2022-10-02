@@ -10,7 +10,7 @@
 
 ## Status
 
-<a href="#"><img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/ImLecus/Astra?color=blue&include_prereleases&label=VERSION&style=for-the-badge"></a> <a href="#"><img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/ImLecus/Astra/src/astra.css?color=purple&label=CSS%20size&style=for-the-badge"></a> <a href="#"><img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/ImLecus/Astra/src/astra.js?color=red&label=JS%20size&style=for-the-badge"></a> <a href="#"><img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/ImLecus/Astra/scss/astra.scss?color=yellow&label=SCSS%20size&style=for-the-badge"></a>
+<a href="#"><img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/ImLecus/Astra?color=blue&include_prereleases&label=VERSION&style=for-the-badge"></a> <a href="#"><img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/ImLecus/Astra/src/astra.css?color=purple&label=CSS%20size&style=for-the-badge"></a> <a href="#"><img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/ImLecus/Astra/src/astra.js?color=red&label=JS%20size&style=for-the-badge"></a>
 
 ## Quick start
 
