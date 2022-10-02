@@ -92,6 +92,10 @@ Array.from(document.querySelectorAll("*")).forEach(e => {
                 groupElement = parseFunctionClass(groupElement,"bg");
                 e.style.backgroundColor = BackgroundColor(groupElement);
             }
+            else if(groupElement.startsWith("span")){
+                groupElement = parseFunctionClass(groupElement,"span");
+                e.style.flexGrow = groupElement;
+            }
         });
     }
 });

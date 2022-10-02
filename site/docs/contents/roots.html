@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../src/astra.css">
+    <link rel="icon" href="../../assets/images/logo.png">
+    <title>Roots</title>
+</head>
+<body>
+    <header class="header stickyTop gradient(linear,#499eef,#4b32a5,90deg) shadowXS">
+        <div class="root flex centerY paddingY-2 wrap">
+            <div class="flex noWrap alignLeft centerY">
+                <img class="brand" width="50" height="50" src="../../assets/images/logoWhite.png"/>
+                <div class="navbar marginLeft-5">
+                    <a href="../../index.html" class="navbarLink white">Home</a>
+                    <a href="" class="navbarLink white b">Docs</a>
+                    <a href="" class="navbarLink white">Examples</a>
+                </div>
+            </div>     
+        </div>
+    </header>
+    <div class="rootXL row marginBottom-5">
+        <aside class="sidebar">
+            <ul class="unmarked overflowY paddingRight-5">
+                <b>Getting started</b>
+                <ul class="unmarked">
+                    <li><a class="grey" href="../getting-started/introduction.html">Introduction</a></li>
+                    <li><a class="grey">Download</a></li>
+                </ul>
+                <br>
+                <b>Contents</b>
+                <ul class="unmarked">
+                    <li><a class="grey">Roots</a></li>
+                    <li><a class="grey">Headers</a></li>
+                    <li><a class="grey">Inputs</a></li>
+                    <li><a class="grey">Alignments</a></li>
+                    <li><a class="grey">Margin & paddings</a></li>
+                    <li><a class="grey">Tables</a></li>
+                    <li><a class="grey">Sidebars</a></li>
+                </ul>
+                <br>
+                <b>Advanced</b>
+                <ul class="unmarked">
+                    <li><a class="grey">Function classes</a></li>
+                    <li><a class="grey">Input validation</a></li>
+                </ul>
+                <br>
+                <b>Customization</b>
+                <ul class="unmarked">
+                    <li><a class="grey">Colours</a></li>
+                    <li><a class="grey">Gradients</a></li>
+                </ul>
+                <br>
+                <b>Components</b>
+                <ul class="unmarked">
+                    <li><a class="grey">Alerts</a></li>
+                    <li><a class="grey">Badges</a></li>
+                    <li><a class="grey">Cards</a></li>
+                    <li><a class="grey">Close button</a></li>
+                </ul>
+                <br>
+                <b>Utility</b>
+                <ul class="unmarked">
+                    <li><a class="grey">Position</a></li>
+                    <li><a class="grey">Flex</a></li>
+                    <li><a class="grey">Grid</a></li>
+                    <li><a class="grey">Sizing</a></li>
+                    <li><a class="grey">Overflow</a></li>
+                    <li><a class="grey">Spacing</a></li>
+                    <li><a class="grey">Shadows</a></li>
+                </ul>
+            </ul>
+        </aside>
+        <main class="padding-5">
+        <div class="display-4 semiBold">Roots</div>
+        <p class="lead">Learn about the root element and how it works</p>
+        <br>
+        <h2>What are roots?</h2>
+        <p>The <b>root</b> elements are the most basic element container in Astra. They have different sizes and they 
+        mark the width of the elements inside them. For example, the <code>.root</code> element has a maximum width of
+        the 75% of the parent element, in this case the body.
+        </p>
+        <br>
+        <h2>Different sizes of roots</h2>
+        <p>Roots have 7 different sizes, here is a table with all of them and their width based on the screen width:</p>
+        <table class="table striped border">
+            <thead>
+                <tr>
+                    <th></th><th>Extra Small (&lt600px)</th><th>Small (&lt768px)</th><th>Medium (&lt992px)</th><th>Large (&lt1200px)</th><th>Extra Large (&lt1440px)</th><th>Ultra Large (&GreaterEqual;1440px)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="paddingX-3"><code>.root</code></th><th>75%</th><th>75%</th><th>75%</th><th>75%</th><th>75%</th><th>75%</th>
+                </tr> 
+                <tr>
+                    <th><code>.rootXS</code></th><th class="grey">100%</th><th>600px</th><th>600px</th><th>600px</th><th>600px</th><th>600px</th>
+                </tr>
+                <tr>
+                    <th><code>.rootS</code></th><th class="grey">100%</th><th class="grey">100%</th><th>768px</th><th>768px</th><th>768px</th><th>768px</th>
+                </tr>
+                <tr>
+                    <th><code>.rootM</code></th><th class="grey">100%</th><th class="grey">100%</th><th class="grey">100%</th><th>992px</th><th>992px</th><th>992px</th>
+                </tr>
+                <tr>
+                    <th><code>.rootL</code></th><th class="grey">100%</th><th class="grey">100%</th><th class="grey">100%</th><th class="grey">100%</th><th >1200px</th><th>1200px</th>
+                </tr>
+                <tr>
+                    <th><code>.rootXL</code></th><th class="grey">100%</th><th class="grey">100%</th><th class="grey">100%</th><th class="grey">100%</th><th class="grey">100%</th><th>1440px</th>
+                </tr>
+                <tr>
+                    <th><code>.rootFull</code></th><th class="grey">100%</th><th class="grey">100%</th><th class="grey">100%</th><th class="grey">100%</th><th class="grey">100%</th><th class="grey">100%</th>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h2>Creating a root</h2>
+        <p>To create a root element you need to apply one of the previous root classes inside an element, preferably inside a <code>div</code> tag, like the example of below:</p>
+        <pre class="html">
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"root"</span>&gt</span>
+    <span class="line">&lt<span class="tag">p</span>&gtThis is a paragraph inside a root&lt/<span class="tag">p</span>&gt</span>
+<span class="line">&lt/<span class="tag">div</span>&gt</span>
+        </pre>
+        <br>
+        <h2>Full and default roots</h2>
+        <p>There are two special types of roots: <code>.root</code> and <code>.rootFull</code>. They doesn't have a specified width,
+        because they works with percentages. <code>.rootFull</code> will expand to the entire screen width, and <code>.root</code> will
+        expand only to the 75% of the screen.
+        </p>
+        <pre class="html">
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"root"</span>&gt</span>
+    <span class="line">&lt<span class="tag">p</span>&gtThis will expand until the 75%&lt/<span class="tag">p</span>&gt</span>
+<span class="line">&lt/<span class="tag">div</span>&gt</span>
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"rootFull"</span>&gt</span>
+    <span class="line">&lt<span class="tag">p</span>&gtThis will expand until the 100%&lt/<span class="tag">p</span>&gt</span>
+<span class="line">&lt/<span class="tag">div</span>&gt</span>
+        </pre>
+        </main>
+    </div>
+    <footer class="bg(--astra-grey-200)"><p class="textCenter grey footerText">© Astra, Marcos González 2022-2023<br><br>All rights reserved</p></footer>
+    <script src="../../../src/astra.js"></script>
+</body>
+</html>

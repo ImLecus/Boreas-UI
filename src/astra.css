@@ -169,6 +169,7 @@ a{
     cursor: pointer;
     color: var(--astra-blue-500);
     transition: 0.5s linear;
+    text-decoration: none;
 }
 a:hover{
     color: var(--astra-lightBlue-600);
@@ -185,7 +186,7 @@ del{
     text-decoration: line-through;
 }
 b,strong,.b, .bold{
-    font-weight: bold !important;
+    font-weight: 700 !important;
 }
 .semiBold{
     font-weight: 600 !important;
@@ -234,6 +235,10 @@ ol{
     font-weight: bold;
     background-color: var(--astra-blue-500);
     color: var(--astra-grey-100);
+}
+.footerText{
+    margin: 0;
+    padding: 1.5rem;
 }
 /* DISPLAYS */
 .inline{
@@ -419,6 +424,7 @@ pre{
     border-radius: 10px;
     padding: 20px;
     font-size: 15px;
+    overflow-x: auto;
 }
 .line{
     color: var(--astra-grey-700);
@@ -444,38 +450,31 @@ pre.css .var{
 .root {
     max-width: 75%;
     margin: 0 auto;
-    overflow: hidden;
 }
 .rootXS {
     max-width: 600px;
     margin: 0 auto;
-    overflow: hidden;
 }
 .rootS {
     max-width: 768px;
     margin: 0 auto;
-    overflow: hidden;
 }
 .rootM {
     max-width: 992px;
     margin: 0 auto;
-    overflow: hidden;
 }
 .rootL {
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
 }
 .rootXL {
     max-width: 1440px;
     margin: 0 auto;
-    overflow: hidden;
 }
 .rootFull {
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
-    overflow: hidden;
 }
 /* ALIGNMENT */
 .centerY {
@@ -517,6 +516,12 @@ pre.css .var{
 .textCenter{
     text-align: center;
 }
+.left {
+    float: left !important;
+}
+.right {
+    float: right !important;
+}
 /* FLEX */
 .flex, .flexRow {
     display: flex;
@@ -541,36 +546,15 @@ pre.css .var{
     flex-wrap: nowrap;
 }
 /* GRID */
-.grid, .grid-2, .grid-3, .grid-4, .grid-5,.grid-6,.grid-7,.grid-8,.grid-9,.grid-10{
+.grid{
     display: grid;
     gap: 5px;
 }
-.grid-2{
-    grid-template-columns: 50%;
+.row{
+    display: flex;
 }
-.grid-3 {
-    grid-template-columns: 33%;
-}
-.grid-4 {
-    grid-template-columns: 25%;
-}
-.grid-5 {
-    grid-template-columns: 20%;
-}
-.grid-6 {
-    grid-template-columns: 6;
-}
-.grid-7 {
-    grid-template-columns: 7;
-}
-.grid-8 {
-    grid-template-columns: 8;
-}
-.grid-9 {
-    grid-template-columns: 9;
-}
-.grid-10 {
-    grid-template-columns: 10%;
+.column{
+    flex: 1 0 0%;
 }
 .overflow{
     overflow: auto;
@@ -579,7 +563,7 @@ pre.css .var{
     overflow-x: auto;
 }
 .overflowY{
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 /* MARGIN & PADDING */
 .margin-1 {
@@ -929,7 +913,7 @@ button.l,button.xl {
     color: var(--astra-lightBlue-500) !important;
 }
 .grey{
-    color: var(--astra-grey-800) !important;
+    color: var(--astra-grey-600) !important;
 }
 .transparent{
     background-color: transparent;
@@ -1175,21 +1159,21 @@ button.close{
 .shadowL, .shadowXL {
     filter: drop-shadow(0px var(--astra-distance-3) calc(var(--astra-distance-1)*3) #777777aa);
 }
-/* OVERFLOW */
-.overflowY{
-    overflow-y:scroll;
+.shadowTopS, .shadowTopXS {
+    filter: drop-shadow(0px calc(var(--astra-distance-1)*-1) calc(var(--astra-distance-1)*3) #777777aa);
 }
-.overflowX{
-    overflow-x: scroll;
+.shadowTopM, .shadowTop{
+    filter: drop-shadow(0px calc(var(--astra-distance-2)*-1) calc(var(--astra-distance-1)*3) #777777aa);
 }
-.overflow{
-    overflow: scroll;
+.shadowTopL, .shadowTopXL {
+    filter: drop-shadow(0px calc(var(--astra-distance-3)*-1) calc(var(--astra-distance-1)*3) #777777aa);
 }
 /* SIDEBARS */
-.sidebar.left, .sidebar{
+.sidebar{
+    height: calc(100vh - 6rem);
+    position: sticky;
+    top: 6rem;
+    padding-right: 2rem;
     float: left;
-    min-width: 15%;
-    width: auto;
-    margin-right: 2rem;
-    padding: 5px 25px 5px 5px;
+    width: 25%;
 }
