@@ -67,49 +67,42 @@ const Gradient = (mode,color1,color2,rotation = "") => {
     if(color2.toString().startsWith("--")){ color2 = `var(${color2})`; }
     return(`${(mode == "linear")? "linear-gradient(" : "radial-gradient("}${(rotation == "")? "": rotation+","}${color1},${color2})`);
 };
-const BackgroundColor = (color) => {
-    return(`${(color.startsWith("--"))? "var(" + color + ")": color}`);
-}
-const parseFunctionClass = (element,name) => {
-    element = element.replace(name,"");
-    element = element.replace("(","");
+const parseFunctionClass = (element) => {
+    element = element.replace(element.substring(0,element.indexOf("(") + 1),"");
     element = element.replace(")","");
     return element;
 }
 //Applying CSS to the colour classes
-Array.from(document.querySelectorAll("*")).forEach(e => {
-    let c = e.getAttribute("class");
-    if(c != null){
-        c = c.toString();
-        c.split(" ").forEach(groupElement => {
-            if(groupElement.substring(0, groupElement.indexOf("("))){
-                switch(groupElement.substring(0, groupElement.indexOf("("))){
-                    case "gradient":
-                        groupElement = parseFunctionClass(groupElement,"gradient");
-                        let attributes = groupElement.split(",");
-                        e.style.background = Gradient(attributes[0],attributes[1],attributes[2],attributes[3]);
-                        break;
-                    case "bg":
-                        groupElement = parseFunctionClass(groupElement,"bg");
-                        e.style.backgroundColor = BackgroundColor(groupElement);
-                        break;
-                    case "span":
-                        groupElement = parseFunctionClass(groupElement,"span");
-                        e.style.flexGrow = groupElement;
-                        break;
-                    case "width":
-                        groupElement = parseFunctionClass(groupElement,"width");
-                        e.style.width = groupElement;
-                        break;
-                    case "heigth":
-                        groupElement = parseFunctionClass(groupElement,"height");
-                        e.style.height = groupElement;
-                        break;
-                    default:
-                        console.error(`The "·${groupElement.substring(0, groupElement.indexOf("("))}" function class doesn't exist`);
-                        break;
-                }
-            } 
-        });
-    }
+Array.from(document.querySelectorAll("*")).filter(e => e.getAttribute("class") != null).forEach(element => {
+    let e = element.getAttribute("class").toString();
+    e.split(" ").forEach(functionClass => {
+    let head = functionClass.substring(0, functionClass.indexOf("("));
+    if(head){
+        let body = parseFunctionClass(functionClass);
+        switch(head){
+            default:
+                console.error(`The "${head}" function class doesn't exist`);
+                break;
+            case "gradient":
+                let attributes = body.split(",");
+                element.style.background = Gradient(attributes[0],attributes[1],attributes[2],attributes[3]);
+                break;
+            case "bg":
+                element.style.backgroundColor = `${(body.startsWith("--"))? "var(" + body + ")": body}`
+                break;
+            case "span":
+                element.style.flexGrow = body;
+                break;
+            case "width":
+                element.style.width = body;
+                break;
+            case "heigth":
+                element.style.height = body;
+                break;
+            case "opacity":
+                element.style.opacity = `${body}%`;
+                break;
+            }
+        } 
+    });
 });
