@@ -96,7 +96,7 @@ Array.from(document.querySelectorAll("*")).filter(e => e.getAttribute("class") !
             case "width":
                 element.style.width = body;
                 break;
-            case "heigth":
+            case "height":
                 element.style.height = body;
                 break;
             case "opacity":

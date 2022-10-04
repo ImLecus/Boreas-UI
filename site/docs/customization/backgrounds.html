@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../src/astra.css">
     <link rel="icon" href="../../assets/images/logo.png">
-    <title>Roots</title>
+    <title>Background Colors</title>
 </head>
 <body>
     <header class="header stickyTop gradient(linear,#499eef,#4b32a5,90deg) shadowXS">
@@ -33,7 +33,7 @@
                 <b>Contents</b>
                 <ul class="unmarked">
                     <li><a class="grey" href="../contents/roots.html">Roots</a></li>
-                    <li><a class="grey">Headers</a></li>
+                    <li><a class="grey" href="../contents/headers.html">Headers</a></li>
                     <li><a class="grey">Inputs</a></li>
                     <li><a class="grey">Alignments</a></li>
                     <li><a class="grey">Margin & paddings</a></li>
@@ -49,8 +49,8 @@
                 <br>
                 <b>Customization</b>
                 <ul class="unmarked">
-                    <li><a class="grey" href="../customization/backgrounds.html">Colours</a></li>
-                    <li><a class="grey" href="../customization/gradients.html">Gradients</a></li>
+                    <li><a class="grey">Colours</a></li>
+                    <li><a class="grey" href="./gradients.html">Gradients</a></li>
                 </ul>
                 <br>
                 <b>Components</b>
@@ -74,24 +74,53 @@
             </ul>
         </aside>
         <main class="padding-5">
-            <div class="display-4 semiBold">Headers</div>
-            <p class="lead">Learn how to use the Astra features on your custom headers</p>
-            <br>
-            <h2>Creating a header</h2>
-            <p>The first step to create a header in Astra is to apply the <code>.header</code> class on the HTML header.</p>
-            <pre class="html">
-<span class="line">&lt<span class="tag">header</span> <span class="atr">class</span>=<span class="value">"header"</span>&gt</span>
+        <div class="display-4 semiBold">Background colors</div>
+        <p class="lead">Learn how to apply every color to your backgrounds</p>
+        <br>
+        <h2>The bg() function class</h2>
+        <p>The background color property is applied in Astra with the <code>bg()</code> function class. As every function class,
+            this method is JS dependent, so make sure that you have the astra.js script attached to your project. Learn more about function classes <a href="">here</a>.<br><br>
 
-<span class="line">&lt<span class="tag">header</span>&gt</span>
-            </pre>
-            <br>
-            <p>Our header will need to have flex properties. In this example it will have a flex with row direction. Learn more about flex <a href="">here</a>.</p>
-            <pre class="html">
-<span class="line">&lt<span class="tag">header</span> <span class="atr">class</span>=<span class="value">"header flex"</span>&gt</span>
-
-<span class="line">&lt<span class="tag">header</span>&gt</span>
-            </pre>
-        </main>
+            To use the <code>bg()</code> function class you need to add a class with the name "<code>bg([color])</code>". The
+            color can be an html color like <b>"blue"</b>, a RGB color like <b>"#0000ff"</b> or a CSS variable.
+        </p><br>
+        <h2>Astra colors</h2>
+        <p>Before the background color became a function class, there were 90 colours in Astra, included as CSS variables.
+            But these variables are still inside the project and you can use it putting <code>--astra-[color]-[intensity]</code>,
+            like the example below:
+        </p>
+        <pre class="css">
+<span class="line"><span class="selector">div</span>{</span>
+    <span class="line"><span class="atr">background-color</span>: <span class="var">var</span>(<span class="value">--astra-red-400</span>);</span>
+<span class="line">}</span>
+        </pre><br>
+        <p>The avaliable colours are:</p>
+        <ul class="unmarked">
+            <li>Red</li>
+            <li>Orange</li>
+            <li>Yellow</li>
+            <li>Green</li>
+            <li>Turquoise</li>
+            <li>Light blue</li>
+            <li>Blue</li>
+            <li>Violet</li>
+            <li>Pink</li>
+            <li>Grey</li>
+        </ul><br>
+        <p>And each one has 9 types of intensity, from 100 to 900.</p>
+        <br>
+        <h2>Using variables inside the bg() function class</h2>
+        <p>Usually, when we need to use a CSS variable to our project, we use the <code>var()</code> function and we put the variable inside it.
+            In Astra, this function doesn't need to be wrote, the JavaScript code will recognize when the value inside the parentheses
+            is a variable and it will apply the <code>var()</code> function. For example, the example below will make the same as the first
+            one, but this time, writing it with the <code>bg()</code> function class:
+        </p>
+        <pre class="html">
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"bg(--astra-red-400)"</span>&gt&lt/<span class="tag">div</span>&gt</span>
+        </pre><br>
+        <p>This method is not only for the Astra variables, but for all the CSS classes that exist in your project.</p>
+        <div class="spaceM"></div>
+    </main>
     </div>
     <footer class="bg(--astra-grey-200)"><p class="textCenter grey footerText">© Astra, Marcos González 2022-2023<br><br>All rights reserved</p></footer>
     <script src="../../../src/astra.js"></script>

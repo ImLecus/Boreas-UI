@@ -1173,5 +1173,5 @@ button.close{
     top: 6rem;
     padding-right: 2rem;
     float: left;
-    width: 25%;
+    min-width: 20%;
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../src/astra.css">
     <link rel="icon" href="../../assets/images/logo.png">
-    <title>Roots</title>
+    <title>Getting started</title>
 </head>
 <body>
     <header class="header stickyTop gradient(linear,#499eef,#4b32a5,90deg) shadowXS">
@@ -33,7 +33,7 @@
                 <b>Contents</b>
                 <ul class="unmarked">
                     <li><a class="grey" href="../contents/roots.html">Roots</a></li>
-                    <li><a class="grey">Headers</a></li>
+                    <li><a class="grey" href="../contents/headers.html">Headers</a></li>
                     <li><a class="grey">Inputs</a></li>
                     <li><a class="grey">Alignments</a></li>
                     <li><a class="grey">Margin & paddings</a></li>
@@ -49,8 +49,8 @@
                 <br>
                 <b>Customization</b>
                 <ul class="unmarked">
-                    <li><a class="grey" href="../customization/backgrounds.html">Colours</a></li>
-                    <li><a class="grey" href="../customization/gradients.html">Gradients</a></li>
+                    <li><a class="grey" href="./backgrounds.html">Colours</a></li>
+                    <li><a class="grey">Gradients</a></li>
                 </ul>
                 <br>
                 <b>Components</b>
@@ -74,24 +74,45 @@
             </ul>
         </aside>
         <main class="padding-5">
-            <div class="display-4 semiBold">Headers</div>
-            <p class="lead">Learn how to use the Astra features on your custom headers</p>
-            <br>
-            <h2>Creating a header</h2>
-            <p>The first step to create a header in Astra is to apply the <code>.header</code> class on the HTML header.</p>
-            <pre class="html">
-<span class="line">&lt<span class="tag">header</span> <span class="atr">class</span>=<span class="value">"header"</span>&gt</span>
-
-<span class="line">&lt<span class="tag">header</span>&gt</span>
+        <div class="display-4 semiBold">Gradients</div>
+        <p class="lead">Learn how to use this powerfull feature</p>
+        <br>
+        <h2>The gradient() function class</h2>
+        <p>Like the <a href="./backgrounds.html">bg() function class</a>, using gradients as background requires to use <thead>
+            <code>gradient()</code> function class following the next order of parameters: <code>gradient([mode],[color1],[color2],[rotation])</code>. Learn more about function classes <a href="">here</a>.
+            <br><br>
+            There are two types of gradients: <b>linear</b> and <b>radial</b>. Linear gradients will change from the first color
+            to the second following a line, while radial gradients change from the first color at the center, to the second color
+            following a circle. Radial gradients <b>doesn't need the rotation paramenter</b>, and it will be discarded on that mode.
+            <br><br>
+            <b>Example:</b> both mode gradients from blue to red.
+        </p>
+        <div class="row around">
+            <pre class="html width(45%)">
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"gradient(linear,blue,red,90deg)"</span>&gt&lt/<span class="tag">div</span>&gt</span>
             </pre>
-            <br>
-            <p>Our header will need to have flex properties. In this example it will have a flex with row direction. Learn more about flex <a href="">here</a>.</p>
-            <pre class="html">
-<span class="line">&lt<span class="tag">header</span> <span class="atr">class</span>=<span class="value">"header flex"</span>&gt</span>
-
-<span class="line">&lt<span class="tag">header</span>&gt</span>
+            <div class="gradient(linear,blue,red,90deg) width(40%) height(200px)"></div>
+        </div>
+        <div class="spaceXS"></div>
+        <div class="row around">
+            <pre class="html width(45%)">
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"gradient(radial,blue,red)"</span>&gt&lt/<span class="tag">div</span>&gt</span>
             </pre>
-        </main>
+            <div class="gradient(radial,blue,red) width(40%) height(200px)"></div>
+        </div>
+        <div class="spaceS"></div>
+        <div class="alert turquoise"><p class="margin-1"><b>Note: [color1]</b> and <b>[color2]</b> parameters can be RGB colors too, so #0000ff and "blue" will make the same result.</p></div>
+        <div class="spaceM"></div>
+        <h2>CSS variables inside the function class</h2>
+        <br>
+        <p>As other function classes, you don't need to put the <code>var()</code> function to use CSS variables in Astra, you can put them
+        by their name as the example of below:
+        </p>
+        <pre class="html">
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"gradient(linear,--astra-blue-500,--astra-red-500,90deg)"</span>&gt&lt/<span class="tag">div</span>&gt</span>
+        </pre>
+        <div class="spaceM"></div>
+    </main>
     </div>
     <footer class="bg(--astra-grey-200)"><p class="textCenter grey footerText">© Astra, Marcos González 2022-2023<br><br>All rights reserved</p></footer>
     <script src="../../../src/astra.js"></script>
