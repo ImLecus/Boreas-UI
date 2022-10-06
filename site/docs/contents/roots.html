@@ -26,8 +26,7 @@
             <ul class="unmarked overflowY paddingRight-5 height(90vh)">
                 <b>Getting started</b>
                 <ul class="unmarked">
-                    <li><a class="grey" href="../getting-started/introduction.html">Introduction</a></li>
-                    <li><a class="grey">Download</a></li>
+                    <li><a class="grey" href="../introduction.html">Introduction</a></li>
                 </ul>
                 <br>
                 <b>Contents</b>
@@ -76,13 +75,13 @@
         <main class="padding-5">
         <div class="display-4 semiBold">Roots</div>
         <p class="lead">Learn about the root element and how it works</p>
-        <br>
+        <div class="spaceS"></div>
         <h2>What are roots?</h2>
         <p>The <b>root</b> elements are the most basic element container in Astra. They have different sizes and they 
         mark the width of the elements inside them. For example, the <code>.root</code> element has a maximum width of
         the 75% of the parent element, in this case the body.
         </p>
-        <br>
+        <div class="spaceS"></div>
         <h2>Different sizes of roots</h2>
         <p>Roots have 7 different sizes, here is a table with all of them and their width based on the screen width:</p>
         <table class="table striped border">
@@ -115,7 +114,7 @@
                 </tr>
             </tbody>
         </table>
-        <br>
+        <div class="spaceS"></div>
         <h2>Creating a root</h2>
         <p>To create a root element you need to apply one of the previous root classes inside an element, preferably inside a <code>div</code> tag, like the example of below:</p>
         <pre class="html">
@@ -123,18 +122,27 @@
     <span class="line">&lt<span class="tag">p</span>&gtThis is a paragraph inside a root&lt/<span class="tag">p</span>&gt</span>
 <span class="line">&lt/<span class="tag">div</span>&gt</span>
         </pre>
-        <br>
-        <h2>Full and default roots</h2>
-        <p>There are two special types of roots: <code>.root</code> and <code>.rootFull</code>. They doesn't have a specified width,
-        because they works with percentages. <code>.rootFull</code> will expand to the entire screen width, and <code>.root</code> will
-        expand only to the 75% of the screen.
+        <div class="spaceS"></div>
+        <h2>Responsive roots</h2>
+        <p>As you can see in the previous table, there are more types of roots, and each one have a width limit depending on their
+            breakpoint. For example, a <code>.rootL</code> element will have a width of 100% if the screen width is smaller than
+            1200px, and it will have a width of 1200px if the screen is larger.
         </p>
         <pre class="html">
-<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"root"</span>&gt</span>
-    <span class="line">&lt<span class="tag">p</span>&gtThis will expand until the 75%&lt/<span class="tag">p</span>&gt</span>
-<span class="line">&lt/<span class="tag">div</span>&gt</span>
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"rootXS"</span>&gt &lt!-- 600px --&gt &lt/<span class="tag">div</span>&gt</span>
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"rootS"</span>&gt &lt!-- 768px --&gt &lt/<span class="tag">div</span>&gt</span>   
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"rootM"</span>&gt &lt!-- 992px --&gt &lt/<span class="tag">div</span>&gt</span> 
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"rootL"</span>&gt &lt!-- 1200px --&gt &lt/<span class="tag">div</span>&gt</span>
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"rootXL"</span>&gt &lt!-- 1440px --&gt &lt/<span class="tag">div</span>&gt</span>
+        </pre>
+        <div class="spaceS"></div>
+        <h2>Full roots</h2>
+        <p>A special type of roots is the full roots. They will expand until the 100%, the screen width will doesn't matter.
+            To use it, write the <code>.rootFull</code> class like the example below:
+        </p>
+        <pre class="html">
 <span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"rootFull"</span>&gt</span>
-    <span class="line">&lt<span class="tag">p</span>&gtThis will expand until the 100%&lt/<span class="tag">p</span>&gt</span>
+    <span class="line">&lt!-- This will have 100% width --&gt</span>
 <span class="line">&lt/<span class="tag">div</span>&gt</span>
         </pre>
         </main>

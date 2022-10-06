@@ -4,6 +4,9 @@ const copyToClipboard = text => {
 const redirect = href => {
     window.location.href = href;
 };
+const getClass = element =>{
+    return element.getAttribute("class").toString();
+};
 const getPosition = element => {
     return new Vector2(element.getBoundingClientRect().x,element.getBoundingClientRect().y);
 };
@@ -69,10 +72,6 @@ const Gradient = (mode,color1,color2,rotation = "") => {
 const parseFunctionClass = (e) => {
     return e.substring(e.indexOf("(") + 1 ,e.indexOf(")"));
 }
-const parseMediaClass = (e) => {
-    return e.substring(e.indexOf("{") + 1 ,e.indexOf("}")).replace(" ","");
-}
-
 //Function classes
 const FunctionClass = (functionClass,element) => {
     let head = functionClass.substring(0, functionClass.indexOf("("));
@@ -106,8 +105,9 @@ const FunctionClass = (functionClass,element) => {
 }
 document.addEventListener("change", 
 Array.from(document.querySelectorAll("*")).filter(e => e.getAttribute("class") != null).forEach(element => {
-    element.getAttribute("class").toString().split(" ").forEach(e => { 
+    split(" ").forEach(e => { 
         FunctionClass(e,element);
     });
 }))
 
+    

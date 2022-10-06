@@ -570,10 +570,6 @@ pre.css .var{
     flex-wrap: nowrap;
 }
 /* GRID */
-.grid{
-    display: grid;
-    gap: 5px;
-}
 .row{
     display: flex;
 }
@@ -1011,6 +1007,22 @@ button.l,button.xl {
     height: 250px;
     width: 100%;
 }
+/* ROUNDING */
+.rounded-1{
+    border-radius: var(--astra-distance-1);
+}
+.rounded-2 {
+    border-radius: var(--astra-distance-2);
+}
+.rounded-3 {
+    border-radius: var(--astra-distance-3);
+}
+.rounded-4 {
+    border-radius: var(--astra-distance-4);
+}
+.rounded-5 {
+    border-radius: var(--astra-distance-5);
+}
 /* TABLES */
 .table{
     width: 100%;
@@ -1166,10 +1178,13 @@ button.close{
 .shadowL, .shadowXL {
     filter: drop-shadow(0px var(--astra-distance-3) calc(var(--astra-distance-1)*3) #777777aa);
 }
+.transparent{
+    background-color: transparent;
+}
 /* SIDEBARS */
 .sidebar{
     height: calc(100vh + 1rem);
-    position: sticky;
+    position: sticky !important;
     top: 6rem;
     padding-right: 2rem;
     float: left;
