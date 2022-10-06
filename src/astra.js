@@ -105,7 +105,7 @@ const FunctionClass = (functionClass,element) => {
 }
 document.addEventListener("change", 
 Array.from(document.querySelectorAll("*")).filter(e => e.getAttribute("class") != null).forEach(element => {
-    split(" ").forEach(e => { 
+    element.getAttribute("class").toString().split(" ").forEach(e => { 
         FunctionClass(e,element);
     });
 }))

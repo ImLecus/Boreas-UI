@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../src/astra.css">
+    <link rel="icon" href="../../assets/images/logo.png">
+    <title>Getting started</title>
+</head>
+<body>
+    <header class="header stickyTop gradient(linear,#499eef,#4b32a5,90deg) shadowXS">
+        <div class="root flex centerY paddingY-2 wrap">
+            <div class="flex noWrap alignLeft centerY">
+                <img class="brand" width="50" height="50" src="../../assets/images/logoWhite.png"/>
+                <div class="navbar marginLeft-5">
+                    <a href="../../index.html" class="navbarLink white">Home</a>
+                    <a href="" class="navbarLink white b">Docs</a>
+                    <a href="" class="navbarLink white">Examples</a>
+                </div>
+            </div>     
+        </div>
+    </header>
+    <div class="rootXL row marginY-5">
+        <aside class="sidebar marginTop-3">
+            <ul class="unmarked overflowY paddingRight-5 height(90vh)">
+                <b>Getting started</b>
+                <ul class="unmarked">
+                    <li><a class="grey" href="../index.html">Introduction</a></li>
+                    <li><a class="grey">Download</a></li>
+                </ul>
+                <br>
+                <b>Contents</b>
+                <ul class="unmarked">
+                    <li><a class="grey" href="../contents/roots.html">Roots</a></li>
+                    <li><a class="grey" href="../contents/headers.html">Headers</a></li>
+                    <li><a class="grey">Inputs</a></li>
+                    <li><a class="grey">Alignments</a></li>
+                    <li><a class="grey">Margin & paddings</a></li>
+                    <li><a class="grey">Tables</a></li>
+                    <li><a class="grey">Sidebars</a></li>
+                </ul>
+                <br>
+                <b>Advanced</b>
+                <ul class="unmarked">
+                    <li><a class="grey">Function classes</a></li>
+                    <li><a class="grey">Input validation</a></li>
+                </ul>
+                <br>
+                <b>Customization</b>
+                <ul class="unmarked">
+                    <li><a class="grey" href="../customization/backgrounds.html">Colours</a></li>
+                    <li><a class="grey" href="../customization/gradients.html">Gradients</a></li>
+                </ul>
+                <br>
+                <b>Components</b>
+                <ul class="unmarked">
+                    <li><a class="grey">Alerts</a></li>
+                    <li><a class="grey">Badges</a></li>
+                    <li><a class="grey">Cards</a></li>
+                    <li><a class="grey">Close button</a></li>
+                </ul>
+                <br>
+                <b>Utility</b>
+                <ul class="unmarked">
+                    <li><a class="grey">Position</a></li>
+                    <li><a class="grey">Flex</a></li>
+                    <li><a class="grey">Grid</a></li>
+                    <li><a class="grey">Sizing</a></li>
+                    <li><a class="grey">Overflow</a></li>
+                    <li><a class="grey">Spacing</a></li>
+                    <li><a class="grey">Shadows</a></li>
+                </ul>
+            </ul>
+        </aside>
+        <main class="padding-5">
+        <div class="display-4 semiBold">Function classes</div>
+        <p class="lead">The best mode to customize your elements, with endless possibilities.</p>
+        <div class="spaceS"></div>
+        <h2>Two types of classes</h2>
+        <p>As you know, Astra works with HTML classes. Using <b>standard classes</b>, the CSS reads the class name and it applies
+            the style to the element. However, the <b>function classes</b> doesn't work like the standard ones. They are JavaScript
+            dependent, so make sure you have the JS imported in your project. Function classes are read by the JavaScript, and it
+            transform the information into a CSS rule.<br><br>
+            This new form to work has the advantadge of having endless possibilities, because each function class can transform into 
+            a different CSS rule. Usually, they are used when the variety of possibilities is very big, like colours or numbers between numbers.
+        </p>
+        <table class="table striped border">
+            <thead>
+                <tr>
+                    <th class="width(20%)">#</th>
+                    <th>Advantadges</th>
+                    <th>Disadvantadges</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Standard classes</th>
+                    <th>No JS required</th>
+                    <th>Limited possibilities</th>
+                </tr>
+                <tr>
+                    <th>Function classes</th>
+                    <th>Unlimited possibilities</th>
+                    <th>JS required</th>
+                </tr>
+            </tbody>
+        </table>
+        <div class="spaceM"></div>
+        <h2>How to use a function class</h2>
+        <p>As standard classes, they work by writing HTML classes. In this case, we need to write the function name and the
+            paremeters inside parentheses, like: <code>[name]([parameter1],[parameter2],[...])</code>.
+        </p>
+        <pre class="html">
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"bold"</span>&gt &lt!-- Standard class --> &lt/<span class="tag">div</span>&gt</span>
+
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"opacity(50)"</span>&gt &lt!-- Function class --> &lt/<span class="tag">div</span>&gt</span>
+        </pre>
+        <div class="spaceM"></div>
+        <h2>Error handling</h2>
+        <p>Function classes also supports some mispell errors, like writing more parameters than the required. This works
+            because the JavaScript only uses a specific number of parameters for each function. Astra removes extra whitespaces
+            too, so the only condition to work well is that the name is well written and the parameters are in the parentheses.
+        </p>
+        <pre class="html">
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"opacity(50)"</span>&gt &lt!-- Well written --> &lt/<span class="tag">div</span>&gt</span>
+
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"opacity( 50, 42, hi  )"</span>&gt &lt!-- Well written too --> &lt/<span class="tag">div</span>&gt</span>
+        </pre>
+        <div class="spaceM"></div>
+        <h2>Variables inside function classes</h2>
+        <p>Usually, when we use CSS variables we need to put them inside the <code>var()</code> function. But, when we use 
+        them inside function classes the <code>var()</code> function is not necessary. They have error handling too, so it doesn't 
+        matter if you put the <code>var()</code> function.
+        </p>
+        <pre class="html">
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"bg(--astra-red-300)"</span>&gt &lt!-- Well written --> &lt/<span class="tag">div</span>&gt</span>
+
+<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"bg(var(--astra-red-300))"</span>&gt &lt!-- Well written too --> &lt/<span class="tag">div</span>&gt</span>
+        </pre>        
+        <div class="spaceM"></div>
+    </main>
+    </div>
+    <footer class="bg(--astra-grey-200)"><p class="textCenter grey footerText">© Astra, Marcos González 2022-2023<br><br>All rights reserved</p></footer>
+    <script src="../../../src/astra.js"></script>
+</body>
+</html>
