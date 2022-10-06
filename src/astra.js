@@ -72,9 +72,8 @@ const parseFunctionClass = (e) => {
 const parseMediaClass = (e) => {
     return e.substring(e.indexOf("{") + 1 ,e.indexOf("}")).replace(" ","");
 }
-//Applying CSS to the colour classes
 
-
+//Function classes
 const FunctionClass = (functionClass,element) => {
     let head = functionClass.substring(0, functionClass.indexOf("("));
     if(head && !head.includes("{")){
@@ -105,70 +104,10 @@ const FunctionClass = (functionClass,element) => {
             }
         } 
 }
+document.addEventListener("change", 
+Array.from(document.querySelectorAll("*")).filter(e => e.getAttribute("class") != null).forEach(element => {
+    element.getAttribute("class").toString().split(" ").forEach(e => { 
+        FunctionClass(e,element);
+    });
+}))
 
-const queries = {
-    darkMode : window.matchMedia("(prefers-color-scheme: dark)"),
-    lightMode : window.matchMedia("(prefers-color-scheme: light)"),
-    xs: window.matchMedia("(max-width: 600px)"),
-    s: window.matchMedia("(max-width: 768px)"),
-    m: window.matchMedia("(max-width: 992px)"),
-    l: window.matchMedia("(max-width: 1200px)"),
-    xl: window.matchMedia("(max-width: 1440px)"),
-}
-
-const analizeMediaClasses = () => {
-    Array.from(document.querySelectorAll("*")).filter(e => e.getAttribute("class") != null).forEach(element => {
-        let e = element.getAttribute("class").toString();
-        if(e.includes("{") && e.includes("}")){
-            parseMediaClass(e).split(" ").filter(f => f != "").forEach(m => {
-                var media = e.split(" ").filter(c => c.includes("{")).toString().replace("{","");
-                 switch(media){
-                    default: 
-                        console.error(`The "${media}" media class doesn't exist`);
-                        break;
-                    case "dark":
-                        if(queries.darkMode.matches){
-                            FunctionClass(parseMediaClass(e),element)
-                        }
-                        break;
-                    case "light":
-                        if(queries.lightMode.matches){
-                            FunctionClass(parseMediaClass(e),element)
-                        }
-                        break;
-                    case "xs":
-                        if(queries.xs.matches){
-                            FunctionClass(parseMediaClass(e),element)
-                        }
-                        break;
-                    case "s":
-                        if(queries.s.matches){
-                            FunctionClass(parseMediaClass(e),element)
-                        }
-                        break;
-                    case "m":
-                        if(queries.m.matches){
-                            FunctionClass(parseMediaClass(e),element)
-                        }
-                        break;
-                    case "l":
-                        if(queries.l.matches){
-                            FunctionClass(parseMediaClass(e),element)
-                        }
-                        break;
-                    case "xl":
-                        if(queries.xl.matches){
-                            FunctionClass(parseMediaClass(e),element)
-                        }
-                        break;
-                 }
-            });
-        }
-        else{
-            e.split(" ").forEach(f => {
-                FunctionClass(f,element)
-            });
-        }
-    });  
-}
-document.addEventListener("change", analizeMediaClasses())
