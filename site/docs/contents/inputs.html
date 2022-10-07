@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../src/astra.css">
     <link rel="icon" href="../../assets/images/logo.png">
-    <title>Background Colors</title>
+    <title>Getting started</title>
 </head>
 <body>
     <header class="header stickyTop gradient(linear,#499eef,#4b32a5,90deg) shadowXS">
@@ -33,7 +33,7 @@
                 <ul class="unmarked">
                     <li><a class="grey" href="../contents/roots.html">Roots</a></li>
                     <li><a class="grey" href="../contents/headers.html">Headers</a></li>
-                    <li><a class="grey" href="../contents/inputs.html">Inputs</a></li>
+                    <li><a class="grey">Inputs</a></li>
                     <li><a class="grey">Alignments</a></li>
                     <li><a class="grey">Margin & paddings</a></li>
                     <li><a class="grey">Tables</a></li>
@@ -48,8 +48,8 @@
                 <br>
                 <b>Customization</b>
                 <ul class="unmarked">
-                    <li><a class="grey">Colours</a></li>
-                    <li><a class="grey" href="./gradients.html">Gradients</a></li>
+                    <li><a class="grey" href="../customization/backgrounds.html">Colours</a></li>
+                    <li><a class="grey" href="../customization/gradients.html">Gradients</a></li>
                 </ul>
                 <br>
                 <b>Components</b>
@@ -73,51 +73,50 @@
             </ul>
         </aside>
         <main class="padding-5">
-        <div class="display-4 semiBold">Background colors</div>
-        <p class="lead">Learn how to apply every color to your backgrounds</p>
-        <br>
-        <h2>The bg() function class</h2>
-        <p>The background color property is applied in Astra with the <code>bg()</code> function class. As every function class,
-            this method is JS dependent, so make sure that you have the astra.js script attached to your project. Learn more about function classes <a href="">here</a>.<br><br>
-
-            To use the <code>bg()</code> function class you need to add a class with the name "<code>bg([color])</code>". The
-            color can be an html color like <b>"blue"</b>, a RGB color like <b>"#0000ff"</b> or a CSS variable.
-        </p><br>
-        <h2>Astra colors</h2>
-        <p>Before the background color became a function class, there were 90 colours in Astra, included as CSS variables.
-            But these variables are still inside the project and you can use it putting <code>--astra-[color]-[intensity]</code>,
-            like the example below:
-        </p>
-        <pre class="css">
-<span class="line"><span class="selector">div</span>{</span>
-    <span class="line"><span class="atr">background-color</span>: <span class="var">var</span>(<span class="value">--astra-red-400</span>);</span>
-<span class="line">}</span>
-        </pre><br>
-        <p>The avaliable colours are:</p>
-        <ul class="unmarked">
-            <li>Red</li>
-            <li>Orange</li>
-            <li>Yellow</li>
-            <li>Green</li>
-            <li>Turquoise</li>
-            <li>Light blue</li>
-            <li>Blue</li>
-            <li>Violet</li>
-            <li>Pink</li>
-            <li>Grey</li>
-        </ul><br>
-        <p>And each one has 9 types of intensity, from 100 to 900.</p>
-        <br>
-        <h2>Using variables inside the bg() function class</h2>
-        <p>Usually, when we need to use a CSS variable to our project, we use the <code>var()</code> function and we put the variable inside it.
-            In Astra, this function doesn't need to be wrote, the JavaScript code will recognize when the value inside the parentheses
-            is a variable and it will apply the <code>var()</code> function. For example, the example below will make the same as the first
-            one, but this time, writing it with the <code>bg()</code> function class:
+        <div class="display-4 semiBold">Inputs</div>
+        <p class="lead">Give a brand new style to your input elements!</p>
+        <div class="spaceS"></div>
+        <h2>Creating custom input elements</h2>
+        <p>By default, Astra don't apply CSS to the normal input elements, you will need to add the <code>input</code> class
+            to the custom inputs. Astra will give a different style depending on its type, so the <code>input</code> class is 
+            universal. <br><br> <b>Example:</b>
         </p>
         <pre class="html">
-<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"bg(--astra-red-400)"</span>&gt&lt/<span class="tag">div</span>&gt</span>
-        </pre><br>
-        <p>This method is not only for the Astra variables, but for all the CSS classes that exist in your project.</p>
+<span class="line">&lt<span class="tag">input</span> <span class="atr">type</span>=<span class="value">"text"</span>&gt &lt!-- Standard input --> &lt/<span class="tag">div</span>&gt</span>
+
+<span class="line">&lt<span class="tag">input</span> <span class="atr">class</span>=<span class="value">"input"</span> <span class="atr">type</span>=<span class="value">"text"</span>&gt &lt!-- Custom input --> &lt/<span class="tag">div</span>&gt</span>
+        </pre>     
+        <p class="bold">Result:</p><br>
+        <div class="width(50%)">
+            <input type="text" placeholder="Normal input">
+            <div class="spaceXS"></div>
+            <input type="text" class="input" placeholder="Custom input">
+        </div>
+        <div class="spaceS"></div>
+        <h2>Changes on the new inputs</h2>
+        <div class="spaceS"></div>
+        <h4>Textarea:</h4>
+        <p>The new <code>textarea</code> input has the <code>resize-x</code> attribute in hidden, so this element will be 
+        resizable on the Y axis, like the example below:
+        </p>
+        <textarea class="input"></textarea>
+        <div class="spaceS"></div>
+        <h4>Range</h4>
+        <p>The <code>range</code> input isn't limited, but its appearance and colors are changed, looking like the following example:</p>
+        <input type="range" class="input">
+        <div class="spaceS"></div>
+        <h4>File</h4>
+        <p>As the previous element, the <code>file</code> input has a brand new appearance:</p>
+        <input type="file" class="input">
+        <div class="spaceM"></div>
+        <h2>Disabled inputs</h2>
+        <p>Astra also has styles to the disabled inputs. They are included with the <code>input</code> class, so you don't need 
+        to apply more classes, just the <code>disabled</code> attribute.</p>
+        <input type="text" class="input" placeholder="Disabled input" disabled>
+        <div class="spaceXS"></div>
+        <input type="file" class="input" disabled>
+        <div class="spaceXS"></div>
+        <input type="range" class="input" disabled>
         <div class="spaceM"></div>
     </main>
     </div>
