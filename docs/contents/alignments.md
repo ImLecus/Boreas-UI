@@ -1,104 +1,31 @@
-# Aligning with Astra CSS
+# Alignments
 
-### Center
+### Aligning content
 
-You can center any content inside the element with the `center-x`,`center-y` and `center` classes.
+To align content inside a flex, Astra uses the `center` and `align` classes and their variants. The usage is: `[align/center][axis]`. In the `center` case, the axis property is optional, if you don't specify it, it will apply the alignment to the center. Additionally, the `center` class is used on the flex container, while the `align` class is used on the elements inside the flex.
 
-By default, if we create a box with 3 elements they will appear in the top-left corner:
+```html
+<div class="centerX"></div>
+<div class="centerY"></div>
+<div class="center"></div>
+```
 ```html
 <div>
-    <p>A</p>
-    <p>B</p>
-    <p>C</p>
+  <div class="alignLeft"></div>
+  <div class="alignRight"></div>
+  <div class="alignTop"></div>
+  <div class="alignBottom"></div>
 </div>
-<!-- RESULT:  
------------
-|ABC      |
-|         |
-|         |
------------
--->
-```
-The `center-x` class aligns all the elements inside the container to the center on the X axis.
-
-```html
-<div class="center-x">
-    <p>A</p>
-    <p>B</p>
-    <p>C</p>
-</div>
-<!-- RESULT:  
------------
-|   ABC   |  
-|         |
-|         |        
------------
--->
-```
-The `center-y` class aligns all the elements inside the container to the center on the Y axis.
-```html
-<div class="center-y">
-    <p>A</p>
-    <p>B</p>
-    <p>C</p>
-</div>
-<!-- RESULT:  
------------
-|         |
-|ABC      |
-|         |
------------
--->
-```
-
-Finally, the `center` class aligns all the elements inside the container to the center on the X and Y axis.
-```html
-<div class="center">
-    <p>A</p>
-    <p>B</p>
-    <p>C</p>
-</div>
-<!-- RESULT:  
------------
-|         |
-|   ABC   |
-|         |
------------
--->
-```
-### Right & Left
-
-To align an element inside the container to the left or right, you can use `align-left` and `align-right` classes:
-
-```html
-<div>
-    <p class="align-left">A</p>
-    <p class="align-right">B</p>
-    <p>C</p>
-</div>
-<!-- RESULT:  
------------
-|A      BC|
-|         |
-|         |
------------
--->
-```
-### Top & Bottom
-To align an element inside the container to the top or bottom, you can use `align-top` and `align-bottom` classes:
-```html
-<div>
-    <p class="align-top">A</p>
-    <p class="align-bottom">B</p>
-    <p>C</p>
-</div>
-<!-- RESULT:  
------------
-|A        |
-|         |
-|BC       |
------------
--->
 ```
 ### Other alignment classes
-There are also other classes for special alignments, like `stretch`, `between`, `around` and `evenly`. They are equivalent to `align-items:center`, `justify-content:space-between`, `justify-content:space-around` and `justify-content:space-evenly`.
+* The `float` property of the elements can be changed with the `left` or `right` classes.
+* The `around` class will align the elements inside a flex with the same space between each one and the borders.
+* The `between` class will align the elements inside a flex with the same space between each one, but ignoring the borders.
+
+### Text alignments
+Texts can be aligned too without being attached to a flex. To align texts in one direction, you can use the `textLeft`, `textRight` and `textCenter` classes. It's very useful to apply these classes if you want to align texts witout a complex system, like a footer text.
+```html
+<p class="textLeft"> Left </p>
+<p class="textRight"> Right </p>
+<p class="textCenter"> Center </p>
+```

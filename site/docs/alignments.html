@@ -55,11 +55,51 @@
   </ul>
 </aside>
         <main class="padding-5">
-        <div class="display-4 semiBold">Alignments</div>
+        <div class="display-4 semiBold">Alignments  <button class="right secondaryBtn" onclick="redirect('https://github.com/ImLecus/Astra/blob/main/docs/contetns/alignments.md')">See it on GitHub</button></div>
         <p class="lead">Learn how to align elements with Astra</p>
         <div class="spaceS"></div>
-        <h2>What are roots?</h2>
-            
+        <h2>Aligning content</h2>
+        <p>
+          To align content inside a flex, Astra uses the <code>center</code> and <code>align</code> classes and their variants. 
+          The usage is: <code>[align/center][axis]</code>. In the <code>center</code> case, the axis property is optional, if 
+          you don't specify it, it will apply the alignment to the center. Additionally, the <code>center</code> class is used
+          on the flex container, while the <code>align</code> class is used on the elements inside the flex.<br><br> <b>Examples:</b>
+        </p>
+        <div class="row around">
+<pre class="html width(80%) margin-1">
+<span class="line">&lt;<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"centerX"</span>&gt;&lt;/<span class="tag">div</span>&gt;</span>
+<span class="line">&lt;<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"centerY"</span>&gt;&lt;/<span class="tag">div</span>&gt;</span>
+<span class="line">&lt;<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"center"</span>&gt;&lt;/<span class="tag">div</span>&gt;</span>
+          </pre>
+          <pre class="html width(80%) margin-1">
+<span class="line">&lt;<span class="tag">div</span>&gt;</span>
+  <span class="line">&lt;<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"alignLeft"</span>&gt;&lt;/<span class="tag">div</span>&gt;</span>
+  <span class="line">&lt;<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"alignRight"</span>&gt;&lt;/<span class="tag">div</span>&gt;</span>
+  <span class="line">&lt;<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"alignTop"</span>&gt;&lt;/<span class="tag">div</span>&gt;</span>
+  <span class="line">&lt;<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"alignBottom"</span>&gt;&lt;/<span class="tag">div</span>&gt;</span>
+<span class="line">&lt;/<span class="tag">div</span>&gt;</span>
+          </pre>
+        </div>
+        <div class="spaceS"></div>
+        <h2>Other alignment classes</h2>
+        <ul>
+          <li>The <code>float</code> property of the elements can be changed with the <code>left</code> or <code>right</code> classes.</li>
+          <li>The <code>around</code> class will align the elements inside a flex with the same space between each one and the borders.</li>
+          <li>The <code>between</code> class will align the elements inside a flex with the same space between each one, but ignoring the borders.</li>
+        </ul>
+        <div class="spaceS"></div>
+        <h2>Text alignments</h2>
+        <p>
+          Texts can be aligned too without being attached to a flex. To align texts in one direction, you can use the <code>textLeft</code>,
+          <code>textRight</code> and <code>textCenter</code> classes. It's very useful to apply these classes if you want to align texts
+          witout a complex system, like a footer text.
+        </p>
+          <pre class="html">
+<span class="line">&lt;<span class="tag">p</span> <span class="atr">class</span>=<span class="value">"textLeft"</span>&gt; Left &lt;/<span class="tag">p</span>&gt;</span>
+<span class="line">&lt;<span class="tag">p</span> <span class="atr">class</span>=<span class="value">"textRight"</span>&gt; Right &lt;/<span class="tag">p</span>&gt;</span>
+<span class="line">&lt;<span class="tag">p</span> <span class="atr">class</span>=<span class="value">"textCenter"</span>&gt; Center &lt;/<span class="tag">p</span>&gt;</span>
+          </pre>
+        <div class="spaceM"></div>
         </main>
     </div>
     <footer class="bg(--astra-grey-200)"><p class="textCenter grey footerText">© Astra, Marcos González 2022-2023<br><br>All rights reserved</p></footer>
