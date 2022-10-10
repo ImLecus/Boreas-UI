@@ -478,6 +478,9 @@ label .input[type="radio"]{
     border-radius: 50%;
     cursor: pointer;
 }
+.input[type="file"]{
+    height: auto;
+}
 .input[type="file"]::file-selector-button, 
 .input[type="file"]::-webkit-file-upload-button
 {
@@ -490,7 +493,6 @@ label .input[type="radio"]{
     transform: translateX(-15px);
     transition: 0.1s linear;
     z-index: 1;
-    height: auto !important;
 }
 .input[type="file"]::file-selector-button:hover,
 .input[type="file"]::-webkit-file-upload-button:hover{
@@ -1316,4 +1318,5 @@ button.close{
     padding-right: 2rem;
     float: left;
     min-width: 20%;
+    width: auto;
 }

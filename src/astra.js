@@ -10,6 +10,9 @@ const getClass = element =>{
 const getPosition = element => {
     return new Vector2(element.getBoundingClientRect().x,element.getBoundingClientRect().y);
 };
+const getAllElements = () => {
+    return Array.from(document.querySelectorAll("*"));
+}
 class Vector2{
     constructor(x,y){
         this.x = x;
@@ -104,7 +107,7 @@ const FunctionClass = (functionClass,element) => {
         } 
 }
 document.addEventListener("change", 
-Array.from(document.querySelectorAll("*")).filter(e => e.getAttribute("class") != null).forEach(element => {
+getAllElements().filter(e => e.getAttribute("class") != null).forEach(element => {
     element.getAttribute("class").toString().split(" ").forEach(e => { 
         FunctionClass(e,element);
     });
