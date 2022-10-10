@@ -1,15 +1,17 @@
-# Get started with Astra
-Astra is a CSS framework that makes easier and faster to write CSS.
+# Getting started with Astra
 
-##### 1. Create a new html file.
-To start creating we need a `html` file. Additionally, Astra needs Astra needs `<meta charset="utf-8">` and `<meta name="viewport">` tags to work well with responsive design. Here is a new html file template that you can copy:
+### Quick start
+
+**1. Create a new html file**. Astra needs the meta name="viewport" tag to work well with responsive webpages. Here is a template that you can copy:
+
+Let's start by including Astra to our webpage. We need to import the production-ready CSS and JavaScript via CDN links.
 ```html
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Astra Initial File</title>
+        <title>Astra Initial Template</title>
     </head>
     <body>
         <h1>Hello world!</h1>
@@ -17,22 +19,31 @@ To start creating we need a `html` file. Additionally, Astra needs Astra needs `
 </html>
 ```
 
-##### 2. Adding Astra
-To use Astra in your project, you need to use the `link` tag for the CSS and the `script` tag for the JavaScript as the example of below:
+**2. Add the CDN links.** Here is the previous template with the CDN links:
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Astra Initial File</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.2-alpha/dist/astra.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@0.4-alpha/src/astra.min.css">
+        <title>Astra Initial Template</title>
     </head>
     <body>
         <h1>Hello world!</h1>
-        <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.2-alpha/dist/astra.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@0.4-alpha/src/astra.min.js"></script>
     </body>
 </html>
 ```
-##### 3. Start coding! 
-With that two simple steps you can use Astra in your projects. But, what's next? Well, read the docs! Astra has a lot of features and possibilities, and also examples that you can copy and use in your projects. Happy coding!
+
+**3. Start coding!** That's all that you need to start creating with Astra. The documentation has all the information that you need to use every feature that Astra has for you.
+
+### CDN links
+
+Don't you want to copy all the template? Here you have the CDN links of the latest version of Astra.
+
+||URL|
+|-|-|
+|CSS|https://cdn.jsdelivr.net/gh/ImLecus/Astra@0.4.1-alpha/src/astra.min.css|
+|JS|https://cdn.jsdelivr.net/gh/ImLecus/Astra@0.4.1-alpha/src/astra.min.js|

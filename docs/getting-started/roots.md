@@ -1,37 +1,50 @@
+
+
 # Roots
 
 ### What are roots?
 
-A root in Astra CSS is an element container. It will expand until a specific width, and it will collapse if it is larger than the width. There are 6 different types of roots:
+The root elements are the most basic element container in Astra. They have different sizes and they mark the width of the elements inside them. For example, the .root element has a maximum width of the 75% of the parent element, in this case the body.
+
+### Different sizes of roots
 
 ||Extra-Small (< 600px)|Small (< 768px)|Medium (< 992px)|Large (< 1200px)| Extra-Large (< 1440)|Ultra-Large (≥ 1440px)|
 |-|------|------|------|------|----|--|
-|`root-xs`|100%|600px|600px|600px|600px|600px
-|`root-s`|100%|100%|768px|768px|768px|768px
-|`root-m`|100%|100%|100%|992px|992px|992px
-|`root-l`|100%|100%|100%|100%|1200px|1200px
-|`root-xl`|100%|100%|100%|100%|100%|1440px
-|`root-full`|100%|100%|100%|100%|100%|100%
 |`root`|75%|75%|75%|75%|75%|75%
+|`rootXS`|100%|600px|600px|600px|600px|600px
+|`rootS`|100%|100%|768px|768px|768px|768px
+|`rootM`|100%|100%|100%|992px|992px|992px
+|`rootL`|100%|100%|100%|100%|1200px|1200px
+|`rootXL`|100%|100%|100%|100%|100%|1440px
+|`rootFull`|100%|100%|100%|100%|100%|100%
 
 ### Creating a root
 
-Creating a root is as simple as creating a div with one of the root classes. Let's create a default root, that has a width of the 75% of the screen:
+To create a root element you need to apply one of the previous root classes inside an element, preferably inside a div tag, like the example of below:
+
 ```html
 <div class="root">
-    <!-- Here goes the content -->
+    <p>This is a paragraph inside a root</p>
 </div>
 ```
-As you have seen on the table, each type of root has different breakpoints when they will stop expanding.
-##### Full and default roots
 
-`root-full` and `root` are two special type of roots avaliable on Astra CSS. Their particularity is that they have no breakpoints, they will expand forever. While `root-full` expands to the 100% of the screen, `root` only expands to 75%, leaving a 12.5% margin on each side.
+### Responsive roots
+
+As you can see in the previous table, there are more types of roots, and each one have a width limit depending on their breakpoint. For example, a .rootL element will have a width of 100% if the screen width is smaller than 1200px, and it will have a width of 1200px if the screen is larger.
 
 ```html
-<div class="root">
-    <!-- This root will expand to the 75% of the screen -->
-</div>
-<div class="root-full">
-    <!-- This root will expand to the 100% of the screen -->
+<div class="rootXS"> <!-- 600px --> </div>
+<div class="rootS"> <!-- 768px --> </div>   
+<div class="rootM"> <!-- 992px --> </div> 
+<div class="rootL"> <!-- 1200px --> </div>
+<div class="rootXL"> <!-- 1440px --> </div>
+```
+
+### Full roots
+
+A special type of roots is the full roots. They will expand until the 100%, the screen width will doesn't matter. To use it, write the .rootFull class like the example below:
+```html
+<div class="rootFull">
+    <!-- This will have 100% width -->
 </div>
 ```
