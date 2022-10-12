@@ -102,7 +102,17 @@ const FunctionClass = (functionClass,element) => {
                 break;
             case "opacity":
                 element.style.opacity = `${body}%`;
+                break;  
+            case "blur":
+                element.style.filter = `blur(${body})`
                 break;
+            case "grayscale":
+                element.style.filter = `grayscale(${body})`
+                break;
+            case "sepia":
+                element.style.filter = `sepia(${body})`
+                break;
+                
             }
         } 
 }
