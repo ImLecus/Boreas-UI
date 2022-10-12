@@ -1,4 +1,1 @@
-*.html linguist-detectable=false
-*.xml linguist-detectable=false
-*.svg linguist-detectable=false
-*.json linguist-detectable=false
+./site/docs/** linguist-detectable=false
