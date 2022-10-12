@@ -1,4 +1,4 @@
-*.html linguist-detectable = false
-*.xml linguist-detectable = false
-*.svg linguist-detectable = false
-*.json linguist-detectable = false
+*.html linguist-detectable=false
+*.xml linguist-detectable=false
+*.svg linguist-detectable=false
+*.json linguist-detectable=false
