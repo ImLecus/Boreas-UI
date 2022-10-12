@@ -1,7 +1,7 @@
 {
     "name": "astra",
     "description": "The CSS framework that makes easier and faster to add styles.",
-    "version": "0.4-alpha",
+    "version": "0.4.1-alpha",
     "author": {
         "name": "Marcos González",
         "email": "marcosgf2005@gmail.com"
@@ -12,11 +12,9 @@
         "responsive",
         "front-end",
         "pc-first",
-        "web"
+        "web",
+        "alpha"
     ],
     "main": "./src/astra.js",
-    "style": "./src/astra.css",
-    "dependencies": {
-        "pug": "^3.0.2"
-    }
+    "style": "./src/astra.css"
 }
