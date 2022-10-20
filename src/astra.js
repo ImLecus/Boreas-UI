@@ -76,6 +76,7 @@ const parseFunctionClass = (e) => {
     return e.substring(e.indexOf("(") + 1 ,e.indexOf(")"));
 }
 //Function classes
+
 const FunctionClass = (functionClass,element) => {
     let head = functionClass.substring(0, functionClass.indexOf("("));
     if(head && !head.includes("{")){
@@ -125,33 +126,30 @@ const getFunctionClasses = () => {
     });
 }
 
-
-
 // Media classes
 
 const mediaClasses = {
     queries:[
         "(prefers-color-scheme: dark)",
         "(prefers-color-scheme: light)",
-        "(max-width: 600px)",
-        "(max-width: 772px)",
-        "(max-width: 968px)",
+        "(max-width: 1440px)",
         "(max-width: 1200px)",
-        "(max-width: 1440px)"
+        "(max-width: 968px)",
+        "(max-width: 772px)",
+        "(max-width: 600px)"
     ],
     names:[
         "dark", 
         "light",
-        "xs",
-        "s",
-        "m",
+        "xl",
         "l",
-        "xl"
+        "m",
+        "s",
+        "xs"
     ]
 }
-
 const getMediaClasses = () => {
-    getAllElements().filter(e => e.hasAttribute("dark") || e.hasAttribute("light")).forEach(e => {
+    getAllElements().filter(e => mediaClasses.names.find(f => f = e)).forEach(e => {
         let attr = mediaClasses.names.filter(c => c in e.attributes);
         attr.forEach(a => {
             if (window.matchMedia && window.matchMedia(mediaClasses.queries[mediaClasses.names.indexOf(a)]).matches) {
@@ -163,11 +161,19 @@ const getMediaClasses = () => {
         });
     });  
 }
-document.addEventListener("DOMContentLoaded", event => {
+
+const getClasses = () =>{
     getFunctionClasses();
     getMediaClasses();
+    
+}
+
+document.addEventListener(("DOMContentLoaded"||"load"), event => {
+    getClasses();
 })
 window.addEventListener(("resize"||"scroll"||"change"), event => {
-    getFunctionClasses();
-    getMediaClasses(); 
+    getClasses();
+})
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    getClasses();
 })
