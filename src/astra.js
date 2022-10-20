@@ -122,5 +122,12 @@ getAllElements().filter(e => e.getAttribute("class") != null).forEach(element =>
         FunctionClass(e,element);
     });
 }))
-
-    
+// Media classes
+getAllElements().filter(e => e.hasAttribute("dark")).forEach(e => {
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        let functions = e.getAttribute("dark").toString().split(" ");
+        functions.forEach(f => {
+            FunctionClass(f,e)
+        })
+    }
+})
