@@ -116,18 +116,48 @@ const FunctionClass = (functionClass,element) => {
             }
         } 
 }
-document.addEventListener("change", 
-getAllElements().filter(e => e.getAttribute("class") != null).forEach(element => {
-    element.getAttribute("class").toString().split(" ").forEach(e => { 
-        FunctionClass(e,element);
+
+const getFunctionClasses = () => {
+    getAllElements().filter(e => e.getAttribute("class") != null).forEach(element => {
+        element.getAttribute("class").toString().split(" ").forEach(e => { 
+            FunctionClass(e,element);
+        });
     });
-}))
-// Media classes
-getAllElements().filter(e => e.hasAttribute("dark")).forEach(e => {
-    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        let functions = e.getAttribute("dark").toString().split(" ");
-        functions.forEach(f => {
-            FunctionClass(f,e)
-        })
-    }
+}
+
+document.addEventListener("change", event => {
+    getMediaClasses();
+    getFunctionClasses();
 })
+document.addEventListener("DOMContentLoaded", event => {
+    getMediaClasses();
+    getFunctionClasses();
+})
+
+// Media classes
+
+const mediaClasses = {
+    queries:[
+        "(prefers-color-scheme: dark)",
+        "(prefers-color-scheme: light)"
+    ],
+    names:[
+        "dark", 
+        "light"
+    ]
+}
+
+const getMediaClasses = () => {
+    getAllElements().filter(e => e.hasAttribute("dark") || e.hasAttribute("light")).forEach(e => {
+        let attr = mediaClasses.names.filter(c => c in e.attributes);
+        attr.forEach(a => {
+            if (window.matchMedia && window.matchMedia(mediaClasses.queries[mediaClasses.names.indexOf(a)]).matches) {
+                let functions = e.getAttribute(a).toString().split(" ");
+                functions.forEach(f => {
+                    FunctionClass(f,e);
+                })
+            }
+        });
+    });  
+}
+
