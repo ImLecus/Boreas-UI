@@ -125,25 +125,28 @@ const getFunctionClasses = () => {
     });
 }
 
-document.addEventListener("change", event => {
-    getMediaClasses();
-    getFunctionClasses();
-})
-document.addEventListener("DOMContentLoaded", event => {
-    getMediaClasses();
-    getFunctionClasses();
-})
+
 
 // Media classes
 
 const mediaClasses = {
     queries:[
         "(prefers-color-scheme: dark)",
-        "(prefers-color-scheme: light)"
+        "(prefers-color-scheme: light)",
+        "(max-width: 600px)",
+        "(max-width: 772px)",
+        "(max-width: 968px)",
+        "(max-width: 1200px)",
+        "(max-width: 1440px)"
     ],
     names:[
         "dark", 
-        "light"
+        "light",
+        "xs",
+        "s",
+        "m",
+        "l",
+        "xl"
     ]
 }
 
@@ -160,4 +163,11 @@ const getMediaClasses = () => {
         });
     });  
 }
-
+document.addEventListener("DOMContentLoaded", event => {
+    getFunctionClasses();
+    getMediaClasses();
+})
+window.addEventListener(("resize"||"scroll"||"change"), event => {
+    getFunctionClasses();
+    getMediaClasses(); 
+})
