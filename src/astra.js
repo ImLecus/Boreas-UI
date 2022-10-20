@@ -148,8 +148,9 @@ const mediaClasses = {
         "xs"
     ]
 }
+
 const getMediaClasses = () => {
-    getAllElements().filter(e => mediaClasses.names.find(f => f = e)).forEach(e => {
+    getAllElements().forEach(e => {
         let attr = mediaClasses.names.filter(c => c in e.attributes);
         attr.forEach(a => {
             if (window.matchMedia && window.matchMedia(mediaClasses.queries[mediaClasses.names.indexOf(a)]).matches) {
@@ -165,13 +166,12 @@ const getMediaClasses = () => {
 const getClasses = () =>{
     getFunctionClasses();
     getMediaClasses();
-    
 }
 
 document.addEventListener(("DOMContentLoaded"||"load"), event => {
     getClasses();
 })
-window.addEventListener(("resize"||"scroll"||"change"), event => {
+addEventListener(("resize"||"scroll"||"change"), event => {
     getClasses();
 })
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
