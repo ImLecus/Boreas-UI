@@ -17,16 +17,16 @@
 To use Astra in your project you will need to copy this 2 **CDN links** in your html file.
 ```html
   <!-- Put this link tag inside the head tags -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4.1-alpha/src/astra.min.css" integrity="sha384-Wcc4EpFfg8VGPJD9r5d7BX80jVLWuKwwgqko91NsP5dAC46tR5ZmvzC5XNfQPEqc" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.5-alpha/src/astra.min.css" integrity="sha384-Wcc4EpFfg8VGPJD9r5d7BX80jVLWuKwwgqko91NsP5dAC46tR5ZmvzC5XNfQPEqc" crossorigin="anonymous">
   
   <!-- Put this script tag inside the body tags -->
-  <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4.1-alpha/src/astra.min.js" integrity="sha384-jShvWUneWxI2199nhcqFSr+Z2Qr+gwfWxP0Wp0gsZqq4gelLa609jLStklWa1/za" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.5-alpha/src/astra.min.js" integrity="sha384-jShvWUneWxI2199nhcqFSr+Z2Qr+gwfWxP0Wp0gsZqq4gelLa609jLStklWa1/za" crossorigin="anonymous"></script>
 ```
 If you are new using Astra, read the [documentation](https://github.com/ImLecus/Astra/docs) to learn how to use this framework.
 
 ## Documentation
 
-Astra will have both GitHub and web documentation. In the `/docs` folder on this repository you can see the GitHub documentation, which is in developement and expanding while the projects expands too. Web documentation will be added at release 1.0.
+Astra will have both GitHub and web documentation. In the `/docs` folder on this repository you can see the GitHub documentation, which is in developement and expanding while the projects expands too. Web documentation will be completely added at release 1.0.
 
 ## Copyright and licence
 Code and documentation copyright 2022-2023 [Marcos González](https://twitter.com/ImLecus).
