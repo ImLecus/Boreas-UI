@@ -96,43 +96,39 @@ const Gradient = (mode, color1, color2, rotation = "") => {
 const parseFunctionClass = (functionClass) => {
     return functionClass.substring(functionClass.indexOf("(") + 1, functionClass.indexOf(")"));
 };
+const functionClasses = {
+    "gradient": function (element, attributes) {
+        element.style.background = Gradient(attributes[0], attributes[1], attributes[2], attributes[3]);
+    },
+    "bg": function (element, attributes) {
+        element.style.backgroundColor = `${(attributes[0].startsWith("--")) ? "var(" + attributes[0] + ")" : attributes[0]}`;
+    },
+    "span": function (element, attributes) {
+        element.style.flexGrow = attributes[0];
+    },
+    "width": function (element, attributes) {
+        element.style.width = attributes[0];
+    },
+    "height": function (element, attributes) {
+        element.style.height = attributes[0];
+    },
+    "opacity": function (element, attributes) {
+        element.style.opacity = `${attributes[0]}%`;
+    },
+    "blur": function (element, attributes) {
+        element.style.filter = `blur(${attributes[0]})`;
+    },
+    "grayscale": function (element, attributes) {
+        element.style.filter = `grayscale(${attributes[0]})`;
+    },
+    "sepia": function (element, attributes) {
+        element.style.filter = `sepia(${attributes[0]})`;
+    }
+};
 const FunctionClass = (functionClass, element) => {
     let head = functionClass.substring(0, functionClass.indexOf("("));
-    if (head && !head.includes("{")) {
-        let body = parseFunctionClass(functionClass);
-        switch (head) {
-            default:
-                console.error(`The "${head}" function class doesn't exist`);
-                break;
-            case "gradient":
-                let attributes = body.split(",");
-                element.style.background = Gradient(attributes[0], attributes[1], attributes[2], attributes[3]);
-                break;
-            case "bg":
-                element.style.backgroundColor = `${(body.startsWith("--")) ? "var(" + body + ")" : body}`;
-                break;
-            case "span":
-                element.style.flexGrow = body;
-                break;
-            case "width":
-                element.style.width = body;
-                break;
-            case "height":
-                element.style.height = body;
-                break;
-            case "opacity":
-                element.style.opacity = `${body}%`;
-                break;
-            case "blur":
-                element.style.filter = `blur(${body})`;
-                break;
-            case "grayscale":
-                element.style.filter = `grayscale(${body})`;
-                break;
-            case "sepia":
-                element.style.filter = `sepia(${body})`;
-                break;
-        }
+    if (head && head in functionClasses) {
+        functionClasses[head](element, parseFunctionClass(functionClass).split(","));
     }
 };
 const getFunctionClasses = () => {
@@ -145,30 +141,19 @@ const getFunctionClasses = () => {
 };
 // Media classes
 const mediaClasses = {
-    queries: [
-        "(prefers-color-scheme: dark)",
-        "(prefers-color-scheme: light)",
-        "(max-width: 1440px)",
-        "(max-width: 1200px)",
-        "(max-width: 968px)",
-        "(max-width: 772px)",
-        "(max-width: 600px)"
-    ],
-    names: [
-        "dark",
-        "light",
-        "xl",
-        "l",
-        "m",
-        "s",
-        "xs"
-    ]
+    "dark": "(prefers-color-scheme: dark)",
+    "light": "(prefers-color-scheme: light)",
+    "xl": "(max-width: 1440px)",
+    "l": "(max-width: 1200px)",
+    "m": "(max-width: 968px)",
+    "s": "(max-width: 772px)",
+    "xs": "(max-width: 600px)"
 };
 const getMediaClasses = () => {
     getAllElements().forEach(e => {
-        let attr = mediaClasses.names.filter(c => c in e.attributes);
+        let attr = Object.keys(mediaClasses).filter(c => c in e.attributes);
         attr.forEach(a => {
-            if (window.matchMedia && window.matchMedia(mediaClasses.queries[mediaClasses.names.indexOf(a)]).matches) {
+            if (window.matchMedia && window.matchMedia(Object.values(mediaClasses)[Object.keys(mediaClasses).indexOf(a)]).matches) {
                 let getAttribute = e.getAttribute(a);
                 let functions = getAttribute.toString().split(" ");
                 functions.forEach(f => {
@@ -191,4 +176,3 @@ addEventListener(("resize" || "scroll" || "change"), event => {
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
     getClasses();
 });
-export {};
