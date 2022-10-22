@@ -90,7 +90,11 @@ const Gradient = (mode, color1, color2, rotation = "") => {
     if (color2.toString().startsWith("--")) {
         color2 = `var(${color2})`;
     }
-    return (`${(mode == "linear") ? "linear-gradient(" : "radial-gradient("}${(rotation == "") ? "" : rotation + ","}${color1},${color2})`);
+    return (`${(mode == "linear") ? "linear-gradient(" : "radial-gradient("}${(rotation == "") ? "" : "calc(" + rotation + "),"}${color1},${color2})`);
+};
+//Shadow function
+const Shadow = (offsetX, offsetY, blurRadius = "0", spreadRadius = "0", color = "black") => {
+    return (`drop-shadow( calc(${offsetX}) calc(${offsetY}) calc(${blurRadius}) calc(${spreadRadius}) ${color})`);
 };
 //Function classes
 const parseFunctionClass = (functionClass) => {
@@ -99,6 +103,9 @@ const parseFunctionClass = (functionClass) => {
 const functionClasses = {
     "gradient": function (element, attributes) {
         element.style.background = Gradient(attributes[0], attributes[1], attributes[2], attributes[3]);
+    },
+    "shadow": function (element, attributes) {
+        element.style.filter = Shadow(attributes[0], attributes[1], attributes[2], attributes[3], attributes[4]);
     },
     "bg": function (element, attributes) {
         element.style.backgroundColor = `${(attributes[0].startsWith("--")) ? "var(" + attributes[0] + ")" : attributes[0]}`;
