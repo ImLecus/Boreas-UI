@@ -716,6 +716,9 @@ pre.css .var{
 .overflowY{
     overflow-y: auto;
 }
+.notOverflow{
+    overflow: hidden;
+}
 /* MARGIN & PADDING */
 .margin-1 {
     margin: var(--astra-distance-1);

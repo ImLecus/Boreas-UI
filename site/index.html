@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astra, the CSS framework that makes it easier.</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.4.1-alpha/src/astra.min.css">
+    <link rel="stylesheet" href="../src/astra.css">
     <link rel="icon" href="./assets/images/logo.png">
 </head>
 <body>
-    <div class="header rootFull stickyTop gradient(linear,#499eef,#4b32a5,90deg) shadowXS">
+    <div class="header rootFull stickyTop gradient(linear,#499eef,#4b32a5,90deg) shadow(0,10px,20px,#00000055)">
         <div class="root flex centerY paddingY-2 wrap">
             <div class="flex noWrap alignLeft centerY">
                 <img class="brand" width="50" height="50" src="./assets/images/logoWhite.png"/>
                 <div class="navbar marginLeft-5">
-                    <a href="" class="navbarLink white b">Home</a>
-                    <a href="./docs/getting-started/introduction.html" class="navbarLink white">Docs</a>
-                    <a href="" class="navbarLink white">Examples</a>
+                    <a href="" class="navbarLink color(white) b">Home</a>
+                    <a href="./docs/getting-started/introduction.html" class="navbarLink color(white)">Docs</a>
+                    <a href="" class="navbarLink color(white)">Examples</a>
                 </div>
             </div>     
         </div>
@@ -24,8 +24,8 @@
     <main>
         <div class="root mTop-5">
             <div class="textCenter centerX flexColumn">
-                <img src="./assets/images/logo.png" width="300" class="marginY-5 marginX-auto shadow">
-                <div class="display-5 semi-b grey marginX-5">Astra, the CSS framework that makes<br>easier and faster to write CSS.</div>
+                <img src="./assets/images/logo.png" width="300" class="marginY-5 marginX-auto shadow(0,20px,20px,#00000044)">
+                <div class="display-6 semiBold color(#353535) width(600px) marginX-auto" s="width(100%)"><span class="color(#4782e5) display-1 bold">Astra</span><br><br>The CSS framework that makes easier and faster to write CSS.</div>
                 <div class="flex center marginTop-5">
                     <button class="primaryBtn marginX-2 semi-b xl" onclick="window.location.href = `./docs/introduction.html`">Get started</button>
                     <button class="secondaryBtn marginX-2 xl">Examples</button>
@@ -34,14 +34,14 @@
                 <p class="grey">Don't you want to use CDN links? <a href="">Download source code</a></p>
             </div>
             <div class="spaceXL"></div>
-            <div class="row around">
-                <div class="paddingRight-5 column span(2)">
+            <div class="column">
+                <div class="flex around wrap">
+                    <div class="width(50%)" s="width(100%)">
+                        <div class="display-6 semiBold color(#505050) marginY-5">Quick and easy to use</div>
+                        <p class="lead">Astra was created for both experienced creators and people without much knowledge of CSS. Therefore, its structure is intuitive and quick to use and learn.</p>
+                    </div>
 
-                    <div class="display-6 semiBold grey">Quick and easy to use</div>
-                    <p class="lead width(60%)">Astra was created for both experienced creators and people without much knowledge of CSS. Therefore, its structure is intuitive and quick to use and learn.</p>
-                
-                </div>
-                    <pre class="html column">
+                    <pre class="html notOverflow marginY-5">
 <span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"display-3 semiBold grey"</span>&gt</span>
     Astra
 <span class="line">&lt/<span class="tag">div</span>&gt</span>
@@ -49,12 +49,13 @@
     Make it easier
 <span class="line">&lt/<span class="tag">p</span>&gt</span>
                     </pre>
-            </div>
 
-            <div class="spaceL"></div><hr class="opacity(50)"><div class="spaceL"></div>
+                </div>
+                <div class="spaceL"></div><hr class="opacity(50)"><div class="spaceL"></div>
 
-            <div class="row around">
-                    <pre class="css column span(2)">
+                <div class="flex around wrap">
+
+                    <pre class="css notOverflow marginY-5">
 <span class="line"><span class="selector">body</span>{</span>
     <span class="line"><span class="atr">background-color</span>: <span class="value">var</span>(<span class="var">--astra-grey-100</span>);</span>
     <span class="line"><span class="atr">color</span>: <span class="value">var</span>(<span class="var">--astra-grey-800</span>);</span>
@@ -62,26 +63,27 @@
 <span class="line">}</span>
                     </pre>
 
-                <div class="column span(3)">
-
-                    <div class="display-6 semiBold grey textRight">Fully customizable</div>
-                    <p class="lead textRight right width(60%)">Unleash your most creative side and made beautifull websites with Astra and its CSS variables.</p>
-                
-                </div> 
-
-            </div>
-            <div class="spaceL"></div><hr class="opacity(50)"><div class="spaceL"></div>
-            <div class="row around">
-                <div class="column span(2)">
-                    <div class="display-6 semiBold grey">Endless possibilities</div>
-                    <p class="lead width(60%)">With the new function classes the customization possibilities are infinite!</p>
+                    <div class="width(50%) marginY-5" s="width(100%)">
+                        <div class="display-6 semiBold color(#505050) marginTop-5">Fully customizable</div>
+                        <p class="lead">Unleash your most creative side and made beautifull websites with Astra and its CSS variables.</p>
+                    </div>
                 </div>
-                    <pre class="html column">
+                <div class="spaceL"></div><hr class="opacity(50)"><div class="spaceL"></div>
+
+                <div class="flex around wrap">
+                    <div class="width(50%)" s="width(100%)">
+                        <div class="display-6 semiBold color(#505050) marginY-5">Endless possibilities</div>
+                        <p class="lead">With the new function classes and media classes the customization possibilities are infinite!</p>
+                    </div>
+
+                    <pre class="html notOverflow marginY-5">
 <span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"bg(#499eef) height(100px)"</span>&gt</span><span class="line">&lt/<span class="tag">div</span>&gt</span>
-<span class="line">&lt<span class="tag">div</span> <span class="atr">class</span>=<span class="value">"gradient(linear,#499eef,#4b32a5,45deg)"</span>&gt</span>
+<span class="line">&lt<span class="tag">div</span> <span class="atr">dark</span>=<span class="value">"color(blue)"</span>&gt</span>
     Hello world!
 <span class="line">&lt/<span class="tag">div</span>&gt</span>
                     </pre>
+
+                </div>
             </div>
             <div class="spaceXL"></div>
         </div>

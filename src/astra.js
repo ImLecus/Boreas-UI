@@ -93,8 +93,8 @@ const Gradient = (mode, color1, color2, rotation = "") => {
     return (`${(mode == "linear") ? "linear-gradient(" : "radial-gradient("}${(rotation == "") ? "" : "calc(" + rotation + "),"}${color1},${color2})`);
 };
 //Shadow function
-const Shadow = (offsetX, offsetY, blurRadius = "0", spreadRadius = "0", color = "black") => {
-    return (`drop-shadow( calc(${offsetX}) calc(${offsetY}) calc(${blurRadius}) calc(${spreadRadius}) ${color})`);
+const Shadow = (offsetX, offsetY, blurRadius = "0", color = "black") => {
+    return (`drop-shadow(${offsetX} ${offsetY} ${blurRadius} ${color})`);
 };
 //Function classes
 const parseFunctionClass = (functionClass) => {
@@ -105,10 +105,13 @@ const functionClasses = {
         element.style.background = Gradient(attributes[0], attributes[1], attributes[2], attributes[3]);
     },
     "shadow": function (element, attributes) {
-        element.style.filter = Shadow(attributes[0], attributes[1], attributes[2], attributes[3], attributes[4]);
+        element.style.filter = Shadow(attributes[0], attributes[1], attributes[2], attributes[3]);
     },
     "bg": function (element, attributes) {
         element.style.backgroundColor = `${(attributes[0].startsWith("--")) ? "var(" + attributes[0] + ")" : attributes[0]}`;
+    },
+    "color": function (element, attributes) {
+        element.style.color = attributes[0];
     },
     "span": function (element, attributes) {
         element.style.flexGrow = attributes[0];
