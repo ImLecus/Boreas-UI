@@ -7,26 +7,6 @@ const redirect = (href) => {
 const getClass = (element) => {
     return element.getAttribute("class").toString();
 };
-class Vector2 {
-    constructor(x = 0, y = 0) {
-        var x = x;
-        var y = y;
-    }
-}
-class Vector3 {
-    constructor(x = 0, y = 0, z = 0) {
-        var x = x;
-        var y = y;
-        var z = z;
-    }
-}
-const getPosition = (element) => {
-    return new Vector3(element.getBoundingClientRect().x, element.getBoundingClientRect().y, element.style.zIndex);
-};
-const get3DPosition = (element) => { getPosition(element); };
-const get2DPosition = (element) => {
-    return new Vector2(element.getBoundingClientRect().x, element.getBoundingClientRect().y);
-};
 const getAllElements = () => {
     return Array.from(document.querySelectorAll("*"));
 };
