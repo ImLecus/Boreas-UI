@@ -10,17 +10,14 @@
 
 ## Status
 
-<a href="#"><img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/ImLecus/Astra?color=blue&include_prereleases&label=VERSION&style=for-the-badge"></a> <a href="#"><img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/ImLecus/Astra/src/astra.css?color=purple&label=CSS%20size&style=for-the-badge"></a> <a href="#"><img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/ImLecus/Astra/src/astra.js?color=red&label=JS%20size&style=for-the-badge"></a>
+<a href="#"><img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/ImLecus/Astra?color=blue&include_prereleases&label=VERSION&style=for-the-badge"></a> <a href="#"><img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/ImLecus/Astra/src/astra.css?color=purple&label=CSS%20size&style=for-the-badge"></a>
 
 ## Quick start
 
-To use Astra in your project you will need to copy this 2 **CDN links** in your html file.
+To use Astra in your project you will need to copy this **CDN link** in your html file.
 ```html
   <!-- Put this link tag inside the head tags -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.5-alpha/src/astra.min.css" integrity="sha384-Wcc4EpFfg8VGPJD9r5d7BX80jVLWuKwwgqko91NsP5dAC46tR5ZmvzC5XNfQPEqc" crossorigin="anonymous">
-  
-  <!-- Put this script tag inside the body tags -->
-  <script src="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.5-alpha/src/astra.min.js" integrity="sha384-jShvWUneWxI2199nhcqFSr+Z2Qr+gwfWxP0Wp0gsZqq4gelLa609jLStklWa1/za" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.1/src/astra.min.css">
 ```
 If you are new using Astra, read the [documentation](https://github.com/ImLecus/Astra/docs) to learn how to use this framework.
 
