@@ -1052,12 +1052,6 @@ button.l,button.xl {
     padding: 0.5rem 1rem;
     margin-bottom: 0;
 }
-.dark {
-    color: var(--astra-grey-900);
-}
-.active {
-    color: var(--astra-grey-300);
-}
 .bLine {
     border-bottom: solid 1px var(--astra-grey-300);
 } 
@@ -1198,46 +1192,6 @@ button.l,button.xl {
 }
 button.close{
     background-image: url("https://cdn.jsdelivr.net/gh/ImLecus/Astra/icons/dark/close.svg");
-}
-.alert.red{
-    background-color: var(--astra-red-200);
-    color: var(--astra-red-700) !important;
-    border-color: var(--astra-red-300) !important;
-}
-.alert.orange{
-    background-color: var(--astra-orange-200);
-    color: var(--astra-orange-700) !important;
-    border-color: var(--astra-orange-500) !important;
-}
-.alert.yellow{
-    background-color: var(--astra-yellow-200);
-    color: var(--astra-yellow-800) !important;
-    border-color: var(--astra-yellow-500) !important;
-}
-.alert.green{
-    background-color: var(--astra-green-200);
-    color: var(--astra-green-800) !important;
-    border-color: var(--astra-green-500) !important;
-}
-.alert.turquoise{
-    background-color: var(--astra-turquoise-200);
-    color: var(--astra-turquoise-800) !important;
-    border-color: var(--astra-turquoise-500) !important;
-}
-.alert.blue{
-    background-color: var(--astra-blue-200);
-    color: var(--astra-blue-800) !important;
-    border-color: var(--astra-blue-500) !important;
-}
-.alert.violet {
-    background-color: var(--astra-violet-200);
-    color: var(--astra-violet-800) !important;
-    border-color: var(--astra-violet-500) !important;
-}
-.alert.pink {
-    background-color: var(--astra-pink-200);
-    color: var(--astra-pink-800) !important;
-    border-color: var(--astra-pink-500) !important;
 }
 /* INPUT VALIDATION */
 .input.valid{

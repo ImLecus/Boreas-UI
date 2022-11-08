@@ -113,6 +113,9 @@ const functionClasses = {
     },
     "sepia": function (element, attributes) {
         element.style.filter = `sepia(${attributes[0]})`;
+    },
+    "borderColor":function(element,attributes){
+        element.style.borderColor = attributes[0];
     }
 };
 const FunctionClass = (functionClass, element) => {
