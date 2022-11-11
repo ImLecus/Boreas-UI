@@ -1,5 +1,15 @@
 {
+    "name": "astra",
+    "version": "0.0.1",
+    "author": {
+        "name": "Marcos González",
+        "email": "marcosgf2005@gmail.com",
+        "url": "https://marcosgf.netlify.app"
+    },
     "scripts": {
-        "compile":"node astra.js"
+        "compile": "node astra.js"
+    },
+    "dependencies": {
+        "node-html-parser": "^6.1.1"
     }
 }
