@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "compile":"node astra.js"
+    }
+}

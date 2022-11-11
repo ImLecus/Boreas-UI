@@ -97,5 +97,11 @@
 "astra-grey-600": "#606060",
 "astra-grey-700": "#3f3f3f",
 "astra-grey-800": "#2b2b2b",
-"astra-grey-900": "#1a1a1b"
+"astra-grey-900": "#1a1a1b",
+
+"astra-body-font":"system-ui, 'Roboto', sans-serif",
+"astra-code-font":"monospace",
+
+"astra-highlight-bg": "#fdebd0"
+
 }
