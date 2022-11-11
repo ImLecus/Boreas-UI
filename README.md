@@ -8,7 +8,7 @@
 
 **Warning: this project is on developement and the actual versions (alpha) could be unstable**
 
-## Status
+## Status 
 
 <a href="#"><img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/ImLecus/Astra?color=blue&include_prereleases&label=VERSION&style=for-the-badge"></a> <a href="#"><img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/ImLecus/Astra/src/astra.css?color=purple&label=CSS%20size&style=for-the-badge"></a>
 
