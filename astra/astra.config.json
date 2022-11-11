@@ -1,0 +1,15 @@
+{
+    "using":{
+        "variables":true,
+        "base":true
+    },
+    "included":{
+        "variables":{
+        }
+    },
+    "extra": {
+        "variables":{
+            "primary":"#00FFFF"
+        }
+    }
+}
