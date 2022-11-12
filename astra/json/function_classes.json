@@ -1,0 +1,10 @@
+{
+    "width":".width\\(par1\\){\n    width: par2;\n}\n",
+    "height":".height\\(par1\\){\n    height: par2;\n}\n",
+    "top":".top\\(par1\\){\n    top: par2;\n}\n",
+    "bottom":".bottom\\(par1\\){\n    bottom: par2;\n}\n",
+    "left":".left\\(par1\\){\n    left: par2;\n}\n",
+    "right":".height\\(par1\\){\n    right: par2;\n}\n",
+    "bg":".bg\\(par1\\){\n    background-color: par2;\n}\n",
+    "color":".color\\(par1\\){\n    color: par2;\n}\n"
+}

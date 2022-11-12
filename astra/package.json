@@ -7,10 +7,11 @@
         "url": "https://marcosgf.netlify.app"
     },
     "scripts": {
-        "compile": "node astra.js"
+        "compile": "node astra.js",
+        "watch": ""
     },
     "dependencies": {
-        "purgecss": "^5.0.0",
-        "shelljs": "^0.8.5"
+        "node-html-parser": "^6.1.1",
+        "purgecss": "^5.0.0"
     }
 }
