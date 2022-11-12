@@ -1,8 +1,8 @@
 console.log("Compiling...");
 var startTime = performance.now()
 var fs = require("node:fs");
-var path = require('path');
-const parse = require('node-html-parser').parse;
+const PurgeCSS = require("purgecss");
+
 var configFile = JSON.parse(fs.readFileSync("./astra.config.json", "utf-8"));
 
 var variables = "";
@@ -10,6 +10,7 @@ if(configFile.using.variables){
     variables = JSON.parse(fs.readFileSync("./variables.json","utf8"));
 } 
 var base = "";
+var baseLines = base.split("\n");
 if(configFile.using.base){
     base = fs.readFileSync("./base.css","utf-8");
 }
@@ -31,23 +32,16 @@ for(let key in variables){
 for(let key in configFile.extra.variables){
     outputData += `    --${key}: ${configFile.extra.variables[key]}; \n`
 }
-outputData += "}";
+outputData += "}\n";
+
 //Base
-fs.readdir("./",function(err,data){
-    if(err) throw err;
-    let input = data.filter(d => d.endsWith(".html"));
-    input.forEach(file => {
-        let content = fs.readFileSync(file,"utf-8");
-        let document = parse(content);
-        document.querySelectorAll("body *").forEach(element => {
-            console.log(element.toString())
-        })
-
-
-    });
-});
-
 outputData += base;
+
+//Utilities
+
+
+//Purge
+
 
 fs.writeFileSync(outputDir, outputData ,function(err){ if(err) throw err;});
 var endTime = performance.now()

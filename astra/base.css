@@ -112,18 +112,7 @@ body {
     font-weight: 400;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+ h1 , h2 , h3 , h4 , h5 , h6 , .h1 , .h2 , .h3 , .h4 , .h5 , .h6 {
     margin: 0.2rem 0 0.8rem 0;
     font-weight: normal;
     font-style: normal;
@@ -132,78 +121,66 @@ h6,
     color: var(--astra-grey-800);
 }
 
-.display-1,
-.display-2,
-.display-3,
-.display-4,
-.display-5,
-.display-6 {
+ .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
     font-weight: 300;
     margin-bottom: 1rem;
 }
 
-.display-1 {
+ .display-1 {
     font-size: 50pt;
 }
 
-.display-2 {
+ .display-2 {
     font-size: 45pt;
 }
 
-.display-3 {
+ .display-3 {
     font-size: 40pt;
 }
 
-.display-4 {
+ .display-4 {
     font-size: 35pt;
 }
 
-.display-5 {
+ .display-5 {
     font-size: 30pt;
 }
 
-.display-6 {
+ .display-6 {
     font-size: 25pt;
 }
 
-h1,
-.h1 {
+ h1 , .h1 {
     font-size: 33pt;
 }
 
-h2,
-.h2 {
+ h2 , .h2 {
     font-size: 25pt;
 }
 
-h3,
-.h3 {
+ h3 , .h3 {
     font-size: 20pt;
 }
 
-h4,
-.h4 {
+ h4 , .h4 {
     font-size: 17pt;
 }
 
-h5,
-.h5 {
+ h5 , .h5 {
     font-size: 14pt;
 }
 
-h6,
-.h6 {
+ h6 , .h6 {
     font-size: 11pt;
 }
 
-p,
-a {
+ p , a {
     font-size: 16px;
     margin-bottom: 0.8rem;
     line-height: 130%;
 }
 
-a {
+ a { 
     cursor: pointer;
     color: var(--astra-blue-500);
     transition: 0.5s linear;
@@ -254,7 +231,7 @@ blockquote {
     margin-bottom: 1rem;
 }
 
-blockquote p {
+blockquote p{
     font-size: 1.2rem;
     margin: 0 0 0 0.25rem;
 }
@@ -481,7 +458,7 @@ sup {
     position: -webkit-sticky;
 }
 
-.stickyTop {
+.stickyTop{
     position: sticky;
     position: -webkit-sticky;
     top: 0;
