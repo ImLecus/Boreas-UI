@@ -1,27 +1,27 @@
-console.log("Compiling...");
-var startTime = performance.now()
 var fs = require("node:fs");
-const PurgeCSS = require("purgecss");
+var shell = require("shelljs");
+const child_process = require('node:child_process');
+const { stdout } = require("node:process");
 
 var configFile = JSON.parse(fs.readFileSync("./astra.config.json", "utf-8"));
+
+console.log("Compiling...");
+var startTime = performance.now()
 
 var variables = "";
 if(configFile.using.variables){
     variables = JSON.parse(fs.readFileSync("./variables.json","utf8"));
 } 
-var base = "";
-var baseLines = base.split("\n");
-if(configFile.using.base){
-    base = fs.readFileSync("./base.css","utf-8");
-}
 
 var outputData = "";
-var outputDir = process.argv[2];
+var outputDir = configFile.defaultOutputFile;
 if(process.argv[2] && process.argv[2].endsWith(".css")){
     outputDir = process.argv[2];
 }
 
 //CSS variables
+
+
 outputData += ":root{\n";
 for(let key in variables){ 
     if(configFile.included.variables[key]){
@@ -34,15 +34,19 @@ for(let key in configFile.extra.variables){
 }
 outputData += "}\n";
 
-//Base
-outputData += base;
 
+//Base
+if(configFile.using.base){
+    outputData += fs.readFileSync("./base.css","utf-8");
+}
 //Utilities
 
 
-//Purge
-
-
-fs.writeFileSync(outputDir, outputData ,function(err){ if(err) throw err;});
+fs.writeFileSync("./raw.css", outputData ,function(err){ if(err) throw err;});
+child_process.exec(`purgecss --css ./raw.css --content ./*.html --output ${outputDir} -v true`,(err,stdout) => {
+    if(err){ throw err;}
+    else{console.log("Comando ejecutado", stdout)}
+})
 var endTime = performance.now()
 console.log(`Finished in ${(endTime - startTime).toFixed(0)}ms`);
+

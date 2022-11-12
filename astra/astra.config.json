@@ -1,7 +1,9 @@
 {
+    "defaultOutputFile":"./output.css",
     "using":{
         "variables":true,
-        "base":true
+        "base":true,
+        "utilities":true
     },
     "included":{
         "variables":{

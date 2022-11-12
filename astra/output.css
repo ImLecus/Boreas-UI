@@ -1,0 +1,76 @@
+:root{ 
+    --astra-blue-500: #0466c8; 
+    --astra-grey-100: #f5f5f5; 
+    --astra-grey-800: #2b2b2b; 
+    --astra-body-font: system-ui, 'Roboto', sans-serif; 
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-file-upload-button {
+    font: inherit
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    display: block;
+    font-family: var(--astra-body-font);
+    font-weight: 400;
+}
+
+  h2 , .h2  {
+    margin: 0.2rem 0 0.8rem 0;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.25;
+    font-weight: 500;
+    color: var(--astra-grey-800);
+}
+
+ h2 , .h2 {
+    font-size: 25pt;
+}
+
+ p , a {
+    font-size: 16px;
+    margin-bottom: 0.8rem;
+    line-height: 130%;
+}
+
+ a { 
+    cursor: pointer;
+    color: var(--astra-blue-500);
+    transition: 0.5s linear;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+b,
+.b {
+    font-weight: 700 !important;
+    color: var(--astra-grey-700);
+}
+
+.rootS {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
