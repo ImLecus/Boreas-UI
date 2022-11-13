@@ -41,7 +41,7 @@ if(configFile.using.utilities){
 //Function classes
 var functionClassList = JSON.parse(fs.readFileSync("./json/function_classes.json","utf-8"));
 
-fs.readdir("./",function(err,data){
+fs.readdir("./",(err,data) => {
     if(err) throw err;
     let input = data.filter(d => d.endsWith(".html"));
     input.forEach(file => {
@@ -52,12 +52,14 @@ fs.readdir("./",function(err,data){
             functionClasses.forEach(functionClass => {
                 let head = functionClass.substring(0,functionClass.indexOf("("));
                 let body = functionClass.substring(functionClass.indexOf("(") + 1,functionClass.length - 1)
-                let rule = "/* purgecss ignore */ \n" + functionClassList[head].replace("par1",body).replace("par2",body.startsWith("--")? `var(${body})`: body);
+                let rule = "/* purgecss ignore */ \n" + functionClassList[head]
+                                                        .replace("par1",body.startsWith("#")? `\\${body}` : body)
+                                                        .replace("par2",body.startsWith("--")? `var(${body})`: body);
                 outputData += rule;
             });
         })
     })
-    fs.writeFileSync("./raw.css", outputData ,function(err){ if(err) throw err;});
+    fs.writeFileSync("./raw.css", outputData ,err => { if(err) throw err;});
 });
 
 

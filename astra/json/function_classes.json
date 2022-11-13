@@ -1,6 +1,8 @@
 {
     "width":".width\\(par1\\){\n    width: par2;\n}\n",
+    "w":".w\\(par1\\){\n    width: par2;\n}\n",
     "height":".height\\(par1\\){\n    height: par2;\n}\n",
+    "h":".h\\(par1\\){\n    height: par2;\n}\n",
     "top":".top\\(par1\\){\n    top: par2;\n}\n",
     "bottom":".bottom\\(par1\\){\n    bottom: par2;\n}\n",
     "left":".left\\(par1\\){\n    left: par2;\n}\n",

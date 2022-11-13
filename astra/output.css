@@ -117,64 +117,26 @@ body {
     font-weight: 400;
 }
 
- h2 , .h2  {
-    margin: 0.2rem 0 0.8rem 0;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.25;
-    font-weight: 500;
-    color: var(--astra-grey-800);
-}
-
-h2 , .h2 {
-    font-size: 25pt;
-}
-
-p , a {
-    font-size: 16px;
-    margin-bottom: 0.8rem;
-    line-height: 130%;
-}
-
-a { 
-    cursor: pointer;
-    color: var(--astra-blue-500);
-    transition: 0.5s linear;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-b,
-.b {
-    font-weight: 700 !important;
-    color: var(--astra-grey-700);
-}
-
 .root {
     max-width: 75%;
     margin: 0 auto;
 }
 
-.center-x {
-    justify-content: center;
-}
-
-.flex {
-    display: flex;
-    flex-direction: row;
+.absolute {
+    position: absolute;
 } 
 .bg\(--astra-red-300\){
     background-color: var(--astra-red-300);
 } 
-.bg\(--astra-aqua-500\){
-    background-color: var(--astra-aqua-500);
+.bg\(\#333333\){
+    background-color: #333333;
 } 
-.bg\(yellow\){
-    background-color: yellow;
+.w\(200px\){
+    width: 200px;
 } 
-.width\(20px\){
-    width: 20px;
+.h\(200px\){
+    height: 200px;
 } 
-.color\(--primary\){
-    color: var(--primary);
+.top\(150px\){
+    top: 150px;
 }
