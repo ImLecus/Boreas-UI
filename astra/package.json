@@ -7,8 +7,7 @@
         "url": "https://marcosgf.netlify.app"
     },
     "scripts": {
-        "compile": "node astra.js",
-        "watch": ""
+        "watch": "node astra.js"
     },
     "dependencies": {
         "node-html-parser": "^6.1.1",
