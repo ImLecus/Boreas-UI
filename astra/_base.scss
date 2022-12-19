@@ -1,4 +1,6 @@
+@use "variables" as v;
 @import "./normalize.css";
+
 *, *::after, *::before{
     margin: 0;
     padding: 0;
@@ -31,8 +33,102 @@ h6, .h6{
     font-size: 1.25rem;
     margin: 0.5rem 0;
 }
-
-div[sticky-top]{
+button, input[type="button"], .button{
+    background-color: transparent;
+    border: 1px solid v.$grey-300;
+    padding: calc(0.5rem - 1px) calc(1rem - 1px);
+    cursor: pointer;
+    &:hover{
+        border-color: v.$grey-800;
+    }
+    transition: 0.1s linear;
+    &[xl]{
+        padding: calc(1rem - 1px) calc(2rem - 1px);
+        font-size: 120%;
+    }
+    &[xs]{
+        padding: calc(0.4rem - 1px) calc(0.8rem - 1px);
+        font-size: 80%;
+    }
+}
+button[primary], input[type="button"][primary], .button-primary{
+    background-color: v.$primary-color;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    &:hover{
+        background-color: change-color($color: v.$primary-color, $lightness: 45%)
+    }
+    &[xl]{
+        padding: 1rem 2rem;
+        font-size: 120%;
+    }
+    &[xs]{
+        padding: 0.4rem 0.8rem;
+        font-size: 80%;
+    }
+}
+button[secondary], input[type="button"][secondary], .button-secondary{
+    background-color: white;
+    color: v.$primary-color;
+    border: 1px solid v.$primary-color;
+    padding: calc(0.5rem - 1px) calc(1rem - 1px);
+    &:hover{
+        border-color: change-color($color: v.$primary-color, $lightness: 45%);
+        color: change-color($color: v.$primary-color, $lightness: 45%);
+    }
+    &[xl]{
+        padding: calc(1rem - 1px) calc(2rem - 1px);
+        font-size: 120%;
+    }
+    &[xs]{
+        padding: calc(0.4rem - 1px) calc(0.8rem - 1px);
+        font-size: 80%;
+    }
+}
+button[danger], input[type="button"][danger], .button-danger{
+    background-color: v.$danger-color;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    &:hover{
+        background-color: change-color($color: v.$danger-color, $lightness: 45%)
+    }
+    &[xl]{
+        padding: 1rem 2rem;
+        font-size: 120%;
+    }
+    &[xs]{
+        padding: 0.4rem 0.8rem;
+        font-size: 80%;
+    }
+}
+button[warning], input[type="button"][warning], .button-warning{
+    background-color: v.$warning-color;
+    color: v.$grey-700;
+    border: none;
+    padding: 0.5rem 1rem;
+    &:hover{
+        background-color: change-color($color: v.$warning-color, $lightness: 45%)
+    }
+    &[xl]{
+        padding: 1rem 2rem;
+        font-size: 120%;
+    }
+    &[xs]{
+        padding: 0.4rem 0.8rem;
+        font-size: 80%;
+    }
+}
+a{
+    cursor: pointer;
+    color: v.$grey-700;
+    transition: 0.1s linear;
+    &:hover{
+        color: v.$grey-500;
+    }
+}
+div[sticky-top], .sticky-top{
     position: sticky;
     top: 0;
 }
