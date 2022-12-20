@@ -1,0 +1,29 @@
+@use "variables" as v;
+
+.bg-grey-100{
+    background-color: v.$grey-100;
+}
+.bg-grey-200{
+    background-color: v.$grey-200;
+}
+.bg-grey-300{
+    background-color: v.$grey-300;
+}
+.bg-grey-400{
+    background-color: v.$grey-400;
+}
+.bg-grey-500{
+    background-color: v.$grey-500;
+}
+.bg-grey-600{
+    background-color: v.$grey-600;
+}
+.bg-grey-700{
+    background-color: v.$grey-700;
+}
+.bg-grey-800{
+    background-color: v.$grey-800;
+}
+.bg-grey-900{
+    background-color: v.$grey-900;
+}

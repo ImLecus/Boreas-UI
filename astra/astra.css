@@ -5,10 +5,6 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-  padding: 0 5%;
-}
-
 h1, .h1 {
   font-size: 3.5rem;
   margin: 1.5rem 0;
@@ -141,7 +137,7 @@ button.danger.xl, input[type=button].danger.xl, .button.danger.xl {
   padding: 1rem 2rem;
 }
 button.danger:hover, input[type=button].danger:hover, .button.danger:hover {
-  background-color: #0092e6;
+  background-color: #cc1a27;
 }
 
 button.warning, input[type=button].warning, .button.warning {
@@ -165,7 +161,7 @@ button.warning.xl, input[type=button].warning.xl, .button.warning.xl {
   padding: 1rem 2rem;
 }
 button.warning:hover, input[type=button].warning:hover, .button.warning:hover {
-  background-color: #0092e6;
+  background-color: #e6b800;
 }
 
 a {
@@ -181,6 +177,72 @@ a:hover {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
+
+.root {
+  max-width: 80%;
+  margin: auto;
+}
+
+.rootXS {
+  max-width: 500px;
+  margin: auto;
+}
+
+.rootS {
+  max-width: 678px;
+  margin: auto;
+}
+
+.rootM {
+  max-width: 900px;
+  margin: auto;
+}
+
+.rootL {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.rootXL {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.bg-grey-100 {
+  background-color: #ededed;
+}
+
+.bg-grey-200 {
+  background-color: #cbcbcb;
+}
+
+.bg-grey-300 {
+  background-color: #bababa;
+}
+
+.bg-grey-400 {
+  background-color: #767676;
+}
+
+.bg-grey-500 {
+  background-color: #585858;
+}
+
+.bg-grey-600 {
+  background-color: #464646;
+}
+
+.bg-grey-700 {
+  background-color: #323232;
+}
+
+.bg-grey-800 {
+  background-color: #202020;
+}
+
+.bg-grey-900 {
+  background-color: #121212;
 }
 
 .flex {
@@ -217,6 +279,18 @@ a:hover {
 
 .justify-stretch {
   justify-content: stretch;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .align-center {

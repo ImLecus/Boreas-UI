@@ -4,10 +4,7 @@
 *, *::after, *::before{
     margin: 0;
     padding: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-}
-body{
-    padding: 0 5%;
+    font-family: v.$font;
 }
 h1, .h1{
     font-size: 3.5rem;
@@ -63,7 +60,7 @@ h6, .h6{
     }
 }
 @function darken($color: #000){
-    @return change-color($color: v.$primary-color, $lightness: 45%);
+    @return change-color($color: $color, $lightness: 45%);
 }
 button, input[type="button"], .button{
     @include btn($bg: transparent, $padding: 1px);
@@ -109,4 +106,29 @@ a{
 .sticky-top{
     position: sticky;
     top: 0;
+}
+
+.root{
+    max-width: 80%;
+    margin: auto;
+}
+.rootXS{
+    max-width: v.$xs;
+    margin: auto;
+}
+.rootS{
+    max-width: v.$s;
+    margin: auto;
+}
+.rootM{
+    max-width: v.$m;
+    margin: auto;
+}
+.rootL{
+    max-width: v.$l;
+    margin: auto;
+}
+.rootXL{
+    max-width: v.$xl;
+    margin: auto;
 }
