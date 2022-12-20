@@ -4,7 +4,7 @@
 *, *::after, *::before{
     margin: 0;
     padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 body{
     padding: 0 5%;
@@ -33,15 +33,26 @@ h6, .h6{
     font-size: 1.25rem;
     margin: 0.5rem 0;
 }
-button, input[type="button"], .button{
-    background-color: transparent;
-    border: 1px solid v.$grey-300;
-    padding: calc(0.5rem - 1px) calc(1rem - 1px);
+@mixin btn($bg: #000000, $padding: 0px){
+    background-color: $bg;
+    padding: 0.5rem 1rem;
+    @if ($padding > 0){
+        padding: calc(0.5rem - $padding) calc(1rem - $padding);
+    }
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 2px;
     cursor: pointer;
+    transition: 0.1s linear;
+    margin: 2px;
+    border: none;
+}
+button, input[type="button"], .button{
+    @include btn($bg: transparent, $padding: 1px);
+    border: 1px solid v.$grey-300;
     &:hover{
         border-color: v.$grey-800;
     }
-    transition: 0.1s linear;
     &[xl]{
         padding: calc(1rem - 1px) calc(2rem - 1px);
         font-size: 120%;
@@ -51,11 +62,9 @@ button, input[type="button"], .button{
         font-size: 80%;
     }
 }
-button[primary], input[type="button"][primary], .button-primary{
-    background-color: v.$primary-color;
+button.primary, input[type="button"].primary{
+    @include btn($bg: v.$primary-color, $padding: 0);
     color: white;
-    border: none;
-    padding: 0.5rem 1rem;
     &:hover{
         background-color: change-color($color: v.$primary-color, $lightness: 45%)
     }
@@ -68,11 +77,11 @@ button[primary], input[type="button"][primary], .button-primary{
         font-size: 80%;
     }
 }
-button[secondary], input[type="button"][secondary], .button-secondary{
-    background-color: white;
+button.secondary, input[type="button"].secondary{
+    @include btn($bg: white, $padding: 1px);
+
     color: v.$primary-color;
     border: 1px solid v.$primary-color;
-    padding: calc(0.5rem - 1px) calc(1rem - 1px);
     &:hover{
         border-color: change-color($color: v.$primary-color, $lightness: 45%);
         color: change-color($color: v.$primary-color, $lightness: 45%);
@@ -86,11 +95,10 @@ button[secondary], input[type="button"][secondary], .button-secondary{
         font-size: 80%;
     }
 }
-button[danger], input[type="button"][danger], .button-danger{
-    background-color: v.$danger-color;
+button.danger, input[type="button"].danger{
+    @include btn($bg: v.$danger-color, $padding: 0);
+
     color: white;
-    border: none;
-    padding: 0.5rem 1rem;
     &:hover{
         background-color: change-color($color: v.$danger-color, $lightness: 45%)
     }
@@ -103,11 +111,10 @@ button[danger], input[type="button"][danger], .button-danger{
         font-size: 80%;
     }
 }
-button[warning], input[type="button"][warning], .button-warning{
-    background-color: v.$warning-color;
+button.warning, input[type="button"].warning{
+    @include btn($bg: v.$warning-color, $padding: 0);
+
     color: v.$grey-700;
-    border: none;
-    padding: 0.5rem 1rem;
     &:hover{
         background-color: change-color($color: v.$warning-color, $lightness: 45%)
     }
@@ -128,7 +135,7 @@ a{
         color: v.$grey-500;
     }
 }
-div[sticky-top], .sticky-top{
+.sticky-top{
     position: sticky;
     top: 0;
 }
@@ -141,4 +148,19 @@ div[sticky-top], .sticky-top{
 }
 .flex{
     @include flex();
+}
+.flex.column{
+    @include flex($direction: column);
+}
+.flex.reverse{
+    @include flex($direction: row-reverse);
+}
+.flex.column.reverse{
+    @include flex($direction: column-reverse);
+}
+.flex.justify-center{
+    justify-content: center;
+}
+.flex.justify-baseline{
+    justify-content: baseline;
 }
