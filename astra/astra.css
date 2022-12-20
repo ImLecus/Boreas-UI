@@ -50,21 +50,24 @@ button, input[type=button], .button {
   transition: 0.1s linear;
   margin: 2px;
   border: none;
+  color: #323232;
   border: 1px solid #bababa;
+}
+button.xs, input[type=button].xs, .button.xs {
+  font-size: 80%;
+  padding: 0.4rem 0.8rem;
+  padding: calc(0.4rem - 1px) calc(0.8rem - 1px);
+}
+button.xl, input[type=button].xl, .button.xl {
+  font-size: 120%;
+  padding: 1rem 2rem;
+  padding: calc(1rem - 1px) calc(2rem - 1px);
 }
 button:hover, input[type=button]:hover, .button:hover {
   border-color: #202020;
 }
-button[xl], input[type=button][xl], .button[xl] {
-  padding: calc(1rem - 1px) calc(2rem - 1px);
-  font-size: 120%;
-}
-button[xs], input[type=button][xs], .button[xs] {
-  padding: calc(0.4rem - 1px) calc(0.8rem - 1px);
-  font-size: 80%;
-}
 
-button.primary, input[type=button].primary {
+button.primary, input[type=button].primary, .button.primary {
   background-color: #00a2ff;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
@@ -74,21 +77,21 @@ button.primary, input[type=button].primary {
   transition: 0.1s linear;
   margin: 2px;
   border: none;
-  color: white;
+  color: #ededed;
 }
-button.primary:hover, input[type=button].primary:hover {
+button.primary.xs, input[type=button].primary.xs, .button.primary.xs {
+  font-size: 80%;
+  padding: 0.4rem 0.8rem;
+}
+button.primary.xl, input[type=button].primary.xl, .button.primary.xl {
+  font-size: 120%;
+  padding: 1rem 2rem;
+}
+button.primary:hover, input[type=button].primary:hover, .button.primary:hover {
   background-color: #0092e6;
 }
-button.primary[xl], input[type=button].primary[xl] {
-  padding: 1rem 2rem;
-  font-size: 120%;
-}
-button.primary[xs], input[type=button].primary[xs] {
-  padding: 0.4rem 0.8rem;
-  font-size: 80%;
-}
 
-button.secondary, input[type=button].secondary {
+button.secondary, input[type=button].secondary, .button.secondary {
   background-color: white;
   padding: 0.5rem 1rem;
   padding: calc(0.5rem - 1px) calc(1rem - 1px);
@@ -102,20 +105,22 @@ button.secondary, input[type=button].secondary {
   color: #00a2ff;
   border: 1px solid #00a2ff;
 }
-button.secondary:hover, input[type=button].secondary:hover {
+button.secondary.xs, input[type=button].secondary.xs, .button.secondary.xs {
+  font-size: 80%;
+  padding: 0.4rem 0.8rem;
+  padding: calc(0.4rem - 1px) calc(0.8rem - 1px);
+}
+button.secondary.xl, input[type=button].secondary.xl, .button.secondary.xl {
+  font-size: 120%;
+  padding: 1rem 2rem;
+  padding: calc(1rem - 1px) calc(2rem - 1px);
+}
+button.secondary:hover, input[type=button].secondary:hover, .button.secondary:hover {
   border-color: #0092e6;
   color: #0092e6;
 }
-button.secondary[xl], input[type=button].secondary[xl] {
-  padding: calc(1rem - 1px) calc(2rem - 1px);
-  font-size: 120%;
-}
-button.secondary[xs], input[type=button].secondary[xs] {
-  padding: calc(0.4rem - 1px) calc(0.8rem - 1px);
-  font-size: 80%;
-}
 
-button.danger, input[type=button].danger {
+button.danger, input[type=button].danger, .button.danger {
   background-color: #e63946;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
@@ -125,21 +130,21 @@ button.danger, input[type=button].danger {
   transition: 0.1s linear;
   margin: 2px;
   border: none;
-  color: white;
+  color: #ededed;
 }
-button.danger:hover, input[type=button].danger:hover {
-  background-color: #cc1a27;
-}
-button.danger[xl], input[type=button].danger[xl] {
-  padding: 1rem 2rem;
-  font-size: 120%;
-}
-button.danger[xs], input[type=button].danger[xs] {
-  padding: 0.4rem 0.8rem;
+button.danger.xs, input[type=button].danger.xs, .button.danger.xs {
   font-size: 80%;
+  padding: 0.4rem 0.8rem;
+}
+button.danger.xl, input[type=button].danger.xl, .button.danger.xl {
+  font-size: 120%;
+  padding: 1rem 2rem;
+}
+button.danger:hover, input[type=button].danger:hover, .button.danger:hover {
+  background-color: #0092e6;
 }
 
-button.warning, input[type=button].warning {
+button.warning, input[type=button].warning, .button.warning {
   background-color: #ffce08;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
@@ -151,16 +156,16 @@ button.warning, input[type=button].warning {
   border: none;
   color: #323232;
 }
-button.warning:hover, input[type=button].warning:hover {
-  background-color: #e6b800;
-}
-button.warning[xl], input[type=button].warning[xl] {
-  padding: 1rem 2rem;
-  font-size: 120%;
-}
-button.warning[xs], input[type=button].warning[xs] {
-  padding: 0.4rem 0.8rem;
+button.warning.xs, input[type=button].warning.xs, .button.warning.xs {
   font-size: 80%;
+  padding: 0.4rem 0.8rem;
+}
+button.warning.xl, input[type=button].warning.xl, .button.warning.xl {
+  font-size: 120%;
+  padding: 1rem 2rem;
+}
+button.warning:hover, input[type=button].warning:hover, .button.warning:hover {
+  background-color: #0092e6;
 }
 
 a {
@@ -180,36 +185,52 @@ a:hover {
 
 .flex {
   display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: baseline;
 }
 
-.flex.column {
-  display: flex;
+.column {
   flex-direction: column;
-  justify-content: start;
-  align-items: baseline;
 }
 
 .flex.reverse {
-  display: flex;
   flex-direction: row-reverse;
-  justify-content: start;
-  align-items: baseline;
 }
 
-.flex.column.reverse {
-  display: flex;
+.flex.column-reverse {
   flex-direction: column-reverse;
-  justify-content: start;
-  align-items: baseline;
 }
 
-.flex.justify-center {
+.flex.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.justify-center {
   justify-content: center;
 }
 
-.flex.justify-baseline {
-  justify-content: baseline;
+.justify-start {
+  justify-content: start;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-stretch {
+  justify-content: stretch;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-stretch {
+  align-items: stretch;
 }/*# sourceMappingURL=astra.css.map */

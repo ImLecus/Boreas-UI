@@ -33,7 +33,7 @@ h6, .h6{
     font-size: 1.25rem;
     margin: 0.5rem 0;
 }
-@mixin btn($bg: #000000, $padding: 0px){
+@mixin btn($bg: #000, $padding: 0px, $color: v.$grey-700){
     background-color: $bg;
     padding: 0.5rem 1rem;
     @if ($padding > 0){
@@ -46,6 +46,24 @@ h6, .h6{
     transition: 0.1s linear;
     margin: 2px;
     border: none;
+    color: $color;
+    &.xs{
+        font-size: 80%;
+        padding: 0.4rem 0.8rem;
+        @if ($padding > 0){
+            padding: calc(0.4rem - $padding) calc(0.8rem - $padding);
+        }
+    }
+    &.xl{
+        font-size: 120%;
+        padding: 1rem 2rem;
+        @if ($padding > 0){
+            padding: calc(1rem - $padding) calc(2rem - $padding);
+        }
+    }
+}
+@function darken($color: #000){
+    @return change-color($color: v.$primary-color, $lightness: 45%);
 }
 button, input[type="button"], .button{
     @include btn($bg: transparent, $padding: 1px);
@@ -53,78 +71,31 @@ button, input[type="button"], .button{
     &:hover{
         border-color: v.$grey-800;
     }
-    &[xl]{
-        padding: calc(1rem - 1px) calc(2rem - 1px);
-        font-size: 120%;
-    }
-    &[xs]{
-        padding: calc(0.4rem - 1px) calc(0.8rem - 1px);
-        font-size: 80%;
-    }
 }
-button.primary, input[type="button"].primary{
-    @include btn($bg: v.$primary-color, $padding: 0);
-    color: white;
+button.primary, input[type="button"].primary, .button.primary{
+    @include btn($bg: v.$primary-color, $color: v.$grey-100);
     &:hover{
-        background-color: change-color($color: v.$primary-color, $lightness: 45%)
-    }
-    &[xl]{
-        padding: 1rem 2rem;
-        font-size: 120%;
-    }
-    &[xs]{
-        padding: 0.4rem 0.8rem;
-        font-size: 80%;
+        background-color: darken($color: v.$primary-color);
     }
 }
-button.secondary, input[type="button"].secondary{
-    @include btn($bg: white, $padding: 1px);
-
-    color: v.$primary-color;
+button.secondary, input[type="button"].secondary, .button.secondary{
+    @include btn($bg: white, $padding: 1px, $color: v.$primary-color);
     border: 1px solid v.$primary-color;
     &:hover{
-        border-color: change-color($color: v.$primary-color, $lightness: 45%);
-        color: change-color($color: v.$primary-color, $lightness: 45%);
-    }
-    &[xl]{
-        padding: calc(1rem - 1px) calc(2rem - 1px);
-        font-size: 120%;
-    }
-    &[xs]{
-        padding: calc(0.4rem - 1px) calc(0.8rem - 1px);
-        font-size: 80%;
+        border-color: darken($color: v.$primary-color);
+        color: darken($color: v.$primary-color);
     }
 }
-button.danger, input[type="button"].danger{
-    @include btn($bg: v.$danger-color, $padding: 0);
-
-    color: white;
+button.danger, input[type="button"].danger, .button.danger{
+    @include btn($bg: v.$danger-color, $color: v.$grey-100);
     &:hover{
-        background-color: change-color($color: v.$danger-color, $lightness: 45%)
-    }
-    &[xl]{
-        padding: 1rem 2rem;
-        font-size: 120%;
-    }
-    &[xs]{
-        padding: 0.4rem 0.8rem;
-        font-size: 80%;
+        background-color: darken($color: v.$danger-color);
     }
 }
-button.warning, input[type="button"].warning{
-    @include btn($bg: v.$warning-color, $padding: 0);
-
-    color: v.$grey-700;
+button.warning, input[type="button"].warning, .button.warning{
+    @include btn($bg: v.$warning-color, $color: v.$grey-700);
     &:hover{
-        background-color: change-color($color: v.$warning-color, $lightness: 45%)
-    }
-    &[xl]{
-        padding: 1rem 2rem;
-        font-size: 120%;
-    }
-    &[xs]{
-        padding: 0.4rem 0.8rem;
-        font-size: 80%;
+        background-color: darken($color: v.$warning-color);
     }
 }
 a{
@@ -138,29 +109,4 @@ a{
 .sticky-top{
     position: sticky;
     top: 0;
-}
-
-@mixin flex($direction: row, $justify: start, $align: baseline){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: baseline;
-}
-.flex{
-    @include flex();
-}
-.flex.column{
-    @include flex($direction: column);
-}
-.flex.reverse{
-    @include flex($direction: row-reverse);
-}
-.flex.column.reverse{
-    @include flex($direction: column-reverse);
-}
-.flex.justify-center{
-    justify-content: center;
-}
-.flex.justify-baseline{
-    justify-content: baseline;
 }
