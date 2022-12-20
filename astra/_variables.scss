@@ -19,3 +19,103 @@ $grey-600: #464646;
 $grey-700: #323232;
 $grey-800: #202020;
 $grey-900: #121212;
+
+$red-500: #d62828;
+$red-100: change-color($color: $red-500, $lightness: 90%);
+$red-200: change-color($color: $red-500, $lightness: 80%);
+$red-300: change-color($color: $red-500, $lightness: 70%);
+$red-400: change-color($color: $red-500, $lightness: 60%);
+$red-600: change-color($color: $red-500, $lightness: 40%);
+$red-700: change-color($color: $red-500, $lightness: 30%);
+$red-800: change-color($color: $red-500, $lightness: 20%);
+$red-900: change-color($color: $red-500, $lightness: 10%);
+
+$orange-500: #f77f00;
+$orange-100: change-color($color: $orange-500, $lightness: 90%);
+$orange-200: change-color($color: $orange-500, $lightness: 80%);
+$orange-300: change-color($color: $orange-500, $lightness: 70%);
+$orange-400: change-color($color: $orange-500, $lightness: 60%);
+$orange-600: change-color($color: $orange-500, $lightness: 40%);
+$orange-700: change-color($color: $orange-500, $lightness: 30%);
+$orange-800: change-color($color: $orange-500, $lightness: 20%);
+$orange-900: change-color($color: $orange-500, $lightness: 10%);
+
+$yellow-500: #ffbe0b;
+$yellow-100: change-color($color: $yellow-500, $lightness: 90%);
+$yellow-200: change-color($color: $yellow-500, $lightness: 80%);
+$yellow-300: change-color($color: $yellow-500, $lightness: 70%);
+$yellow-400: change-color($color: $yellow-500, $lightness: 60%);
+$yellow-600: change-color($color: $yellow-500, $lightness: 40%);
+$yellow-700: change-color($color: $yellow-500, $lightness: 30%);
+$yellow-800: change-color($color: $yellow-500, $lightness: 20%);
+$yellow-900: change-color($color: $yellow-500, $lightness: 10%);
+
+$lime-500: #89fc00;
+$lime-100: change-color($color: $lime-500, $lightness: 90%);
+$lime-200: change-color($color: $lime-500, $lightness: 80%);
+$lime-300: change-color($color: $lime-500, $lightness: 70%);
+$lime-400: change-color($color: $lime-500, $lightness: 60%);
+$lime-600: change-color($color: $lime-500, $lightness: 40%);
+$lime-700: change-color($color: $lime-500, $lightness: 30%);
+$lime-800: change-color($color: $lime-500, $lightness: 20%);
+$lime-900: change-color($color: $lime-500, $lightness: 10%);
+
+$green-500: #2a9d8f;
+$green-100: change-color($color: $green-500, $lightness: 90%);
+$green-200: change-color($color: $green-500, $lightness: 80%);
+$green-300: change-color($color: $green-500, $lightness: 70%);
+$green-400: change-color($color: $green-500, $lightness: 60%);
+$green-600: change-color($color: $green-500, $lightness: 40%);
+$green-700: change-color($color: $green-500, $lightness: 30%);
+$green-800: change-color($color: $green-500, $lightness: 20%);
+$green-900: change-color($color: $green-500, $lightness: 10%);
+
+$sky-500: #00b4d8;
+$sky-100: change-color($color: $sky-500, $lightness: 90%);
+$sky-200: change-color($color: $sky-500, $lightness: 80%);
+$sky-300: change-color($color: $sky-500, $lightness: 70%);
+$sky-400: change-color($color: $sky-500, $lightness: 60%);
+$sky-600: change-color($color: $sky-500, $lightness: 40%);
+$sky-700: change-color($color: $sky-500, $lightness: 30%);
+$sky-800: change-color($color: $sky-500, $lightness: 20%);
+$sky-900: change-color($color: $sky-500, $lightness: 10%);
+
+$blue-500: #004e89;
+$blue-100: change-color($color: $blue-500, $lightness: 90%);
+$blue-200: change-color($color: $blue-500, $lightness: 80%);
+$blue-300: change-color($color: $blue-500, $lightness: 70%);
+$blue-400: change-color($color: $blue-500, $lightness: 60%);
+$blue-600: change-color($color: $blue-500, $lightness: 40%);
+$blue-700: change-color($color: $blue-500, $lightness: 30%);
+$blue-800: change-color($color: $blue-500, $lightness: 20%);
+$blue-900: change-color($color: $blue-500, $lightness: 10%);
+
+$violet-500: #4e148c;
+$violet-100: change-color($color: $violet-500, $lightness: 90%);
+$violet-200: change-color($color: $violet-500, $lightness: 80%);
+$violet-300: change-color($color: $violet-500, $lightness: 70%);
+$violet-400: change-color($color: $violet-500, $lightness: 60%);
+$violet-600: change-color($color: $violet-500, $lightness: 40%);
+$violet-700: change-color($color: $violet-500, $lightness: 30%);
+$violet-800: change-color($color: $violet-500, $lightness: 20%);
+$violet-900: change-color($color: $violet-500, $lightness: 10%);
+
+$pink-500: #fe5d9f;
+$pink-100: change-color($color: $pink-500, $lightness: 90%);
+$pink-200: change-color($color: $pink-500, $lightness: 80%);
+$pink-300: change-color($color: $pink-500, $lightness: 70%);
+$pink-400: change-color($color: $pink-500, $lightness: 60%);
+$pink-600: change-color($color: $pink-500, $lightness: 40%);
+$pink-700: change-color($color: $pink-500, $lightness: 30%);
+$pink-800: change-color($color: $pink-500, $lightness: 20%);
+$pink-900: change-color($color: $pink-500, $lightness: 10%);
+
+$zinc-500: #adb5bd;
+$zinc-100: change-color($color: $zinc-500, $lightness: 90%);
+$zinc-200: change-color($color: $zinc-500, $lightness: 80%);
+$zinc-300: change-color($color: $zinc-500, $lightness: 70%);
+$zinc-400: change-color($color: $zinc-500, $lightness: 60%);
+$zinc-600: change-color($color: $zinc-500, $lightness: 40%);
+$zinc-700: change-color($color: $zinc-500, $lightness: 30%);
+$zinc-800: change-color($color: $zinc-500, $lightness: 20%);
+$zinc-900: change-color($color: $zinc-500, $lightness: 10%);

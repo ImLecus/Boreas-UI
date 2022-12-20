@@ -245,6 +245,78 @@ a:hover {
   background-color: #121212;
 }
 
+.bg-red-100 {
+  background-color: #f7d4d4;
+}
+
+.bg-red-200 {
+  background-color: #efa9a9;
+}
+
+.bg-red-300 {
+  background-color: #e77e7e;
+}
+
+.bg-red-400 {
+  background-color: #df5353;
+}
+
+.bg-red-500 {
+  background-color: #d62828;
+}
+
+.bg-red-600 {
+  background-color: #ac2020;
+}
+
+.bg-red-700 {
+  background-color: #811818;
+}
+
+.bg-red-800 {
+  background-color: #561010;
+}
+
+.bg-red-900 {
+  background-color: #2b0808;
+}
+
+.bg-orange-100 {
+  background-color: #ffe6cc;
+}
+
+.bg-orange-200 {
+  background-color: #ffcd99;
+}
+
+.bg-orange-300 {
+  background-color: #ffb566;
+}
+
+.bg-orange-400 {
+  background-color: #ff9c33;
+}
+
+.bg-orange-500 {
+  background-color: #f77f00;
+}
+
+.bg-orange-600 {
+  background-color: #cc6900;
+}
+
+.bg-orange-700 {
+  background-color: #994f00;
+}
+
+.bg-orange-800 {
+  background-color: #663400;
+}
+
+.bg-orange-900 {
+  background-color: #331a00;
+}
+
 .flex {
   display: flex;
 }
