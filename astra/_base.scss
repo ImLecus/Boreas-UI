@@ -1,5 +1,5 @@
 @use "variables" as v;
-@import "./normalize.css";
+@use "reboot";
 
 *, *::after, *::before{
     margin: 0;
@@ -28,6 +28,11 @@ h5, .h5{
 }
 h6, .h6{
     font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+.lead{
+    font-size: 150%;
+    font-weight: lighter;
     margin: 0.5rem 0;
 }
 @mixin btn($bg: #000, $padding: 0px, $color: v.$grey-700){
@@ -107,7 +112,19 @@ a{
     position: sticky;
     top: 0;
 }
-
+.sticky-bottom{
+    position: sticky;
+    bottom: 0;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
 .root{
     max-width: 80%;
     margin: auto;
