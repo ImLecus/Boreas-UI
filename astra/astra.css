@@ -400,6 +400,26 @@ a:hover {
   margin: auto;
 }
 
+.shadowXS {
+  filter: drop-shadow(0 3px 5px rgba(186, 186, 186, 0.5));
+}
+
+.shadowS {
+  filter: drop-shadow(0 4px 5px rgba(186, 186, 186, 0.5));
+}
+
+.shadowM {
+  filter: drop-shadow(0 5px 5px rgba(186, 186, 186, 0.5));
+}
+
+.shadowL {
+  filter: drop-shadow(0 6px 5px rgba(186, 186, 186, 0.5));
+}
+
+.shadowXL {
+  filter: drop-shadow(0 7px 5px rgba(186, 186, 186, 0.5));
+}
+
 .bg-red-100 {
   background-color: #f7d4d4;
 }
