@@ -1,6 +1,7 @@
 @use "variables" as v;
 @use "reboot";
 @use "tables";
+@use "inputs";
 
 *, *::after, *::before{
     margin: 0;
