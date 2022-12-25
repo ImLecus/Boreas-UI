@@ -166,6 +166,61 @@ template {
   display: none;
 }
 
+table, .table {
+  width: 100%;
+  border-spacing: 0;
+  border-top: 1px solid #bababa;
+  border-left: 1px solid #bababa;
+}
+
+table *, .table * {
+  padding: 10px 2px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #bababa;
+  background-color: #cbcbcb;
+}
+
+table > tbody > tr:nth-of-type(odd) > *, .table > tbody > tr:nth-of-type(odd) > * {
+  background-color: #ededed;
+}
+
+table > tbody > tr > th, .table > tbody > tr > th {
+  font-weight: 400;
+}
+
+table > * > tr > th {
+  border-right: 1px solid #bababa;
+  border-bottom: 1px solid #bababa;
+}
+
+table > tbody > tr > :first-child, .table > tbody > tr > :first-child {
+  font-weight: bold;
+  width: 40px;
+}
+
+table.dark, .table.dark {
+  background-color: #202020;
+  color: #ededed;
+  border-top: 1px solid #585858;
+  border-left: 1px solid #585858;
+}
+
+table.dark > * > tr > th, .table.dark > * > tr > th {
+  border-bottom: 1px solid #323232;
+  background-color: #202020;
+  border-right: 1px solid #585858;
+  border-bottom: 1px solid #585858;
+}
+
+table.dark > tbody > tr:nth-of-type(odd) > *, .table.dark > tbody > tr:nth-of-type(odd) > * {
+  background-color: #323232;
+}
+
+table.no-border, table.no-border * {
+  border: none !important;
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -206,6 +261,82 @@ h6, .h6 {
   font-size: 150%;
   font-weight: lighter;
   margin: 0.5rem 0;
+}
+
+b, strong, .b, .bold {
+  font-weight: 700 !important;
+  color: var(--astra-grey-700);
+}
+
+.semiBold {
+  font-weight: 600 !important;
+}
+
+i, em, .i {
+  font-style: italic;
+}
+
+li {
+  list-style-position: inside;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--astra-grey-600);
+}
+
+ul {
+  list-style-type: circle;
+  margin-bottom: 0.5rem;
+}
+
+ol {
+  margin-bottom: 0.5rem;
+}
+
+.unmarked {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.badge {
+  padding: 3px 0.5em;
+  margin: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: var(--astra-blue-500);
+  color: var(--astra-grey-100);
+}
+
+.footerText {
+  margin: 0;
+  padding: 1.5rem;
+}
+
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.inlineFlex {
+  display: inline-flex;
+}
+
+.hidden {
+  display: hidden;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
 }
 
 button, input[type=button], .button {
@@ -344,6 +475,18 @@ a {
 }
 a:hover {
   color: #585858;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .sticky-top {

@@ -1,0 +1,47 @@
+@use "variables" as v;
+table,.table{
+    width: 100%;
+    border-spacing: 0;
+    border-top: 1px solid v.$grey-300;
+    border-left: 1px solid v.$grey-300;
+}
+table *,.table *{
+    padding: 10px 2px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid v.$grey-300;
+    background-color: v.$grey-200;
+}
+table>tbody>tr:nth-of-type(odd)>*,.table>tbody>tr:nth-of-type(odd)>*{
+    background-color: v.$grey-100;
+}
+table>tbody>tr>th,.table>tbody>tr>th{
+    font-weight: 400;
+}
+table>*>tr>th{
+    border-right: 1px solid v.$grey-300;
+    border-bottom: 1px solid v.$grey-300;
+}
+table>tbody>tr>:first-child,.table>tbody>tr>:first-child{
+    font-weight: bold;
+    width: 40px;
+}
+
+table.dark,.table.dark{
+    background-color: v.$grey-800;
+    color: v.$grey-100;
+    border-top: 1px solid v.$grey-500;
+    border-left: 1px solid v.$grey-500;
+}
+table.dark>*>tr>th,.table.dark>*>tr>th {
+    border-bottom: 1px solid v.$grey-700;
+    background-color: v.$grey-800;
+    border-right: 1px solid v.$grey-500;
+    border-bottom: 1px solid v.$grey-500;
+}
+table.dark>tbody>tr:nth-of-type(odd)>*,.table.dark>tbody>tr:nth-of-type(odd)>* {
+    background-color: v.$grey-700;
+}
+table.no-border, table.no-border *{
+    border: none !important;
+}
