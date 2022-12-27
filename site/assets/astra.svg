@@ -16,10 +16,10 @@
 <feColorMatrix id="eL7c30br8oY3-filter-hue-rotate-0" type="hueRotate" values="0" result="result"/>
 </filter>
 <radialGradient id="eL7c30br8oY3-fill" cx="0" cy="0" r="1.158375" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0.017606 0.059709)">
-<stop id="eL7c30br8oY3-fill-0" offset="0%" stop-color="#f9f9f9"/>
-<stop id="eL7c30br8oY3-fill-1" offset="34%" stop-color="#f9f9f9"/>
-<stop id="eL7c30br8oY3-fill-2" offset="56%" stop-color="#f9f9f9"/>
-<stop id="eL7c30br8oY3-fill-3" offset="100%" stop-color="#f9f9f9"/>
+<stop id="eL7c30br8oY3-fill-0" offset="0%" stop-color="#FFC933"/>
+<stop id="eL7c30br8oY3-fill-1" offset="34%" stop-color="#FFC933"/>
+<stop id="eL7c30br8oY3-fill-2" offset="56%" stop-color="#FFC933"/>
+<stop id="eL7c30br8oY3-fill-3" offset="100%" stop-color="#FFC933"/>
 </radialGradient>
 </defs>
 <g clip-rule="evenodd">
