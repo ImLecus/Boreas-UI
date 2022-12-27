@@ -506,6 +506,7 @@ a {
   cursor: pointer;
   color: #323232;
   transition: 0.1s linear;
+  text-decoration: none !important;
 }
 a:hover {
   color: #585858;
@@ -1548,43 +1549,43 @@ input[type=range]:disabled:hover {
 }
 
 .bg-zinc-100 {
-  background-color: #e3e6e8;
+  background-color: #e3e5e8;
 }
 
 .bg-zinc-200 {
-  background-color: #c6ccd2;
+  background-color: #c8ccd0;
 }
 
 .bg-zinc-300 {
-  background-color: #aab3bb;
+  background-color: #acb2b9;
 }
 
 .bg-zinc-400 {
-  background-color: #8e99a4;
+  background-color: #9098a2;
 }
 
 .bg-zinc-500 {
-  background-color: #72808d;
+  background-color: #757e8a;
 }
 
 .bg-zinc-600 {
-  background-color: #5b6671;
+  background-color: #5d656f;
 }
 
 .bg-zinc-700 {
-  background-color: #444d55;
+  background-color: #464c53;
 }
 
 .bg-zinc-800 {
-  background-color: #2d3339;
+  background-color: #2f3337;
 }
 
 .bg-zinc-900 {
-  background-color: #171a1c;
+  background-color: #17191c;
 }
 
 .zinc {
-  color: #adb5bd !important;
+  color: #c5c9ce !important;
 }
 
 .black {
@@ -1637,6 +1638,7 @@ input[type=range]:disabled:hover {
 
 pre {
   color: #323232;
+  border-radius: 3px;
 }
 
 pre span {
@@ -1657,6 +1659,10 @@ pre span {
 
 .value, .v {
   color: #118ab2;
+}
+
+.variable, .var {
+  color: #e63946;
 }
 
 @-webkit-keyframes fade-up {

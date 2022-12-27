@@ -2,6 +2,7 @@
 
 pre{
     color: v.$grey-700;
+    border-radius: 3px;
 }
 pre span{
     font-family: monospace !important;
@@ -18,3 +19,6 @@ pre span{
 .value, .v{
     color: v.$value-color;
 }
+.variable, .var{
+    color: v.$var-color;
+}   

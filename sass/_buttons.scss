@@ -68,6 +68,7 @@ a{
     cursor: pointer;
     color: v.$grey-700;
     transition: 0.1s linear;
+    text-decoration: none !important;
     &:hover{
         color: v.$grey-500;
     }
