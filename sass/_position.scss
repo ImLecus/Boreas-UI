@@ -1,0 +1,50 @@
+.none{
+    display: none;
+}
+.hidden{
+    display: hidden;
+}
+.inline{
+    display: inline;
+}
+.block{
+    display: block;
+}
+.inlineBlock{
+    display: inline-block;
+}
+.inlineFlex{
+    display: inline-flex;
+}
+.left {
+    float: left !important;
+}
+.right {
+    float: right !important;
+}
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}
+.fixed{
+    position: fixed;
+}
+.sticky-top{
+    position: sticky;
+    top: 0;
+}
+.sticky-bottom{
+    position: sticky;
+    bottom: 0;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}

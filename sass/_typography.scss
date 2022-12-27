@@ -1,0 +1,61 @@
+@use "variables" as v;
+h1, .h1{
+    font-size: 3.5rem;
+    margin: 1.5rem 0;
+}
+h2, .h2{
+    font-size: 2.5rem;
+    margin: 1.25rem 0;
+}
+h3, .h3{
+    font-size: 2rem;
+    margin: 1.1rem 0;
+}
+h4, .h4{
+    font-size: 1.75rem;
+    margin: 1rem 0;
+}
+h5, .h5{
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+h6, .h6{
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+.lead{
+    font-size: 150%;
+    font-weight: lighter;
+    margin: 0.5rem 0;
+}
+b,strong,.b, .bold{
+    font-weight: 700 !important;
+    color: var(--astra-grey-700);
+}
+.semiBold{
+    font-weight: 600 !important;
+}
+i,em,.i{
+    font-style: italic;
+}
+li{
+    list-style-position: inside;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--astra-grey-600);
+}
+ul{
+    list-style-type: circle;
+    margin-bottom: 0.5rem;
+}
+ol{
+    margin-bottom: 0.5rem;
+}
+.unmarked{
+    list-style-type: none;
+    padding-left: 1rem;
+}
+.footerText{
+    margin: 0;
+    padding: 1.5rem;
+}

@@ -1,57 +1,58 @@
- html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+@use "variables" as v;
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  font-family: v.$font;
+}
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+main {
+  display: block;
+}
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
   }
-  main {
-    display: block;
-  }
-  hr {
-    box-sizing: content-box; /* 1 */
-    height: 0; /* 1 */
-    overflow: visible; /* 2 */
-  }
-  pre {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
-  }
-  a {
-    background-color: transparent;
-  }
-  abbr[title] {
-    border-bottom: none; /* 1 */
-    text-decoration: underline; /* 2 */
-    text-decoration: underline dotted; /* 2 */
-  }
-  b,
-  strong {
-    font-weight: bolder;
-  }
-  code,
-  kbd,
-  samp {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
-  }
-  small {
-    font-size: 80%;
-  }
-  sub,
-  sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
-  sub {
-    bottom: -0.25em;
-  }
-  
-  sup {
-    top: -0.5em;
-  }
-  img {
-    border-style: none;
-  }
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
   button,
   input,
   optgroup,
@@ -100,15 +101,10 @@
   progress {
     vertical-align: baseline;
   }
-  textarea {
-    overflow: auto;
-  }
-
   [type="checkbox"],
   [type="radio"] {
     box-sizing: border-box; /* 1 */
   }
-
   [type="number"]::-webkit-inner-spin-button,
   [type="number"]::-webkit-outer-spin-button {
     height: auto;
