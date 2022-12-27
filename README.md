@@ -1,12 +1,12 @@
 <div align="center">
-<a href="#"><img src="https://cdn.jsdelivr.net/gh/ImLecus/Astra/site/assets/images/logo.png" alt="Logo width="200" height="200"></a>
-<h1>Welcome to Astra</h1>
-<h3>The CSS framework that makes faster and easier to add styles to yout webpage</h3>
+<a href="#"><img src="https://cdn.jsdelivr.net/gh/ImLecus/Astra/site/assets/logo.svg" alt="Logo" width="200" height="200"></a>
+<h1>Astra</h1>
+<h3>Make it easier</h3>
 <br><br>
 </div>
 
 
-**Warning: this project is on developement and the actual versions (alpha) could be unstable**
+**Warning: this project is on developement and the actual versions (alpha) could be unstables**
 
 ## Status 
 
@@ -17,13 +17,9 @@
 To use Astra in your project you will need to copy this **CDN link** in your html file.
 ```html
   <!-- Put this link tag inside the head tags -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra@v0.1/src/astra.min.css">
+  <link rel="stylesheet" href="">
 ```
 If you are new using Astra, read the [documentation](https://github.com/ImLecus/Astra/docs) to learn how to use this framework.
-
-## Documentation
-
-Astra will have both GitHub and web documentation. In the `/docs` folder on this repository you can see the GitHub documentation, which is in developement and expanding while the projects expands too. Web documentation will be completely added at release 1.0.
 
 ## Copyright and licence
 Code and documentation copyright 2022-2023 [Marcos González](https://twitter.com/ImLecus).
