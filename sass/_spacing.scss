@@ -1,0 +1,51 @@
+@use "variables" as v;
+
+@each $name, $space in v.$spaces {
+    .m-#{$name} {
+        margin: $space;
+    }
+    .m-x-#{$name} {
+        margin-left: $space;
+        margin-right: $space;
+    }
+    .m-y-#{$name} {
+        margin-top: $space;
+        margin-bottom: $space;
+    }
+    .m-top-#{$name} {
+        margin-top: $space;
+    }
+    .m-left-#{$name} {
+        margin-left: $space;
+    }
+    .m-bottom-#{$name} {
+        margin-bottom: $space;
+    }
+    .m-right-#{$name} {
+        margin-right: $space;
+    }
+    
+    .p-#{$name} {
+        padding: $space;
+    }
+    .p-x-#{$name} {
+        padding-left: $space;
+        padding-right: $space;
+    }
+    .p-y-#{$name} {
+        padding-top: $space;
+        padding-bottom: $space;
+    }
+    .p-top-#{$name} {
+        padding-top: $space;
+    }
+    .p-left-#{$name} {
+        padding-left: $space;
+    }
+    .p-bottom-#{$name} {
+        padding-bottom: $space;
+    }
+    .p-right-#{$name} {
+        padding-right: $space;
+    }
+}

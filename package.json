@@ -15,6 +15,5 @@
         "web",
         "alpha"
     ],
-    "main": "./src/astra.js",
-    "style": "./src/astra.css"
+    "main": "./dist/astra.css"
 }

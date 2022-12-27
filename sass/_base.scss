@@ -2,6 +2,7 @@
 @use "reboot";
 @use "tables";
 @use "inputs";
+@use "spacing";
 
 *, *::after, *::before{
     margin: 0;
