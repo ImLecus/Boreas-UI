@@ -48,4 +48,23 @@
     .p-right-#{$name} {
         padding-right: $space;
     }
+
+    .w-#{$name}{
+        width: $space;
+    }
+    .h-#{$name}{
+        height: $space;
+    }
+}
+.w-half{
+    width: 50%;
+}
+.w-full{
+    width: 100%;
+}
+.h-half{
+    height: 50%;
+}
+.h-full{
+    height: 100%;
 }

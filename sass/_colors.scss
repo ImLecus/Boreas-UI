@@ -5,6 +5,15 @@
             background-color: change-color($color: $col, $lightness: calc(100 - ($i * 10)) * 1%);
         }
     }
+    .#{$name} {
+        color: $col !important;
+    }
+}
+.black{
+    color: v.$grey-900 !important;
+}
+.grey{
+    color: v.$grey-500 !important;
 }
 .bg-grey-100{
     background-color: v.$grey-100;
@@ -32,4 +41,7 @@
 }
 .bg-grey-900{
     background-color: v.$grey-900;
+}
+.white{
+    color: v.$grey-100 !important;
 }

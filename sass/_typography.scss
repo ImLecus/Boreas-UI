@@ -32,7 +32,7 @@ b,strong,.b, .bold{
     font-weight: 700 !important;
     color: var(--astra-grey-700);
 }
-.semiBold{
+.semi-bold{
     font-weight: 600 !important;
 }
 i,em,.i{
@@ -58,4 +58,13 @@ ol{
 .footerText{
     margin: 0;
     padding: 1.5rem;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.lowercase{
+    text-transform: lowercase;
+}
+.capitalize{
+    text-transform: capitalize;
 }

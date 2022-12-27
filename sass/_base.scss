@@ -31,18 +31,18 @@
     max-width: v.$xl;
     margin: auto;
 }
-.shadowXS{
+.shadow-xs{
     filter: drop-shadow(0 3px 5px change-color($color: v.$grey-300, $alpha: 0.5));
 }
-.shadowS{
+.shadow-s{
     filter: drop-shadow(0 4px 5px change-color($color: v.$grey-300, $alpha: 0.5));
 }
-.shadowM{
+.shadow-m{
     filter: drop-shadow(0 5px 5px change-color($color: v.$grey-300, $alpha: 0.5));
 }
-.shadowL{
+.shadow-l{
     filter: drop-shadow(0 6px 5px change-color($color: v.$grey-300, $alpha: 0.5));
 }
-.shadowXL{
+.shadow-xl{
     filter: drop-shadow(0 7px 5px change-color($color: v.$grey-300, $alpha: 0.5));
 }

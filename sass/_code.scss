@@ -1,0 +1,20 @@
+@use "variables" as v;
+
+pre{
+    color: v.$grey-700;
+}
+pre span{
+    font-family: monospace !important;
+}
+.comment, .c{
+    color: v.$grey-400;
+}
+.tag, .t{
+    color: v.$tag-color;
+}
+.attribute, .attr{
+    color: v.$attribute-color;
+}
+.value, .v{
+    color: v.$value-color;
+}
