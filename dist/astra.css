@@ -208,6 +208,10 @@ b, strong, .b, .bold {
   font-weight: 600 !important;
 }
 
+.light {
+  font-weight: 400 !important;
+}
+
 i, em, .i {
   font-style: italic;
 }
@@ -1120,6 +1124,10 @@ input[type=range]:disabled:hover {
   height: 100%;
 }
 
+.sidebar {
+  float: left;
+}
+
 .none {
   display: none;
 }
@@ -1697,7 +1705,7 @@ pre span {
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -1708,7 +1716,7 @@ pre span {
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -1745,7 +1753,7 @@ pre span {
 
 @-webkit-keyframes fade-right {
   0% {
-    transform: translateY(100px);
+    transform: translateX(100px);
     opacity: 0;
   }
   100% {
@@ -1756,7 +1764,7 @@ pre span {
 
 @keyframes fade-right {
   0% {
-    transform: translateY(100px);
+    transform: translateX(100px);
     opacity: 0;
   }
   100% {

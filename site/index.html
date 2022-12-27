@@ -10,13 +10,13 @@
 </head>
 <body class="bg-grey-100">
     <header class="p-3 bg-yellow-400">
-        <div class="flex">
+        <div class="flex justify-between">
             <div class="b flex">
                 <a href="#" class="m-x-4 white">Home</a>
                 <a href="./docs" class="m-x-4 white">Docs</a>
                 <a href="https://github.com/ImLecus/Astra" class="m-x-4 white">GitHub</a>
             </div>
-
+            <p class="white bold m-right-4">v. 0.1</p>
         </div> 
     </header>
     <main>
@@ -27,39 +27,44 @@
         </div>
         <div class="root p-y-4">
             <div class="p-y-5">
-                <h2>Get started</h2>
-                <div class="flex">
-                    <p class="lead w-half p-right-4">
+                <h2 class="fade-up">Get started</h2>
+                <div class="fade-up">
+                    <p class="lead p-right-4">
                         Astra is a CSS framework that makes easier and faster to add styles to your projects. The objective with this framework is to have a solid CSS source with prefabricated components and the capacity to create
                         unique styles with it. <br><br> To use this framework, you can put the CDN link as the example below or download it <a href="" class="orange">here</a>. <br><br>   
                     </p>   
                 </div>
-                <pre class="bg-zinc-100 p-y-2 p-x-4 w-half">&lt;<span class="tag">link</span> <span class="attr">rel</span>=<span class="v">"stylesheet"</span> <span class="attr">href</span>=<span class="v">""</span>&gt;</pre>
+                <pre class="bg-zinc-100 p-y-2 p-x-4 w-full fade-up">&lt;<span class="tag">link</span> <span class="attr">rel</span>=<span class="v">"stylesheet"</span> <span class="attr">href</span>=<span class="v">""</span>&gt;</pre>
             </div>
 
             <div class="p-y-5">
                 <div class="flex">
                     <div class="w-half"></div>
-                   <h2>Animation library</h2> 
+                   <h2 class="fade-right">Animation library</h2> 
                 </div>
                 
                 <div class="flex">
                     <div class="w-half">
-                        
+                        <pre class="bg-zinc-100 p-y-2 p-x-4 fade-left m-right-4">
+&lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="v">"fade-up"</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="v">"rotate-left"</span>&gt;&lt;/<span class="tag">div</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr">class</span>=<span class="v">"fade-right"</span>&gt;&lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">div</span>&gt;
+                        </pre>
                     </div>
-                    <p class="lead w-half p-right-4">
+                    <p class="lead w-half p-right-4 fade-right">
                         A website without movement can be boring, isn't it? Well, Astra has the solution for that problem. It comes with an animation library ready to give life to your projects.
                     </p>   
                 </div>
             </div>
             
             <div class="p-y-5">
-                <h2>Made in Sass</h2>
+                <h2 class="fade-left">Made in Sass</h2>
                 <div class="flex">
-                    <p class="lead w-half p-right-4">
+                    <p class="lead w-half p-right-4 fade-left">
                         Do you want to customize Astra? Do it. It's as simple as modify the SCSS variables in the main code and change Astra to adapt it to your style.
                     </p>   
-                    <pre class="bg-zinc-100 p-y-2 p-x-4 w-half">
+                    <pre class="bg-zinc-100 p-y-2 p-x-4 w-half fade-right">
 <span class="var">$primary-color</span>: <span class="v">#ad842d</span>;
 
 <span class="var">$colors</span>:(
