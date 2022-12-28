@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../dist/astra.css">
+  </head>
+  <body> 
+    <header class="p-3 bg-yellow-400 fixed z-5 w-full">
+      <div class="flex justify-between">
+        <div class="b flex"><a class="m-x-4 white" href="../index.html">Home</a><a class="m-x-4 white" href="#">Docs</a><a class="m-x-4 white" href="https://github.com/ImLecus/Astra">GitHub</a></div>
+        <p class="white bold m-right-4">v. 0.2.1</p>
+      </div>
+    </header>
+    <aside class="sidebar m-x-4 p-top-4 top-5"><b class="m-bottom-3">Customization</b>
+      <ul class="unmarked m-bottom-4">
+        <li>Backgrounds</li>
+        <li>Borders</li>
+        <li>Colors</li>
+        <li>Shadows</li>
+        <li>Text</li>
+        <li>Animations</li>
+      </ul><b class="m-bottom-3">Utility</b>
+      <ul class="unmarked m-bottom-4">
+        <li>Buttons</li>
+        <li>Display</li>
+        <li>Flex</li>
+        <li>Grid</li>
+        <li>Inputs</li>
+        <li>Position</li>
+        <li>Roots</li>
+        <li>Spacing</li>
+        <li>Tables</li>
+        <li>Typography</li>
+      </ul>
+    </aside>
+    <main class="m-left-5 p-left-5 left-5 absolute m-top-5 p-right-5">
+      <h1>Typography</h1>
+      <p class="light grey lead">Learn how to write rich text with Astra.</p><br>
+      <h3>Headings </h3>
+      <p>Usually, we use the <code>h1</code> to <code>h6</code> tags to create headings with different size and importance. But maybe you want an element with the size of a <code>h5</code> but without leaving the properties of the tag. For that problem, Astra has the <code>h1</code> to <code>h6</code> classes that you can add to your texts to add the properties of a heading.</p><br>
+      <h1>This is a h1 </h1>
+      <div class="h1">This is a div with the <code>h1</code> class</div><br>
+      <p>As you can see, the font size can be changed by adding this classes.</p><br>
+      <h3>Lead parapraphs </h3>
+      <p>Some parapgraphs are more important than others, and that creates the need of having a new type of paragraph. Astra has the solution with the lead paragraphs. Here is an example: </p>
+      <div class="bg-grey-200 w-half text-center m-y-2">
+        <p class="lead">Hey! I'm an important paragraph.</p>
+        <p>And this is the content. The details are here.</p>
+      </div>
+      <p>To use lead paragraphs in your project, use the <code>lead</code> class.</p><br>
+      <h3>Bold, italic, light and semibold text </h3>
+      <p>To add bold or italic text you can put a <code>b</code> or <code>i</code> tag. But you can also use the <code>b</code>, <code>bold</code> or <code>i</code> classes to make your text bold or italic. Additionally, Astra has the light text, which is used by the <code>light</code> class; and the semibold text, used by the <code>semi-bold</code> class.</p><br>
+      <p class="bold">I'm a bold text</p>
+      <p class="i">I'm an italic text</p>
+      <p class="semi-bold">I'm a semibold text</p>
+      <p class="light">I'm a light text</p><br>
+      <h3>Text transform</h3>
+      <p>With Astra you can also transform the text with the <code>uppercase</code>, <code>lowercase</code> and <code>capitalize</code> classes respectively: </p><br>
+      <p class="uppercase">Text uppercased </p>
+      <p class="lowercase">Text lowercased </p>
+      <p class="capitalize">Text capitalized</p><br>
+      <h3>Unmarked lists </h3>
+      <p>As you can see, the sidebar of this website doessn't have bullets. That's because Astra has the <code>unmarked</code> class, that makes a list without bullets.</p><br>
+      <div class="flex justify-evenly w-half"> 
+        <ul>Marked list
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+        <ul class="unmarked">Unmarked list
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

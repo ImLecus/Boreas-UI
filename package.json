@@ -1,7 +1,7 @@
 {
     "name": "astra",
     "description": "The CSS framework that makes easier and faster to add styles.",
-    "version": "0.4.1-alpha",
+    "version": "0.2.1",
     "author": {
         "name": "Marcos González",
         "email": "marcosgf2005@gmail.com"
@@ -13,7 +13,7 @@
         "front-end",
         "pc-first",
         "web",
-        "alpha"
+        "sass"
     ],
     "main": "./dist/astra.css"
 }
