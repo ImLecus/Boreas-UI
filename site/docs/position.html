@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra/dist/astra.min.css">
+  </head>
+  <body> 
+    <header class="p-3 bg-yellow-400 fixed z-5 w-full">
+      <div class="flex justify-between">
+        <div class="b flex"><a class="m-x-4 white" href="../index.html">Home</a><a class="m-x-4 white" href="#">Docs</a><a class="m-x-4 white" href="https://github.com/ImLecus/Astra">GitHub</a></div>
+        <p class="white bold m-right-4">v. 0.2.1</p>
+      </div>
+    </header>
+    <aside class="sidebar m-x-4 p-top-4 top-5"><b class="m-bottom-3">Customization</b>
+      <ul class="unmarked m-bottom-4">
+        <li>Backgrounds</li>
+        <li>Borders</li>
+        <li>Colors</li>
+        <li>Shadows</li>
+        <li>Text</li>
+        <li>Animations</li>
+      </ul><b class="m-bottom-3">Utility</b>
+      <ul class="unmarked m-bottom-4">
+        <li>Buttons</li>
+        <li>Display</li>
+        <li>Flex</li>
+        <li>Grid</li>
+        <li>Inputs</li>
+        <li>Position</li>
+        <li>Roots</li>
+        <li>Spacing</li>
+        <li>Tables</li>
+        <li>Typography</li>
+      </ul>
+    </aside>
+    <main class="m-left-5 p-left-5 left-5 absolute m-top-5 p-right-5">
+      <h1>Position </h1>
+      <p class="light grey lead">Learn how to position elements with Astra.</p><br>
+      <h3>Relative </h3>
+      <p>To make an element with relative position use the <code>relative</code> class. This option is enabled by default.</p><br>
+      <div class="flex w-half bg-zinc-100 border-3">
+        <div class="bg-yellow-300 white b p-3 m-x-2 relative" style="border-radius: 5px;">relative</div>
+        <div class="bg-orange-300 white b p-3 m-x-2 relative" style="border-radius: 5px;">relative</div>
+        <div class="bg-red-300 white b p-3 m-x-2 relative" style="border-radius: 5px;">relative</div>
+      </div><br>
+      <h3>Absolute</h3>
+      <p>To make an element with absolute position use the <code>absolute</code> class and the positioning classes, that are the direction and a number from 0 to 5:</p><br>
+      <div class="flex w-half bg-zinc-100 border-3">
+        <div class="bg-orange-300 white b p-3 m-x-2 absolute left-5" style="border-radius: 5px;">absolute left-5</div>
+        <div class="bg-red-300 white b p-3 m-x-2 absolute right-5" style="border-radius: 5px;">absolute right-5</div>
+      </div><br><br><br>
+      <h3>Sticky </h3>
+      <p>To make an element sticky you can use the <code>sticky</code>, <code>sticky-top</code> and <code>sticky-bottom</code> classes.To change the position you can use the positioning classes.</p>
+      <h3>Fixed </h3>
+      <p>To make an element to be fixed use the <code>fixed</code> class. To change the position you can use the positioning classes.</p><br>
+      <h3>Z-Index </h3>
+      <p>To change the z-index property of an element use the <code>z-1</code> to <code>z-5</code> classes.</p><br>
+      <h3>Overflow</h3>
+      <p>You can change the overflow of the elements by using the <code>overflow-x</code>, <code>overflow-y</code>, <code>overflow</code> and <code>no-overflow</code> classes.</p><br><br><br>
+    </main>
+  </body>
+</html>
