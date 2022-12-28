@@ -1339,6 +1339,22 @@ a:hover {
   z-index: 500;
 }
 
+.top-0 {
+  top: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
 .bg-red-100 {
   background-color: #f7d4d4;
 }
