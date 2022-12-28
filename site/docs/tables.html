@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ImLecus/Astra/dist/astra.min.css">
+  </head>
+  <body> 
+    <header class="p-3 bg-yellow-400 fixed z-5 w-full">
+      <div class="flex justify-between">
+        <div class="b flex"><a class="m-x-4 white" href="../index.html">Home</a><a class="m-x-4 white" href="#">Docs</a><a class="m-x-4 white" href="https://github.com/ImLecus/Astra">GitHub</a></div>
+        <p class="white bold m-right-4">v. 0.2.1</p>
+      </div>
+    </header>
+    <aside class="sidebar m-x-4 p-top-4 top-5"><b class="m-bottom-3">Customization</b>
+      <ul class="unmarked m-bottom-4">
+        <li>Backgrounds</li>
+        <li>Borders</li>
+        <li>Colors</li>
+        <li>Shadows</li>
+        <li>Text</li>
+        <li>Animations</li>
+      </ul><b class="m-bottom-3">Utility</b>
+      <ul class="unmarked m-bottom-4">
+        <li>Buttons</li>
+        <li>Display</li>
+        <li>Flex</li>
+        <li>Grid</li>
+        <li>Inputs</li>
+        <li>Position</li>
+        <li>Roots</li>
+        <li>Spacing</li>
+        <li>Tables</li>
+        <li>Typography</li>
+      </ul>
+    </aside>
+    <main class="m-left-5 p-left-5 left-5 absolute m-top-5 p-right-5">
+      <h1>Tables</h1>
+      <p class="light grey lead">Learn how to change the style of the tables with Astra.</p><br>
+      <h3>Default tables </h3>
+      <p>By default, tables in Astra looks like this: </p><br>
+      <table> 
+        <thead> 
+          <tr>
+            <th> </th>
+            <th>A</th>
+            <th>C</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <th>1A</th>
+            <th>1B</th>
+          </tr>
+          <tr>
+            <th>2</th>
+            <th>2A</th>
+            <th>2B</th>
+          </tr>
+          <tr>
+            <th>3</th>
+            <th>3A</th>
+            <th>3B</th>
+          </tr>
+        </tbody>
+      </table>
+      <p>To change the style of the tables, Astra has some classes: </p>
+      <h3>Dark tables </h3>
+      <p>You can put a dark table by adding the <code>dark</code> class in the table tag:</p><br>
+      <table class="dark"> 
+        <thead> 
+          <tr>
+            <th> </th>
+            <th>A</th>
+            <th>C</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <th>1A</th>
+            <th>1B</th>
+          </tr>
+          <tr>
+            <th>2</th>
+            <th>2A</th>
+            <th>2B</th>
+          </tr>
+          <tr>
+            <th>3</th>
+            <th>3A</th>
+            <th>3B</th>
+          </tr>
+        </tbody>
+      </table><br>
+      <h3>Tables without borders </h3>
+      <p>To disable the borders in the table element, add the <code>no-border</code> class: </p><br>
+      <table class="no-border"> 
+        <thead> 
+          <tr>
+            <th> </th>
+            <th>A</th>
+            <th>C</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <th>1A</th>
+            <th>1B</th>
+          </tr>
+          <tr>
+            <th>2</th>
+            <th>2A</th>
+            <th>2B</th>
+          </tr>
+          <tr>
+            <th>3</th>
+            <th>3A</th>
+            <th>3B</th>
+          </tr>
+        </tbody>
+      </table><br>
+      <p>You can also combine this option with the dark table: </p><br>
+      <table class="no-border dark"> 
+        <thead> 
+          <tr>
+            <th> </th>
+            <th>A</th>
+            <th>C</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <th>1A</th>
+            <th>1B</th>
+          </tr>
+          <tr>
+            <th>2</th>
+            <th>2A</th>
+            <th>2B</th>
+          </tr>
+          <tr>
+            <th>3</th>
+            <th>3A</th>
+            <th>3B</th>
+          </tr>
+        </tbody>
+      </table><br>
+      <h3>Framework compatibility </h3>
+      <p>If you are working with two or more frameworks at once, use the <code>table</code> class on the table tag for better compatibility. By default, the style will be applied to the <code>table</code> tag without any extra classes.</p><br><br>
+    </main>
+  </body>
+</html>
