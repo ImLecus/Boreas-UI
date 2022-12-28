@@ -5,7 +5,7 @@ table,.table{
     border-top: 1px solid v.$grey-300;
     border-left: 1px solid v.$grey-300;
 }
-table *,.table *{
+table * tr th,.table * tr th{
     padding: 10px 2px;
     outline: none;
     border: none;
@@ -24,7 +24,6 @@ table>*>tr>th{
 }
 table>tbody>tr>:first-child,.table>tbody>tr>:first-child{
     font-weight: bold;
-    width: 40px;
 }
 
 table.dark,.table.dark{

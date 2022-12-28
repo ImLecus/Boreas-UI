@@ -268,27 +268,27 @@ ol {
   margin: auto;
 }
 
-.rootXS {
+.root-xs {
   max-width: 500px;
   margin: auto;
 }
 
-.rootS {
-  max-width: 678px;
+.root-s {
+  max-width: 768px;
   margin: auto;
 }
 
-.rootM {
+.root-m {
   max-width: 900px;
   margin: auto;
 }
 
-.rootL {
+.root-l {
   max-width: 1200px;
   margin: auto;
 }
 
-.rootXL {
+.root-xl {
   max-width: 1440px;
   margin: auto;
 }
@@ -384,12 +384,12 @@ table, .table {
   border-left: 1px solid #bababa;
 }
 
-table *, .table * {
+table * tr th, .table * tr th {
   padding: 10px 2px;
   outline: none;
   border: none;
   border-bottom: 1px solid #bababa;
-  background-color: #cbcbcb;
+  background-color: #e2e2e2;
 }
 
 table > tbody > tr:nth-of-type(odd) > *, .table > tbody > tr:nth-of-type(odd) > * {
@@ -407,7 +407,6 @@ table > * > tr > th {
 
 table > tbody > tr > :first-child, .table > tbody > tr > :first-child {
   font-weight: bold;
-  width: 40px;
 }
 
 table.dark, .table.dark {
@@ -597,7 +596,7 @@ fieldset {
 }
 
 .input:disabled, input:disabled {
-  background-color: #cbcbcb;
+  background-color: #e2e2e2;
 }
 
 .input[type=range]:disabled:focus,
@@ -1768,7 +1767,7 @@ a:hover {
 }
 
 .bg-grey-200 {
-  background-color: #cbcbcb;
+  background-color: #e2e2e2;
 }
 
 .bg-grey-300 {
