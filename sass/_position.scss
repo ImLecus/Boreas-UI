@@ -1,3 +1,4 @@
+@use "variables" as v;
 .none{
     display: none;
 }
@@ -47,4 +48,33 @@
 }
 .text-left{
     text-align: left;
+}
+.overflow-x{
+    overflow-x: scroll;
+}
+.overflow-y{
+    overflow-y: scroll;
+}
+.overflow{
+    overflow: visible;
+}
+.no-overflow{
+    overflow: hidden;
+}
+@each $name, $space in v.$spaces{
+    .top-#{$name}{
+        top: $space;
+    }
+    .bottom-#{$name}{
+        bottom: $space;
+    }
+    .left-#{$name}{
+        left: $space;
+    }
+    .right-#{$name}{
+        right: $space;
+    }
+    .z-#{$name}{
+        z-index: 100 * $name;
+    }
 }

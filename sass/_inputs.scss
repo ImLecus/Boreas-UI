@@ -41,11 +41,10 @@ label .input[type="radio"], label input[type="radio"]{
 .input[type="search"],input[type="search"]{
     height: 35px;
     padding-left: 15px;
-    margin: 0 10px;
     width: 200px !important;
-}
-.input[type="search"]::placeholder , input[type="search"]::placeholder{
-    font-size: 15px;
+    &::placeholder{
+        font-size: 15px;
+    }
 }
 .input[type="color"], input[type="color"]{
     height: 35px;
@@ -102,7 +101,7 @@ label .input[type="radio"], label input[type="radio"]{
 } 
 .input[type="file"]::file-selector-button:hover, input[type="file"]::file-selector-button:hover, 
 .input[type="file"]::-webkit-file-upload-button:hover, input[type="file"]::-webkit-file-upload-button:hover{
-    background-color: var(--astra-blue-600);
+    background-color:  map-get($map: v.$colors, $key: "sky");
 }
 .input[type="file"]:focus, input[type="file"]:focus, 
 .input[type="radio"]:focus, input[type="radio"]:focus{

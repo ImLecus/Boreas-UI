@@ -37,6 +37,9 @@ button, input[type="button"], .button{
     &:hover{
         border-color: v.$grey-800;
     }
+    &:focus{
+        outline: none !important;
+    }
 }
 button.primary, input[type="button"].primary, .button.primary{
     @include btn($bg: v.$primary-color, $color: v.$grey-100);

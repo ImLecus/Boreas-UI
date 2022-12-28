@@ -7,6 +7,9 @@ pre{
 pre span{
     font-family: monospace !important;
 }
+code{
+    color: v.$var-color;
+}
 .comment, .c{
     color: v.$grey-400;
 }
