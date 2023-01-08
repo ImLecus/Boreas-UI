@@ -254,6 +254,11 @@ ol {
   text-transform: capitalize;
 }
 
+@media (max-width: 500px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
 .badge {
   padding: 3px 0.5em;
   margin: 10px;
