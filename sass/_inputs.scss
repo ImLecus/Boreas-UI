@@ -18,6 +18,7 @@ input,select,textarea.input,.select,.textarea{
     height: 30px;
     transition: 0.1s linear;
     font-size: 15px;
+    margin: 5px 0;
 }
 .input:focus, input:focus,
 .select:focus, select:focus,
@@ -85,11 +86,12 @@ label .input[type="radio"], label input[type="radio"]{
 }
 .input[type="file"], input[type="file"]{
     height: auto;
+    border: none;
 }
 .input[type="file"]::file-selector-button,  input[type="file"]::file-selector-button,
 .input[type="file"]::-webkit-file-upload-button, input[type="file"]::-webkit-file-upload-button
 {
-    background-color: v.$primary-color;
+    background-color: v.$primary-color !important;
     border: none;
     border-right: 1px solid v.$grey-600;
     color: v.$grey-100;
@@ -102,6 +104,8 @@ label .input[type="radio"], label input[type="radio"]{
 .input[type="file"]::file-selector-button:hover, input[type="file"]::file-selector-button:hover, 
 .input[type="file"]::-webkit-file-upload-button:hover, input[type="file"]::-webkit-file-upload-button:hover{
     background-color:  map-get($map: v.$colors, $key: "sky");
+    outline: 0;
+    border: 0;
 }
 .input[type="file"]:focus, input[type="file"]:focus, 
 .input[type="radio"]:focus, input[type="radio"]:focus{
