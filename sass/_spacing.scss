@@ -2,62 +2,62 @@
 
 @each $name, $space in v.$spaces {
     .m-#{$name} {
-        margin: $space;
+        margin: $space !important;
     }
     .m-x-#{$name} {
-        margin-left: $space;
-        margin-right: $space;
+        margin-left: $space !important;
+        margin-right: $space !important;
     }
     .m-y-#{$name} {
-        margin-top: $space;
-        margin-bottom: $space;
+        margin-top: $space !important;
+        margin-bottom: $space !important;
     }
     .m-top-#{$name} {
-        margin-top: $space;
+        margin-top: $space !important;
     }
     .m-left-#{$name} {
-        margin-left: $space;
+        margin-left: $space !important;
     }
     .m-bottom-#{$name} {
-        margin-bottom: $space;
+        margin-bottom: $space !important;
     }
     .m-right-#{$name} {
-        margin-right: $space;
+        margin-right: $space!important;
     }
     
     .p-#{$name} {
-        padding: $space;
+        padding: $space !important;
     }
     .p-x-#{$name} {
-        padding-left: $space;
-        padding-right: $space;
+        padding-left: $space !important;
+        padding-right: $space !important;
     }
     .p-y-#{$name} {
-        padding-top: $space;
-        padding-bottom: $space;
+        padding-top: $space !important;
+        padding-bottom: $space !important;
     }
     .p-top-#{$name} {
-        padding-top: $space;
+        padding-top: $space !important;
     }
     .p-left-#{$name} {
-        padding-left: $space;
+        padding-left: $space !important;
     }
     .p-bottom-#{$name} {
-        padding-bottom: $space;
+        padding-bottom: $space !important;
     }
     .p-right-#{$name} {
-        padding-right: $space;
+        padding-right: $space !important;
     }
 
     .w-#{$name}{
-        width: $space;
+        width: $space !important;
     }
     .h-#{$name}{
-        height: $space;
+        height: $space !important;
     }
 
     .border-#{$name}{
-        border-radius: calc($space / 3);
+        border-radius: calc($space / 3) !important;
     }
 }
 .w-half{

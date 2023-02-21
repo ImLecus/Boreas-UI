@@ -66,13 +66,13 @@ ol{
     padding: 1.5rem;
 }
 .uppercase{
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 }
 .lowercase{
-    text-transform: lowercase;
+    text-transform: lowercase !important;
 }
 .capitalize{
-    text-transform: capitalize;
+    text-transform: capitalize !important;
 }
 @media(max-width: 500px){
     h1{
