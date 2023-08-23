@@ -1,6 +1,6 @@
 {
-    "name": "astra",
-    "description": "The CSS framework that makes easier and faster to add styles.",
+    "name": "boreas-ui",
+    "description": "The UI library that makes the style creation easier and faster.",
     "version": "0.2.1",
     "author": {
         "name": "Marcos González",
@@ -15,5 +15,5 @@
         "web",
         "sass"
     ],
-    "main": "./dist/astra.css"
+    "main": "./dist/boreas-ui.css"
 }
