@@ -1,4 +1,49 @@
-.h1 {
-    font-size: 1.5rem;
-    color: red;
+@font-face {
+    font-family: NotoSans;
+    src: url("../site/font/NotoSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: NotoSansBold;
+    src: url("../site/font/NotoSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: NotoSansLight;
+    src: url("../site/font/NotoSans-Light.ttf");
+}
+
+.b-style :is(h1, h2, h3, h4, h5, h6):not(.b-exclude) {
+    font-family: NotoSansBold;
+    margin: 1.125rem 0;
+}
+
+.b-style h1:not(.b-exclude) {
+    font-size: 50px;
+}
+
+.b-style h2:not(.b-exclude) {
+    font-size: 40px;
+}
+
+.b-style h3:not(.b-exclude) {
+    font-size: 32px;
+}
+
+.b-style h4:not(.b-exclude) {
+    font-size: 24px;
+}
+
+.b-style h5:not(.b-exclude) {
+    font-size: 18px;
+}
+
+.b-style h6:not(.b-exclude) {
+    font-size: 12px;
+}
+
+.b-style p:not(.b-exclude) {
+    font-family: NotoSans;
+    font-size: 16px;
+    opacity: 0.9;
 }
