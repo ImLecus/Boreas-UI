@@ -1,7 +1,21 @@
-.text-red {
-    color: red;
-}
+$colors : ("red":red,
+    "orange":orange,
+    "gold":gold,
+    "lime": lime,
+    "green": green,
+    "sky": lightblue,
+    "blue": blue,
+    "violet": violet,
+    "pink": pink,
+    "gray": gray);
 
-.bg-red {
-    background-color: red;
+@each $name,
+$color in $colors {
+    .text-#{$name} {
+        color: $color !important;
+    }
+
+    .bg-#{$name} {
+        background-color: $color !important;
+    }
 }
