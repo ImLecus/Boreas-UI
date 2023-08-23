@@ -1,0 +1,44 @@
+$sizes : ("zero":0, "xs":5px, "sm": 10px, "md": 15px, "lg": 20px, "xl": 40px);
+
+@each $name,
+$size in $sizes {
+    .margin-#{$name} {
+        margin: #{$size} !important;
+    }
+
+    .marginL-#{$name} {
+        margin-left: #{$size} !important;
+    }
+
+    .marginR-#{$name} {
+        margin-right: #{$size} !important;
+    }
+
+    .marginT-#{$name} {
+        margin-top: #{$size} !important;
+    }
+
+    .marginB-#{$name} {
+        margin-bottom: #{$size} !important;
+    }
+
+    .padding-#{$name} {
+        padding: #{$size} !important;
+    }
+
+    .paddingL-#{$name} {
+        padding-left: #{$size} !important;
+    }
+
+    .paddingR-#{$name} {
+        padding-right: #{$size} !important;
+    }
+
+    .paddingT-#{$name} {
+        padding-top: #{$size} !important;
+    }
+
+    .paddingB-#{$name} {
+        padding-bottom: #{$size} !important;
+    }
+}
